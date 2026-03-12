@@ -13,7 +13,7 @@
     "dev:frontend": "vite",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "render-build": "npm ci && npm run build"
+    "render-build": "npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "better-sqlite3": "^11.0.0",
