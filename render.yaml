@@ -3,7 +3,7 @@ services:
     name: email-outreach
     env: node
     plan: free
-    buildCommand: npm install --no-cache && npm run build
+    buildCommand: npm install --include=dev --no-cache && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
