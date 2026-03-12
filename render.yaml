@@ -10,3 +10,7 @@ services:
         value: production
       - key: PORT
         value: 3000
+      - key: NPM_FLAGS
+        value: --legacy-peer-deps
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=2048
