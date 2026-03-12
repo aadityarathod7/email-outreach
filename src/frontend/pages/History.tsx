@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
+import { X, Mail } from 'lucide-react';
 import client from '../api/client';
 
 function History() {
@@ -26,58 +26,71 @@ function History() {
 
   const filteredEmails = emails.filter((email) =>
     email.email.toLowerCase().includes(filter.toLowerCase()) ||
-    email.name.toLowerCase().includes(filter.toLowerCase())
+    email.name.toLowerCase().includes(filter.toLowerCase()) ||
+    email.subject.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
-    <div className="space-y-6">
-      <div className="card">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-slate-900">Email History</h2>
-          <p className="text-sm text-slate-600">{filteredEmails.length} emails</p>
+    <div className="space-y-6 animate-fade-in">
+      <div className="card-elevated">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900">Email History</h2>
+            <p className="text-slate-600 text-sm mt-1">Review all sent emails</p>
+          </div>
+          <div className="bg-gradient-to-br from-orange-100 to-orange-50 px-4 py-2 rounded-lg border border-orange-200">
+            <p className="text-orange-700 font-semibold text-lg">{filteredEmails.length}</p>
+            <p className="text-orange-600 text-xs">emails found</p>
+          </div>
         </div>
 
         <input
           type="text"
-          placeholder="Filter by email or name..."
+          placeholder="Search by email, name, or subject..."
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="input-field mb-4"
+          className="input-field mb-6"
         />
 
         {loading ? (
-          <div className="text-center py-8">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div>
+          <div className="text-center py-12">
+            <div className="inline-block animate-spin rounded-full h-10 w-10 border-b-2 border-orange-500 mb-3"></div>
+            <p className="text-slate-600 font-medium">Loading email history...</p>
           </div>
         ) : filteredEmails.length === 0 ? (
-          <p className="text-slate-500 text-center py-8">No emails found</p>
+          <div className="text-center py-12">
+            <Mail className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+            <p className="text-slate-600 font-medium">No emails found</p>
+            <p className="text-slate-500 text-sm mt-1">{filter ? 'Try adjusting your search filters' : 'Start sending emails to see them here'}</p>
+          </div>
         ) : (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-lg border border-slate-200">
             <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-slate-200">
-                  <th className="text-left py-3 px-4 font-semibold text-slate-600">Email</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-600">Name</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-600">Subject</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-600">Sent At</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-600">Status</th>
+              <thead className="bg-gradient-to-r from-slate-50 to-slate-100 border-b border-slate-200">
+                <tr>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Email</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Name</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Subject</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Sent At</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Status</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredEmails.map((email, idx) => (
                   <tr
                     key={idx}
-                    className="border-b border-slate-100 hover:bg-slate-50 cursor-pointer"
+                    className="table-row-hover border-b border-slate-100 last:border-b-0"
                     onClick={() => setSelectedEmail(email)}
                   >
-                    <td className="py-3 px-4 text-slate-900 font-medium">{email.email}</td>
-                    <td className="py-3 px-4 text-slate-900">{email.name}</td>
-                    <td className="py-3 px-4 text-slate-600 truncate max-w-xs">{email.subject}</td>
-                    <td className="py-3 px-4 text-slate-500 text-xs">
+                    <td className="py-4 px-4 text-slate-900 font-medium">{email.email}</td>
+                    <td className="py-4 px-4 text-slate-700">{email.name}</td>
+                    <td className="py-4 px-4 text-slate-600 truncate max-w-xs">{email.subject}</td>
+                    <td className="py-4 px-4 text-slate-500 text-xs">
                       {new Date(email.sent_at).toLocaleString()}
                     </td>
-                    <td className="py-3 px-4">
-                      <span className="inline-block px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-700">
+                    <td className="py-4 px-4">
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
                         Sent
                       </span>
                     </td>
@@ -91,52 +104,61 @@ function History() {
 
       {/* Email Preview Modal */}
       {selectedEmail && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-slate-100">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-slate-200 p-6 flex items-start justify-between">
-              <div>
-                <h2 className="text-xl font-bold text-slate-900">{selectedEmail.subject}</h2>
-                <p className="text-sm text-slate-600 mt-1">
-                  To: {selectedEmail.email} ({selectedEmail.name})
-                </p>
+            <div className="sticky top-0 bg-gradient-to-r from-white to-slate-50 border-b border-slate-200 px-8 py-6 flex items-start justify-between">
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-slate-900">{selectedEmail.subject}</h2>
+                <div className="flex items-center gap-2 mt-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <p className="text-sm text-slate-600">
+                    To: <span className="font-semibold">{selectedEmail.email}</span> • {selectedEmail.name}
+                  </p>
+                </div>
               </div>
               <button
                 onClick={() => setSelectedEmail(null)}
-                className="text-slate-400 hover:text-slate-600 transition"
+                className="p-2 hover:bg-slate-100 rounded-lg transition-colors ml-4"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 text-slate-600" />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 space-y-4">
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                <p className="text-sm text-slate-600 mb-2">Email Body:</p>
-                <p className="text-slate-900 whitespace-pre-wrap font-normal leading-relaxed">
+            <div className="p-8 space-y-6">
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200">
+                <p className="text-xs text-slate-600 font-semibold uppercase tracking-wide mb-3">Email Body</p>
+                <p className="text-slate-900 whitespace-pre-wrap font-normal leading-relaxed text-base">
                   {selectedEmail.body || 'No body content available'}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
-                  <p className="text-xs text-slate-600 mb-1">Sent At:</p>
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 border border-slate-200">
+                  <p className="text-xs text-slate-600 font-semibold uppercase tracking-wide mb-2">Sent At</p>
                   <p className="text-sm font-semibold text-slate-900">
                     {new Date(selectedEmail.sent_at).toLocaleString()}
                   </p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    {new Date(selectedEmail.sent_at).toLocaleDateString()}
+                  </p>
                 </div>
-                <div className="bg-green-50 rounded-lg p-3 border border-green-200">
-                  <p className="text-xs text-green-600 mb-1">Status:</p>
-                  <p className="text-sm font-semibold text-green-700">Sent</p>
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200">
+                  <p className="text-xs text-green-600 font-semibold uppercase tracking-wide mb-2">Status</p>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                    <p className="text-sm font-semibold text-green-700">Delivered</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Modal Footer */}
-            <div className="sticky bottom-0 bg-slate-50 border-t border-slate-200 p-4 flex justify-end">
+            <div className="sticky bottom-0 bg-gradient-to-r from-slate-50 to-slate-100 border-t border-slate-200 px-8 py-4 flex justify-end gap-3">
               <button
                 onClick={() => setSelectedEmail(null)}
-                className="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition text-sm font-medium"
+                className="px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all font-semibold text-sm shadow-md hover:shadow-lg"
               >
                 Close
               </button>

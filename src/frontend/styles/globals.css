@@ -13,11 +13,11 @@ html {
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 font-sans;
+  @apply bg-gradient-to-br from-slate-50 via-slate-50 to-orange-50 text-slate-900 font-sans;
 }
 
 button {
-  @apply transition-colors duration-200;
+  @apply transition-all duration-200 ease-out;
 }
 
 a {
@@ -25,19 +25,31 @@ a {
 }
 
 .card {
-  @apply bg-white rounded-lg shadow p-6;
+  @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border border-slate-100;
+}
+
+.card-elevated {
+  @apply bg-white rounded-xl shadow-lg p-6 border border-slate-100;
 }
 
 .btn-primary {
-  @apply bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-lg;
+  @apply bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg active:shadow-sm active:scale-95;
 }
 
 .btn-secondary {
-  @apply bg-slate-200 hover:bg-slate-300 text-slate-900 font-medium py-2 px-4 rounded-lg;
+  @apply bg-slate-100 hover:bg-slate-200 text-slate-900 font-medium py-2 px-4 rounded-lg transition-all duration-200 border border-slate-200;
+}
+
+.btn-icon {
+  @apply p-2 hover:bg-slate-100 rounded-lg transition-colors duration-200;
 }
 
 .input-field {
-  @apply w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500;
+  @apply w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-white;
+}
+
+.input-field:disabled {
+  @apply bg-slate-50 text-slate-500 cursor-not-allowed;
 }
 
 .error-message {
@@ -50,4 +62,102 @@ a {
 
 .loading {
   @apply animate-spin h-5 w-5 text-orange-500;
+}
+
+/* Stat Card Styles */
+.stat-card {
+  @apply bg-gradient-to-br from-white to-slate-50 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-slate-100 hover:border-orange-200;
+}
+
+.stat-card:hover {
+  @apply -translate-y-1;
+}
+
+/* Badge Styles */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-700;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-700;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-700;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-700;
+}
+
+/* Table Styles */
+.table-row-hover {
+  @apply hover:bg-slate-50 transition-colors duration-200 cursor-pointer;
+}
+
+/* Animation Classes */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.3s ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

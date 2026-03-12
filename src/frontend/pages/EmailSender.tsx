@@ -45,10 +45,11 @@ function EmailSender() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Upload Section */}
-        <div className="lg:col-span-1 card">
-          <h2 className="text-lg font-bold text-slate-900 mb-4">Upload CSV</h2>
+        <div className="lg:col-span-1 card-elevated">
+          <h2 className="text-lg font-bold text-slate-900 mb-2">Upload CSV</h2>
+          <p className="text-slate-600 text-sm mb-6">Add your email list</p>
 
-          <div className="border-2 border-dashed border-slate-300 rounded-lg p-6 text-center hover:border-orange-500 transition-colors cursor-pointer">
+          <div className="border-2 border-dashed border-slate-300 rounded-xl p-8 text-center hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 cursor-pointer group">
             <input
               type="file"
               accept=".csv"
@@ -57,18 +58,23 @@ function EmailSender() {
               id="csv-upload"
             />
             <label htmlFor="csv-upload" className="cursor-pointer block">
-              <Upload className="w-8 h-8 mx-auto text-slate-400 mb-2" />
-              <p className="text-slate-600 font-medium">Click to upload CSV</p>
-              <p className="text-slate-500 text-sm">or drag and drop</p>
+              <div className="inline-block p-3 rounded-lg bg-slate-100 group-hover:bg-orange-100 transition-all duration-300 mb-3">
+                <Upload className="w-6 h-6 text-slate-600 group-hover:text-orange-600 transition-colors" />
+              </div>
+              <p className="text-slate-700 font-semibold">Click to upload</p>
+              <p className="text-slate-500 text-sm mt-1">or drag and drop your CSV file</p>
             </label>
           </div>
 
           {csvContent && (
-            <div className="mt-4">
-              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                <p className="text-green-700 text-sm font-medium">✓ CSV loaded</p>
-                <p className="text-green-600 text-xs mt-1">
-                  {csvContent.split('\n').length - 1} records found
+            <div className="mt-4 animate-slide-in-up">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-300 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <p className="text-green-700 text-sm font-semibold">CSV Successfully Loaded</p>
+                </div>
+                <p className="text-green-600 text-xs">
+                  {csvContent.split('\n').length - 1} records ready to process
                 </p>
               </div>
             </div>
@@ -77,13 +83,20 @@ function EmailSender() {
 
         {/* Actions */}
         <div className="lg:col-span-2">
-          <div className="card space-y-4 h-full flex flex-col">
+          <div className="card-elevated space-y-6 h-full flex flex-col">
             <div>
-              <h2 className="text-lg font-bold text-slate-900 mb-4">Actions</h2>
-              <p className="text-slate-600 text-sm mb-4">
+              <h2 className="text-lg font-bold text-slate-900 mb-2">Email Campaign</h2>
+              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mt-3 ${
+                preview
+                  ? 'bg-blue-100 text-blue-700'
+                  : 'bg-slate-100 text-slate-700'
+              }`}>
+                {preview ? '🔍 Preview Mode' : '📤 Ready to Send'}
+              </div>
+              <p className="text-slate-600 text-sm mt-4">
                 {preview
-                  ? '✓ Preview mode - emails will NOT be sent'
-                  : 'Click Preview to generate a dry-run, or Send to actually send emails.'}
+                  ? 'Preview mode is active. Emails shown in results will NOT be sent.'
+                  : 'Generate a preview first to review emails before sending.'}
               </p>
             </div>
 
@@ -91,18 +104,18 @@ function EmailSender() {
               <button
                 onClick={handlePreview}
                 disabled={!csvContent || previewLoading || sending}
-                className="flex items-center gap-2 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
               >
                 <Eye className="w-4 h-4" />
-                {previewLoading ? 'Generating...' : 'Preview'}
+                {previewLoading ? 'Generating Preview...' : 'Preview'}
               </button>
               <button
                 onClick={handleSend}
                 disabled={!csvContent || previewLoading || sending}
-                className="flex items-center gap-2 btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
               >
                 <Send className="w-4 h-4" />
-                {sending ? 'Sending...' : 'Send'}
+                {sending ? 'Sending Emails...' : 'Send'}
               </button>
             </div>
           </div>
@@ -111,55 +124,66 @@ function EmailSender() {
 
       {/* Results */}
       {results && (
-        <div className="card">
-          <h2 className="text-lg font-bold text-slate-900 mb-4">
-            {results.dryRun ? 'Preview Results' : 'Send Results'}
-          </h2>
+        <div className="card-elevated animate-slide-in-up">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">
+              {results.dryRun ? '🔍 Preview Results' : '✅ Send Results'}
+            </h2>
+            <p className="text-slate-600 text-sm">
+              {results.dryRun
+                ? 'Review the emails below before sending'
+                : 'Emails have been processed successfully'}
+            </p>
+          </div>
 
           {results.dryRun && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
-              <p className="text-blue-700 text-sm font-medium">
-                ℹ️ Preview Mode - Emails shown below would be sent. No actual emails sent yet.
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-300 rounded-lg p-4 mb-6">
+              <p className="text-blue-700 text-sm font-semibold flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                Preview Mode Active
+              </p>
+              <p className="text-blue-600 text-xs mt-2">
+                These emails will be generated. Click "Send" to proceed with actual sending.
               </p>
             </div>
           )}
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="bg-slate-50 rounded-lg p-4">
-              <p className="text-slate-600 text-sm">Total</p>
-              <p className="text-2xl font-bold text-slate-900">{results.total}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 border border-slate-200">
+              <p className="text-slate-600 text-xs font-semibold uppercase tracking-wide">Total</p>
+              <p className="text-3xl font-bold text-slate-900 mt-2">{results.total}</p>
             </div>
-            <div className="bg-green-50 rounded-lg p-4">
-              <p className="text-green-600 text-sm">{results.dryRun ? 'Ready' : 'Sent'}</p>
-              <p className="text-2xl font-bold text-green-600">{results.sent}</p>
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200">
+              <p className="text-green-600 text-xs font-semibold uppercase tracking-wide">{results.dryRun ? 'Ready' : 'Sent'}</p>
+              <p className="text-3xl font-bold text-green-600 mt-2">{results.sent}</p>
             </div>
-            <div className="bg-yellow-50 rounded-lg p-4">
-              <p className="text-yellow-600 text-sm">Skipped</p>
-              <p className="text-2xl font-bold text-yellow-600">{results.skipped}</p>
+            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-4 border border-yellow-200">
+              <p className="text-yellow-600 text-xs font-semibold uppercase tracking-wide">Skipped</p>
+              <p className="text-3xl font-bold text-yellow-600 mt-2">{results.skipped}</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4">
-              <p className="text-red-600 text-sm">Failed</p>
-              <p className="text-2xl font-bold text-red-600">{results.failed}</p>
+            <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-4 border border-red-200">
+              <p className="text-red-600 text-xs font-semibold uppercase tracking-wide">Failed</p>
+              <p className="text-3xl font-bold text-red-600 mt-2">{results.failed}</p>
             </div>
           </div>
 
           {/* Details Table */}
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-lg border border-slate-200">
             <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-slate-200">
-                  <th className="text-left py-2 px-4 font-semibold text-slate-600">Email</th>
-                  <th className="text-left py-2 px-4 font-semibold text-slate-600">Status</th>
-                  <th className="text-left py-2 px-4 font-semibold text-slate-600">Details</th>
+              <thead className="bg-gradient-to-r from-slate-50 to-slate-100 border-b border-slate-200">
+                <tr>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Email</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Status</th>
+                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Details</th>
                 </tr>
               </thead>
               <tbody>
                 {results.details.map((detail: any, idx: number) => (
-                  <tr key={idx} className="border-b border-slate-100">
-                    <td className="py-3 px-4 text-slate-900">{detail.email}</td>
-                    <td className="py-3 px-4">
+                  <tr key={idx} className="table-row-hover border-b border-slate-100 last:border-b-0">
+                    <td className="py-4 px-4 text-slate-900 font-medium">{detail.email}</td>
+                    <td className="py-4 px-4">
                       <span
-                        className={`inline-block px-2 py-1 rounded text-xs font-medium ${
+                        className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
                           detail.status === 'sent' || detail.status === 'ready'
                             ? 'bg-green-100 text-green-700'
                             : detail.status === 'skipped'
@@ -167,10 +191,11 @@ function EmailSender() {
                             : 'bg-red-100 text-red-700'
                         }`}
                       >
-                        {detail.status}
+                        <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
+                        {detail.status.charAt(0).toUpperCase() + detail.status.slice(1)}
                       </span>
                     </td>
-                    <td className="py-3 px-4 text-slate-600 text-xs">
+                    <td className="py-4 px-4 text-slate-600 text-xs">
                       {detail.subject || detail.reason || '-'}
                     </td>
                   </tr>
