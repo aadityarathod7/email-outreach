@@ -35,6 +35,16 @@ function initializeDb(): Database.Database {
     CREATE UNIQUE INDEX IF NOT EXISTS idx_email ON sent_emails(email);
   `);
 
+  // Migration: add body column if it doesn't exist (for existing databases)
+  try {
+    const columns = db.prepare("PRAGMA table_info(sent_emails)").all() as Array<{ name: string }>;
+    if (!columns.some((col) => col.name === 'body')) {
+      db.exec("ALTER TABLE sent_emails ADD COLUMN body TEXT DEFAULT ''");
+    }
+  } catch (error) {
+    // Migration already applied or table doesn't exist yet
+  }
+
   return db;
 }
 
