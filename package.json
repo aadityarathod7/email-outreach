@@ -4,7 +4,7 @@
   "description": "Automated personalized AI-powered email outreach using Claude",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "tsc",
     "build:frontend": "vite build",
     "start": "node dist/backend/server.js",
