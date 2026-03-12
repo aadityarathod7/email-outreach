@@ -5,14 +5,15 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "npm run build:backend && npm run build:frontend",
-    "build:backend": "tsc",
+    "build:backend": "tsc --listFiles",
     "build:frontend": "vite build",
     "start": "node dist/backend/server.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "ts-node src/backend/server.ts",
     "dev:frontend": "vite",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "render-build": "npm ci && npm run build"
   },
   "dependencies": {
     "better-sqlite3": "^11.0.0",
