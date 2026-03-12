@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
-import { Upload, Send, Eye, CheckCircle } from 'lucide-react';
+import { Upload, Send, Eye, CheckCircle, Mail } from 'lucide-react';
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
@@ -91,7 +91,9 @@ function EmailSender() {
                   ? 'bg-blue-100 text-blue-700'
                   : 'bg-slate-100 text-slate-700'
               }`}>
-                {preview ? '🔍 Preview Mode' : '✉️ Ready to Send'}
+                {preview && <Eye className="w-3 h-3" />}
+                {!preview && <Mail className="w-3 h-3" />}
+                {preview ? 'Preview Mode' : 'Ready to Send'}
               </div>
               <p className="text-slate-600 text-sm mt-4">
                 {preview

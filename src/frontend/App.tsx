@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Menu, X, Mail, BarChart3, Send, Eye, History, Settings } from 'lucide-react';
+import { Menu, X, Mail, BarChart3, Send, Eye, Clock, Settings } from 'lucide-react';
 import './styles/globals.css';
 
 // Pages
@@ -49,7 +49,7 @@ function App() {
               { path: '/', label: 'Dashboard', Icon: BarChart3 },
               { path: '/sender', label: 'Send Emails', Icon: Send },
               { path: '/preview', label: 'Preview', Icon: Eye },
-              { path: '/history', label: 'History', Icon: History },
+              { path: '/history', label: 'History', Icon: Clock },
               { path: '/config', label: 'Settings', Icon: Settings },
             ].map((item) => (
               <Link

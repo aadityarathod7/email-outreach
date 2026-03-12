@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useConfig } from '../hooks/useConfig';
-import { Save, Tag, Settings, Wrench } from 'lucide-react';
+import { Save, Tag, Settings, Wrench, AlertCircle } from 'lucide-react';
 
 function Configuration() {
   const { config, loading, error, updateConfig } = useConfig();
@@ -191,7 +191,10 @@ function Configuration() {
 
         {error && (
           <div className="mt-8 bg-gradient-to-r from-red-50 to-rose-50 border border-red-300 rounded-xl p-4">
-            <p className="text-red-700 text-sm font-semibold">✗ {error}</p>
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 text-red-600" />
+              <p className="text-red-700 text-sm font-semibold">{error}</p>
+            </div>
           </div>
         )}
 
