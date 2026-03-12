@@ -1,0 +1,122 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              📧 EMAIL OUTREACH - START HERE                               ║
+║                                                                            ║
+║  Automated personalized AI-powered email outreach using your LLM API     ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+🚀 QUICK START (3 STEPS - 15 minutes)
+
+  1. npm install
+  2. Update .env with your email credentials
+     (Your LLM_API_KEY is already set!)
+  3. npx ts-node src/index.ts
+
+
+📖 DOCUMENTATION
+
+  Start with one of these:
+  • INDEX.md ................. Overview & guide map
+  • QUICK_START.md ........... 3-step setup
+  • REFERENCE.md ............. Quick reference card
+
+
+✅ YOUR LLM API KEY
+
+  Already configured in .env:
+  LLM_API_KEY=ca0bb886f508c5b7ebd83ca5bee3e27f19263b33b665a3eee1b203c90e37347b
+
+  You only need to add email credentials!
+
+
+📋 WHAT YOU NEED TO DO
+
+  1. Generate Gmail App Password
+     https://myaccount.google.com/security → App passwords
+
+  2. Update .env with:
+     GMAIL_USER=your-email@gmail.com
+     GMAIL_APP_PASSWORD=your-app-password
+     EMAIL_USER=your-email@gmail.com
+     EMAIL_PASSWORD=your-app-password
+     BRAND_NAME=Your Brand
+     BRAND_URL=https://yourbrand.com
+     SENDER_NAME=Your Name
+
+  3. Test:
+     npm install
+     npx ts-node src/index.ts --test-csv=data/test.csv
+
+  4. Run:
+     npx ts-node src/index.ts
+
+
+🎯 HOW IT WORKS
+
+  1. Monitors Gmail inbox for CSV attachments (every 2 hours)
+  2. Parses CSV with user data and image generation prompts
+  3. Generates personalized emails using your LLM API
+  4. Sends emails via Gmail SMTP
+  5. Tracks everything in SQLite (no duplicates)
+
+
+✨ KEY FEATURES
+
+  ✅ Your custom LLM API integration (pre-configured)
+  ✅ Gmail IMAP reader for CSV attachments
+  ✅ Personalized email generation
+  ✅ Email SMTP sender with anti-spam headers
+  ✅ SQLite deduplication
+  ✅ Cron scheduling (configurable)
+  ✅ Rate limiting between emails
+  ✅ Comprehensive logging
+  ✅ Graceful error handling
+
+
+📂 PROJECT STRUCTURE
+
+  src/
+  ├── index.ts ................. Main entry + cron
+  ├── config/env.ts ............ Config validation
+  ├── ai/llmService.ts ......... Your LLM API integration ⭐
+  ├── sender/emailSender.ts .... Email sending
+  ├── gmail/inboxReader.ts ..... Gmail IMAP
+  ├── parser/csvParser.ts ...... CSV parsing
+  ├── db/store.ts .............. SQLite database
+  └── utils/logger.ts .......... Logging
+
+  .env ......................... Configuration (LLM key pre-filled) ⭐
+  data/outreach.db ............ SQLite database (auto-created)
+  data/app.log ................ Application logs (auto-created)
+
+
+📊 CSV FORMAT
+
+  email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4
+  john@example.com,John,free,12,"prompt1","prompt2","prompt3","",""
+
+
+🔗 NEXT STEPS
+
+  1. Open INDEX.md or QUICK_START.md
+  2. Generate Gmail App Password
+  3. Update .env with credentials
+  4. Run: npm install
+  5. Test: npx ts-node src/index.ts --test-csv=data/test.csv
+  6. Run: npx ts-node src/index.ts
+
+
+❓ NEED HELP?
+
+  • Read INDEX.md for complete guide map
+  • Read QUICK_START.md for fast setup
+  • Read REFERENCE.md for quick lookup
+  • Check CHECKLIST.md for verification
+  • See README.md for full documentation
+
+
+✨ YOUR LLM API IS READY - JUST ADD EMAIL CREDENTIALS!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
