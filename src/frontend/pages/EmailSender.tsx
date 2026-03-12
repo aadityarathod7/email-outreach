@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
-import { Upload, Send, Eye } from 'lucide-react';
+import { Upload, Send, Eye, CheckCircle } from 'lucide-react';
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
@@ -91,7 +91,7 @@ function EmailSender() {
                   ? 'bg-blue-100 text-blue-700'
                   : 'bg-slate-100 text-slate-700'
               }`}>
-                {preview ? '🔍 Preview Mode' : '📤 Ready to Send'}
+                {preview ? '🔍 Preview Mode' : '✉️ Ready to Send'}
               </div>
               <p className="text-slate-600 text-sm mt-4">
                 {preview
@@ -126,8 +126,18 @@ function EmailSender() {
       {results && (
         <div className="card-elevated animate-slide-in-up">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">
-              {results.dryRun ? '🔍 Preview Results' : '✅ Send Results'}
+            <h2 className="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+              {results.dryRun ? (
+                <>
+                  <Eye className="w-6 h-6" />
+                  Preview Results
+                </>
+              ) : (
+                <>
+                  <CheckCircle className="w-6 h-6" />
+                  Send Results
+                </>
+              )}
             </h2>
             <p className="text-slate-600 text-sm">
               {results.dryRun

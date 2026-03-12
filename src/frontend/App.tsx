@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X, Mail, BarChart3, Send, Eye, History, Settings } from 'lucide-react';
 import './styles/globals.css';
 
 // Pages
@@ -46,20 +46,18 @@ function App() {
           {/* Navigation */}
           <nav className="flex-1 p-3 space-y-1">
             {[
-              { path: '/', label: 'Dashboard', icon: '📊' },
-              { path: '/sender', label: 'Send Emails', icon: '📧' },
-              { path: '/preview', label: 'Preview', icon: '👁️' },
-              { path: '/history', label: 'History', icon: '📜' },
-              { path: '/config', label: 'Settings', icon: '⚙️' },
+              { path: '/', label: 'Dashboard', Icon: BarChart3 },
+              { path: '/sender', label: 'Send Emails', Icon: Send },
+              { path: '/preview', label: 'Preview', Icon: Eye },
+              { path: '/history', label: 'History', Icon: History },
+              { path: '/config', label: 'Settings', Icon: Settings },
             ].map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group relative"
               >
-                <span className="text-xl group-hover:scale-110 transition-transform duration-200">
-                  {item.icon}
-                </span>
+                <item.Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
                 {sidebarOpen && (
                   <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">
                     {item.label}

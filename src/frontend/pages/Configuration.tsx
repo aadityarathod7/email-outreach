@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useConfig } from '../hooks/useConfig';
-import { Save } from 'lucide-react';
+import { Save, Tag, Settings, Wrench } from 'lucide-react';
 
 function Configuration() {
   const { config, loading, error, updateConfig } = useConfig();
@@ -60,7 +60,7 @@ function Configuration() {
           {/* Brand Settings */}
           <div className="space-y-5">
             <div className="flex items-center gap-2 pb-3 border-b border-slate-200">
-              <span className="text-lg">🏷️</span>
+              <Tag className="w-5 h-5" />
               <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wide">Brand</h3>
             </div>
             <div className="space-y-4">
@@ -102,7 +102,7 @@ function Configuration() {
           {/* Email Settings */}
           <div className="space-y-5">
             <div className="flex items-center gap-2 pb-3 border-b border-slate-200">
-              <span className="text-lg">⚙️</span>
+              <Settings className="w-5 h-5" />
               <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wide">Email Settings</h3>
             </div>
             <div className="space-y-4">
@@ -157,7 +157,7 @@ function Configuration() {
           {/* Advanced Settings */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 pb-3 border-b border-slate-200 mb-5">
-              <span className="text-lg">🔧</span>
+              <Wrench className="w-5 h-5" />
               <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wide">Advanced</h3>
             </div>
             <div>
