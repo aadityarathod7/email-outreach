@@ -1,40 +1,6 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { config } from '../config/env';
 import { logger } from '../utils/logger';
 import { UserRecord } from '../parser/csvParser';
-
-let client: GoogleGenerativeAI | null = null;
-
-/**
- * Get or create Gemini client singleton
- */
-function getClient(): GoogleGenerativeAI {
-  if (!client) {
-    client = new GoogleGenerativeAI(config.llmApiKey || 'dummy-key');
-  }
-  return client;
-}
-
-/**
- * List available models (for debugging)
- */
-export async function listAvailableModels(): Promise<void> {
-  try {
-    const apiKey = config.llmApiKey;
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-    const data: any = await response.json();
-    logger.log('Available models:');
-    if (data.models) {
-      data.models.forEach((model: any) => {
-        logger.log(`- ${model.name}`);
-      });
-    } else {
-      logger.log(JSON.stringify(data, null, 2));
-    }
-  } catch (err) {
-    logger.error(`Failed to list models: ${err instanceof Error ? err.message : String(err)}`);
-  }
-}
 
 /**
  * Analyze user prompts to describe their creative interests
@@ -72,14 +38,13 @@ function analyzeCreativeInterests(prompts: string[]): string {
 }
 
 /**
- * Generate a personalized email using LLM API
+ * Generate a personalized email using Groq API
  */
 export async function generateEmail(
   user: UserRecord
 ): Promise<{ subject: string; body: string }> {
   try {
     const interests = analyzeCreativeInterests(user.prompts);
-    const promptsList = user.prompts.map((p) => `"${p}"`).join('\n');
 
     const systemPrompt = `You are Aayushi, a friendly team member at ${config.brandName} (https://www.artnovaai.com). Your job is to write compelling, authentic emails to creators about specific challenges they face and how to solve them.
 
@@ -131,24 +96,39 @@ DO NOT ADD:
 - CAN-SPAM footer
 - Any line after the signature`;
 
-    const model = getClient().getGenerativeModel({ model: 'gemini-2.5-flash' });
-
-    const completion = await model.generateContent({
-      contents: [
-        {
-          role: 'user',
-          parts: [
-            {
-              text: `${systemPrompt}\n\n${userPrompt}`,
-            },
-          ],
-        },
-      ],
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${config.llmApiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          {
+            role: 'system',
+            content: systemPrompt,
+          },
+          {
+            role: 'user',
+            content: userPrompt,
+          },
+        ],
+        temperature: 0.7,
+        max_tokens: 500,
+      }),
     });
 
-    const content = completion.response.text();
+    if (!response.ok) {
+      const error: any = await response.json();
+      throw new Error(`Groq API error: ${error.error?.message || response.statusText}`);
+    }
+
+    const data: any = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+
     if (!content) {
-      throw new Error('Empty response from Gemini API');
+      throw new Error('Empty response from Groq API');
     }
 
     // Parse JSON from response (handle markdown-wrapped JSON)
@@ -168,24 +148,39 @@ DO NOT ADD:
       // Retry once if JSON parsing fails
       logger.warn(`JSON parse failed for ${user.email}, retrying...`);
 
-      const retryModel = getClient().getGenerativeModel({ model: 'gemini-2.5-flash' });
-
-      const retryCompletion = await retryModel.generateContent({
-        contents: [
-          {
-            role: 'user',
-            parts: [
-              {
-                text: `${systemPrompt}\n\n${userPrompt}`,
-              },
-            ],
-          },
-        ],
+      const retryResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${config.llmApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'llama-3.3-70b-versatile',
+          messages: [
+            {
+              role: 'system',
+              content: systemPrompt,
+            },
+            {
+              role: 'user',
+              content: userPrompt,
+            },
+          ],
+          temperature: 0.7,
+          max_tokens: 500,
+        }),
       });
 
-      const retryContent = retryCompletion.response.text();
+      if (!retryResponse.ok) {
+        const error: any = await retryResponse.json();
+        throw new Error(`Groq API retry error: ${error.error?.message || retryResponse.statusText}`);
+      }
+
+      const retryData: any = await retryResponse.json();
+      const retryContent = retryData.choices?.[0]?.message?.content;
+
       if (!retryContent) {
-        throw new Error('Empty response from Gemini API on retry');
+        throw new Error('Empty response from Groq API on retry');
       }
 
       // Remove markdown blocks from retry response too

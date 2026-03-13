@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
-import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle } from 'lucide-react';
+import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw } from 'lucide-react';
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
@@ -11,15 +11,37 @@ function EmailSender() {
   const { sendEmails, sending } = useEmails();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setCsvContent(event.target?.result as string);
-      setResults(null);
-    };
-    reader.readAsText(file);
+    // Combine multiple CSV files into one
+    let combinedContent = '';
+    let processedFiles = 0;
+
+    Array.from(files).forEach((file, fileIndex) => {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const content = event.target?.result as string;
+        const lines = content.split('\n');
+
+        // Add header only for first file
+        if (fileIndex === 0) {
+          combinedContent += lines.join('\n');
+        } else {
+          // Skip header for subsequent files
+          const contentWithoutHeader = lines.slice(1).join('\n');
+          combinedContent += (combinedContent.endsWith('\n') ? '' : '\n') + contentWithoutHeader;
+        }
+
+        processedFiles++;
+        // Update state after all files are processed
+        if (processedFiles === files.length) {
+          setCsvContent(combinedContent);
+          setResults(null);
+        }
+      };
+      reader.readAsText(file);
+    });
   };
 
   const handlePreview = async (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -46,6 +68,55 @@ function EmailSender() {
     setCsvContent('');
   };
 
+  const handleReloadFailed = async (idx: number, detail: any) => {
+    try {
+      // Retry generating email for this specific user
+      const updatedDetails = [...results.details];
+      updatedDetails[idx] = { ...detail, isReloading: true };
+      setResults({ ...results, details: updatedDetails });
+
+      // Call the API to regenerate this email
+      const response = await fetch('http://localhost:3000/api/emails/preview', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: detail.email,
+          name: detail.name || 'User',
+          plan: detail.plan || 'Gold',
+          totalImages: detail.totalImages || 0,
+          prompts: detail.prompts || [],
+        }),
+      });
+
+      const data = await response.json();
+      if (data.subject && data.body) {
+        updatedDetails[idx] = {
+          email: detail.email,
+          status: results.dryRun ? 'ready' : 'sent',
+          subject: data.subject,
+          body: data.body,
+        };
+        results.sent += 1;
+        results.failed -= 1;
+      } else {
+        updatedDetails[idx] = {
+          ...detail,
+          isReloading: false,
+          reason: 'Retry failed',
+        };
+      }
+      setResults({ ...results, details: updatedDetails });
+    } catch (err) {
+      const updatedDetails = [...results.details];
+      updatedDetails[idx] = {
+        ...detail,
+        isReloading: false,
+        reason: err instanceof Error ? err.message : 'Reload failed',
+      };
+      setResults({ ...results, details: updatedDetails });
+    }
+  };
+
   return (
     <div>
       {/* Main Content */}
@@ -62,6 +133,7 @@ function EmailSender() {
                 <input
                   type="file"
                   accept=".csv"
+                  multiple
                   onChange={handleFileUpload}
                   className="hidden"
                   id="csv-upload"
@@ -70,8 +142,8 @@ function EmailSender() {
                   <div className="inline-block p-3 rounded-lg bg-gray-100 group-hover:bg-black group-hover:text-white transition-all duration-300 mb-3">
                     <Upload className="w-6 h-6 text-black group-hover:text-white transition-colors" />
                   </div>
-                  <p className="text-black font-semibold text-sm sm:text-base">Click to upload</p>
-                  <p className="text-gray-600 text-xs sm:text-sm mt-1">or drag and drop</p>
+                  <p className="text-black font-semibold text-sm sm:text-base">Click to upload CSV</p>
+                  <p className="text-gray-600 text-xs sm:text-sm mt-1">or drag and drop (multiple files)</p>
                 </label>
               </div>
 
@@ -286,9 +358,21 @@ function EmailSender() {
 
                     {/* Error/Reason if any */}
                     {detail.reason && (
-                      <div className="p-4 sm:p-6 bg-red-50 border-t-2 border-red-200 flex items-start gap-3">
-                        <AlertCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-red-700"><span className="font-semibold">Reason:</span> {detail.reason}</p>
+                      <div className="p-4 sm:p-6 bg-red-50 border-t-2 border-red-200">
+                        <div className="flex items-start gap-3 mb-3">
+                          <AlertCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                          <p className="text-sm text-red-700"><span className="font-semibold">Reason:</span> {detail.reason}</p>
+                        </div>
+                        {results.dryRun && (
+                          <button
+                            onClick={() => handleReloadFailed(idx, detail)}
+                            disabled={detail.isReloading}
+                            className="flex items-center gap-2 px-4 py-2 bg-red-700 hover:bg-red-800 disabled:bg-red-600 text-white rounded text-sm font-semibold transition-colors"
+                          >
+                            <RotateCcw className="w-4 h-4" />
+                            {detail.isReloading ? 'Retrying...' : 'Retry'}
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>

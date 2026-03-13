@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 import { parseCsv, type UserRecord } from '../../parser/csvParser';
-import { generateEmail, listAvailableModels } from '../../ai/llmService';
+import { generateEmail } from '../../ai/llmService';
 import { sendEmail } from '../../sender/emailSender';
 import { recordSent, isAlreadySent, getRecentSent } from '../../db/store';
 import { logger } from '../../utils/logger';
@@ -204,19 +204,6 @@ router.post('/send-single', async (req: Request, res: Response) => {
   } catch (err) {
     logger.error(`Error sending single email: ${err}`);
     res.status(500).json({ error: 'Failed to send email' });
-  }
-});
-
-/**
- * GET /api/emails/debug/models
- * List available Gemini models
- */
-router.get('/debug/models', async (req: Request, res: Response) => {
-  try {
-    await listAvailableModels();
-    res.json({ message: 'Check server logs for available models' });
-  } catch (err) {
-    res.status(500).json({ error: `Failed to list models: ${err instanceof Error ? err.message : String(err)}` });
   }
 });
 
