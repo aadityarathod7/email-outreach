@@ -1,18 +1,17 @@
-import OpenAI from 'openai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { config } from '../config/env';
 import { logger } from '../utils/logger';
 import { UserRecord } from '../parser/csvParser';
 
-let client: InstanceType<typeof OpenAI> | null = null;
+let client: GoogleGenerativeAI | null = null;
 
 /**
- * Get or create LLM client singleton
+ * Get or create Gemini client singleton
  */
-function getClient(): InstanceType<typeof OpenAI> {
+function getClient(): GoogleGenerativeAI {
   if (!client) {
-    client = new OpenAI({
+    client = new GoogleGenerativeAI({
       apiKey: config.llmApiKey || 'dummy-key',
-      baseURL: 'https://aiplatform.dev51.cbf.dev.paypalinc.com/cosmosai/llm/v1',
     });
   }
   return client;
@@ -113,24 +112,24 @@ DO NOT ADD:
 - CAN-SPAM footer
 - Any line after the signature`;
 
-    const completion = await getClient().chat.completions.create({
-      model: 'gpt-4o',
-      messages: [
-        {
-          role: 'system',
-          content: systemPrompt,
-        },
+    const model = getClient().getGenerativeModel({ model: 'gemini-2.0-flash' });
+
+    const completion = await model.generateContent({
+      contents: [
         {
           role: 'user',
-          content: userPrompt,
+          parts: [
+            {
+              text: `${systemPrompt}\n\n${userPrompt}`,
+            },
+          ],
         },
       ],
-      max_tokens: 1024,
     });
 
-    const content = completion.choices[0].message.content;
+    const content = completion.response.text();
     if (!content) {
-      throw new Error('Empty response from LLM API');
+      throw new Error('Empty response from Gemini API');
     }
 
     // Parse JSON from response (handle markdown-wrapped JSON)
@@ -150,24 +149,24 @@ DO NOT ADD:
       // Retry once if JSON parsing fails
       logger.warn(`JSON parse failed for ${user.email}, retrying...`);
 
-      const retryCompletion = await getClient().chat.completions.create({
-        model: 'gpt-4o',
-        messages: [
-          {
-            role: 'system',
-            content: systemPrompt,
-          },
+      const retryModel = getClient().getGenerativeModel({ model: 'gemini-2.0-flash' });
+
+      const retryCompletion = await retryModel.generateContent({
+        contents: [
           {
             role: 'user',
-            content: userPrompt,
+            parts: [
+              {
+                text: `${systemPrompt}\n\n${userPrompt}`,
+              },
+            ],
           },
         ],
-        max_tokens: 1024,
       });
 
-      const retryContent = retryCompletion.choices[0].message.content;
+      const retryContent = retryCompletion.response.text();
       if (!retryContent) {
-        throw new Error('Empty response from LLM API on retry');
+        throw new Error('Empty response from Gemini API on retry');
       }
 
       // Remove markdown blocks from retry response too

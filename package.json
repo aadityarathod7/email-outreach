@@ -23,6 +23,7 @@
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.0",
     "openai": "^4.104.0",
+    "@google/generative-ai": "^0.3.0",
     "papaparse": "^5.4.1",
     "express": "^4.18.2",
     "cors": "^2.8.5",
