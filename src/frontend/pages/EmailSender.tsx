@@ -21,7 +21,9 @@ function EmailSender() {
     reader.readAsText(file);
   };
 
-  const handlePreview = async () => {
+  const handlePreview = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     setPreviewLoading(true);
     setPreview(true);
     const result = await sendEmails(csvContent, true);
@@ -31,7 +33,9 @@ function EmailSender() {
     setPreviewLoading(false);
   };
 
-  const handleSend = async () => {
+  const handleSend = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (!confirm('Send emails to all users in the CSV?')) return;
     setPreview(false);
     const result = await sendEmails(csvContent, false);
@@ -102,24 +106,38 @@ function EmailSender() {
               </p>
             </div>
 
-            <div className="flex gap-3 mt-auto">
+            {!results ? (
               <button
                 onClick={handlePreview}
                 disabled={!csvContent || previewLoading || sending}
-                className="flex items-center gap-2 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
+                className="flex items-center gap-2 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed w-full justify-center mt-auto"
+                type="button"
               >
                 <Eye className="w-4 h-4" />
-                {previewLoading ? 'Generating Preview...' : 'Preview'}
+                {previewLoading ? 'Generating Preview...' : 'Preview Emails'}
               </button>
-              <button
-                onClick={handleSend}
-                disabled={!csvContent || previewLoading || sending}
-                className="flex items-center gap-2 btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
-              >
-                <Send className="w-4 h-4" />
-                {sending ? 'Sending Emails...' : 'Send'}
-              </button>
-            </div>
+            ) : (
+              <div className="flex gap-3 mt-auto">
+                <button
+                  onClick={handlePreview}
+                  disabled={!csvContent || previewLoading || sending}
+                  className="flex items-center gap-2 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
+                  type="button"
+                >
+                  <Eye className="w-4 h-4" />
+                  {previewLoading ? 'Regenerating...' : 'Regenerate'}
+                </button>
+                <button
+                  onClick={handleSend}
+                  disabled={previewLoading || sending}
+                  className="flex items-center gap-2 btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 justify-center"
+                  type="button"
+                >
+                  <Send className="w-4 h-4" />
+                  {sending ? 'Sending Emails...' : 'Send Now'}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -179,41 +197,52 @@ function EmailSender() {
             </div>
           </div>
 
-          {/* Details Table */}
-          <div className="overflow-x-auto rounded-lg border border-slate-200">
-            <table className="w-full text-sm">
-              <thead className="bg-gradient-to-r from-slate-50 to-slate-100 border-b border-slate-200">
-                <tr>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Email</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Status</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                {results.details.map((detail: any, idx: number) => (
-                  <tr key={idx} className="table-row-hover border-b border-slate-100 last:border-b-0">
-                    <td className="py-4 px-4 text-slate-900 font-medium">{detail.email}</td>
-                    <td className="py-4 px-4">
-                      <span
-                        className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
-                          detail.status === 'sent' || detail.status === 'ready'
-                            ? 'bg-green-100 text-green-700'
-                            : detail.status === 'skipped'
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-red-100 text-red-700'
-                        }`}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
-                        {detail.status.charAt(0).toUpperCase() + detail.status.slice(1)}
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-slate-600 text-xs">
-                      {detail.subject || detail.reason || '-'}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Email Preview Cards */}
+          <div className="space-y-4">
+            {results.details.map((detail: any, idx: number) => (
+              <div key={idx} className="bg-white border border-slate-200 rounded-lg overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-slate-50 to-slate-100 p-4 border-b border-slate-200">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <p className="font-semibold text-slate-900 text-lg">{detail.email}</p>
+                      <p className="text-sm text-slate-600 mt-2">
+                        <span className="font-medium">Subject:</span> {detail.subject}
+                      </p>
+                    </div>
+                    <span
+                      className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
+                        detail.status === 'sent' || detail.status === 'ready'
+                          ? 'bg-green-100 text-green-700'
+                          : detail.status === 'skipped'
+                          ? 'bg-yellow-100 text-yellow-700'
+                          : 'bg-red-100 text-red-700'
+                      }`}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
+                      {detail.status.charAt(0).toUpperCase() + detail.status.slice(1)}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Email Body Preview */}
+                {detail.body && (
+                  <div className="p-4 bg-white">
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-3">Email Preview</p>
+                    <div className="text-sm text-slate-700 whitespace-pre-wrap leading-relaxed bg-slate-50 p-4 rounded border border-slate-200 font-sans">
+                      {detail.body}
+                    </div>
+                  </div>
+                )}
+
+                {/* Error/Reason if any */}
+                {detail.reason && (
+                  <div className="p-4 bg-red-50 border-t border-red-200">
+                    <p className="text-sm text-red-700"><span className="font-semibold">Reason:</span> {detail.reason}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       )}

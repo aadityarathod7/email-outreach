@@ -147,6 +147,7 @@ router.post('/send-manual', async (req: Request, res: Response) => {
             email: user.email,
             status: dryRun ? 'ready' : 'sent',
             subject: emailContent.subject,
+            body: emailContent.body,
           });
         } else {
           results.failed++;
