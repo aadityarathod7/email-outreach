@@ -39,15 +39,11 @@ function getTransporter(): nodemailer.Transporter {
  */
 export async function sendEmail(to: string, subject: string, body: string): Promise<boolean> {
   try {
-    // Add unsubscribe footer
-    const footer = `\n\n---\nIf you'd rather not hear from us, just reply with "unsubscribe" and we'll remove you immediately.`;
-    const fullBody = body + footer;
-
     const mailOptions = {
       from: config.emailUser,
       to,
       subject,
-      text: fullBody,
+      text: body,
       headers: {
         'X-Priority': '3',
         'Importance': 'normal',

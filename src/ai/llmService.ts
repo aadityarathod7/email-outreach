@@ -16,6 +16,27 @@ function getClient(): GoogleGenerativeAI {
 }
 
 /**
+ * List available models (for debugging)
+ */
+export async function listAvailableModels(): Promise<void> {
+  try {
+    const apiKey = config.llmApiKey;
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+    const data: any = await response.json();
+    logger.log('Available models:');
+    if (data.models) {
+      data.models.forEach((model: any) => {
+        logger.log(`- ${model.name}`);
+      });
+    } else {
+      logger.log(JSON.stringify(data, null, 2));
+    }
+  } catch (err) {
+    logger.error(`Failed to list models: ${err instanceof Error ? err.message : String(err)}`);
+  }
+}
+
+/**
  * Analyze user prompts to describe their creative interests
  */
 function analyzeCreativeInterests(prompts: string[]): string {
@@ -110,7 +131,7 @@ DO NOT ADD:
 - CAN-SPAM footer
 - Any line after the signature`;
 
-    const model = getClient().getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = getClient().getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const completion = await model.generateContent({
       contents: [
@@ -147,7 +168,7 @@ DO NOT ADD:
       // Retry once if JSON parsing fails
       logger.warn(`JSON parse failed for ${user.email}, retrying...`);
 
-      const retryModel = getClient().getGenerativeModel({ model: 'gemini-2.0-flash' });
+      const retryModel = getClient().getGenerativeModel({ model: 'gemini-2.5-flash' });
 
       const retryCompletion = await retryModel.generateContent({
         contents: [

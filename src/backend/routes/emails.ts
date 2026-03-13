@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 import { parseCsv, type UserRecord } from '../../parser/csvParser';
-import { generateEmail } from '../../ai/llmService';
+import { generateEmail, listAvailableModels } from '../../ai/llmService';
 import { sendEmail } from '../../sender/emailSender';
 import { recordSent, isAlreadySent, getRecentSent } from '../../db/store';
 import { logger } from '../../utils/logger';
@@ -80,14 +80,26 @@ router.post('/send-manual', async (req: Request, res: Response) => {
   try {
     const { csvContent, dryRun = false } = req.body;
 
+    logger.log(`Received send-manual request. Body keys: ${Object.keys(req.body).join(', ')}`);
+    logger.log(`csvContent type: ${typeof csvContent}, length: ${csvContent?.length || 0}`);
+
     if (!csvContent) {
+      logger.error('Missing csvContent in request body');
       return res.status(400).json({ error: 'Missing CSV content' });
     }
 
     // Parse CSV
-    const users = parseCsv(csvContent);
+    let users;
+    try {
+      users = parseCsv(csvContent);
+      logger.log(`Successfully parsed CSV: ${users.length} users`);
+    } catch (parseErr) {
+      logger.error(`CSV parsing error: ${parseErr instanceof Error ? parseErr.message : String(parseErr)}`);
+      return res.status(400).json({ error: `CSV parsing failed: ${parseErr instanceof Error ? parseErr.message : String(parseErr)}` });
+    }
 
     if (users.length === 0) {
+      logger.error('No valid users found in CSV');
       return res.status(400).json({ error: 'No valid users in CSV' });
     }
 
@@ -191,6 +203,19 @@ router.post('/send-single', async (req: Request, res: Response) => {
   } catch (err) {
     logger.error(`Error sending single email: ${err}`);
     res.status(500).json({ error: 'Failed to send email' });
+  }
+});
+
+/**
+ * GET /api/emails/debug/models
+ * List available Gemini models
+ */
+router.get('/debug/models', async (req: Request, res: Response) => {
+  try {
+    await listAvailableModels();
+    res.json({ message: 'Check server logs for available models' });
+  } catch (err) {
+    res.status(500).json({ error: `Failed to list models: ${err instanceof Error ? err.message : String(err)}` });
   }
 });
 
