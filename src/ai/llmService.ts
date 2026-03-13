@@ -88,35 +88,30 @@ TONE: You're a knowledgeable friend who's discovered something cool and thinks t
     const userPrompt = `Write a personalized email for this user:
 
 Name: ${user.name}
-Plan: ${user.plan}
-Total images created: ${user.totalImages}
+Email: ${user.email}
+Creative Niche: ${interests}
 
-Their creative interests (based on niche themes): ${interests}
+CRITICAL: Do NOT include any unsubscribe, opt-out, or "If you'd rather not hear from us" language anywhere in the email.
 
-The challenges creators like them typically face:
-- Spending hours iterating on designs when they could be creating more
-- Struggling to maintain consistent quality and style across multiple variations
-- Needing professional-grade visuals without the professional-grade budget
-- Limited time to generate mockups, product shots, or marketing assets
-- Wanting to test design variations quickly before settling on one
-- Creating retail-ready or portfolio-ready images efficiently
-
-IMPORTANT INSTRUCTIONS:
-1. Do NOT mention analyzing their specific prompts or work
-2. Do NOT reference their exact images or past creations
-3. Identify ONE GENUINE pain point they likely experience
-4. Make it specific and relatable - use concrete language
-5. Position ${config.brandName} as the natural, elegant solution
-6. Make the email CONVERSATIONAL and INTERESTING - not generic marketing speak
-7. Offer 2 free credits to try it out (no card required)
-8. Keep subject line SHORT, SPECIFIC, and INTRIGUING (5-10 words max)
-9. Body should be 50-100 words EXACTLY. Make every word count - no filler, no fluff
-
-Return ONLY a JSON object with this exact structure:
+Return ONLY valid JSON (no markdown code blocks):
 {
-  "subject": "intriguing, specific subject line (e.g. 'Cut your design iteration time in half')",
-  "body": "the email body as engaging plain text"
-}`;
+  "subject": "subject line (4-7 words, no 'free' or promotional language)",
+  "body": "Hi ${user.name},\\n\\n[2-3 sentences about their creative pain point and how ArtNovaAI helps - ~60-100 words]\\n\\nStart with 2 free credits at artnovaai.com—no card needed. Curious to see the difference?\\n\\nBest,\\nAayushi — ArtNovaAI Team"
+}
+
+EMAIL STRUCTURE (EXACTLY):
+1. Hi [Name],
+2. 2-3 sentences (~60-100 words): One genuine pain point + ArtNovaAI solution
+3. CTA: "Start with 2 free credits at artnovaai.com—no card needed. Curious to see the difference?"
+4. Sign-off: "Best,\\nAayushi — ArtNovaAI Team"
+5. NO unsubscribe line. NO opt-out. NO "if you'd rather not hear from us". NOTHING after signature.
+
+DO NOT ADD:
+- Unsubscribe instructions
+- "If you'd rather not hear from us"
+- opt-out language
+- CAN-SPAM footer
+- Any line after the signature`;
 
     const completion = await getClient().chat.completions.create({
       model: 'gpt-4o',
