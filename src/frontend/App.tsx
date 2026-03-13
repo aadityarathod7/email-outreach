@@ -16,19 +16,21 @@ function App() {
   return (
     <Router>
       <div className="flex h-screen bg-white">
-        {/* Mobile overlay sidebar */}
+        {/* Mobile overlay backdrop */}
         {sidebarOpen && (
           <div
-            className="fixed sm:hidden inset-0 bg-black/50 z-40"
+            className="fixed sm:hidden inset-0 bg-black/50 z-30"
             onClick={() => setSidebarOpen(false)}
           />
         )}
 
-        {/* Sidebar - Hidden on mobile, visible on larger screens */}
+        {/* Sidebar - Overlay on mobile, fixed on larger screens */}
         <div
           className={`${
             sidebarOpen ? 'w-64' : 'w-20'
-          } hidden sm:flex bg-black text-white transition-all duration-300 ease-out flex-col border-r border-gray-800 shadow-xl`}
+          } fixed sm:relative z-40 sm:z-auto h-screen sm:h-auto bg-black text-white transition-all duration-300 ease-out flex flex-col border-r border-gray-800 shadow-xl ${
+            !sidebarOpen && 'hidden sm:flex -translate-x-full sm:translate-x-0'
+          }`}
         >
           {/* Logo */}
           <div className="p-4 flex items-center justify-between border-b border-gray-800">
@@ -62,6 +64,7 @@ function App() {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={() => setSidebarOpen(false)}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 transition-all duration-200 group relative text-white hover:text-white"
               >
                 <item.Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />

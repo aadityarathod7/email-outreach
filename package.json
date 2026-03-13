@@ -10,7 +10,7 @@
     "start": "node dist/backend/server.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "ts-node src/backend/server.ts",
-    "dev:frontend": "vite",
+    "dev:frontend": "vite --host",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
     "render-build": "npm install --legacy-peer-deps && npm run build"
