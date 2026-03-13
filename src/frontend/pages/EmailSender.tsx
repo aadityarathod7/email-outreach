@@ -60,12 +60,51 @@ function EmailSender() {
     e.preventDefault();
     e.stopPropagation();
     if (!confirm('Send emails to all users in the CSV?')) return;
+
+    // Apply any remaining edits to results before sending
+    const finalDetails = results.details.map((detail: any, idx: number) => {
+      return editedDetails[idx] && editedDetails[idx] !== null ? editedDetails[idx] : detail;
+    });
+
     setPreview(false);
-    const result = await sendEmails(csvContent, false);
-    if (result) {
-      setResults({ ...result, dryRun: false });
+
+    try {
+      // Send each edited email directly via the API
+      const sendResults = await Promise.all(
+        finalDetails.map((detail: any) =>
+          fetch('/api/emails/send-single', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: detail.email,
+              subject: detail.subject,
+              body: detail.body,
+            }),
+          })
+            .then((res) => res.json())
+            .catch((err) => ({ error: err.message }))
+        )
+      );
+
+      // Update results to show all sent
+      setResults({
+        ...results,
+        dryRun: false,
+        details: finalDetails.map((detail: any, idx: number) => ({
+          ...detail,
+          status: sendResults[idx]?.error ? 'failed' : 'sent',
+          reason: sendResults[idx]?.error,
+        })),
+        sent: sendResults.filter((r) => !r.error).length,
+        failed: sendResults.filter((r) => r.error).length,
+      });
+    } catch (err) {
+      console.error('Error sending emails:', err);
+      alert('Failed to send emails');
     }
+
     setCsvContent('');
+    setEditedDetails({});
   };
 
   const handleReloadFailed = async (idx: number, detail: any) => {
@@ -301,11 +340,16 @@ function EmailSender() {
                             <button
                               onClick={() => {
                                 if (isEditing) {
+                                  // Save edits to results and clear edit state
+                                  const updatedDetails = [...results.details];
+                                  updatedDetails[idx] = editedDetails[idx];
+                                  setResults({ ...results, details: updatedDetails });
                                   setEditedDetails({
                                     ...editedDetails,
                                     [idx]: null,
                                   });
                                 } else {
+                                  // Enter edit mode
                                   setEditedDetails({
                                     ...editedDetails,
                                     [idx]: { ...detail },

@@ -16,8 +16,8 @@ export default defineConfig({
         target: 'http://localhost:3000',
         changeOrigin: true,
         bypass(req) {
-          // Don't proxy static files in /api folder (like /api/client.ts)
-          if (req.url?.includes('.')) {
+          // Only bypass actual source/asset file extensions, not API paths with dots (e.g. email addresses)
+          if (/\.(ts|tsx|js|jsx|css|png|svg|ico|html|json|map|woff|woff2)(\?|$)/.test(req.url || '')) {
             return req.url;
           }
         },

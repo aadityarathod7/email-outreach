@@ -114,6 +114,16 @@ export function getRecentSent(
 }
 
 /**
+ * Delete a sent email by email address
+ */
+export function deleteSentEmail(email: string): boolean {
+  const db = getDb();
+  const stmt = db.prepare('DELETE FROM sent_emails WHERE email = ?');
+  const result = stmt.run(email);
+  return result.changes > 0;
+}
+
+/**
  * Close database connection
  */
 export function closeDb(): void {

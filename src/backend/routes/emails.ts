@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 import { parseCsv, type UserRecord } from '../../parser/csvParser';
 import { generateEmail } from '../../ai/llmService';
 import { sendEmail } from '../../sender/emailSender';
-import { recordSent, isAlreadySent, getRecentSent } from '../../db/store';
+import { recordSent, isAlreadySent, getRecentSent, deleteSentEmail } from '../../db/store';
 import { logger } from '../../utils/logger';
 
 const router: Router = express.Router();
@@ -204,6 +204,26 @@ router.post('/send-single', async (req: Request, res: Response) => {
   } catch (err) {
     logger.error(`Error sending single email: ${err}`);
     res.status(500).json({ error: 'Failed to send email' });
+  }
+});
+
+/**
+ * DELETE /api/emails/sent/:email
+ * Delete a sent email from history
+ */
+router.delete('/sent/:email', (req: Request, res: Response) => {
+  try {
+    const email = decodeURIComponent(req.params.email);
+    const deleted = deleteSentEmail(email);
+
+    if (deleted) {
+      res.json({ success: true, message: 'Email deleted from history' });
+    } else {
+      res.status(404).json({ error: 'Email not found' });
+    }
+  } catch (err) {
+    logger.error(`Error deleting email: ${err}`);
+    res.status(500).json({ error: 'Failed to delete email' });
   }
 });
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Mail } from 'lucide-react';
+import { X, Mail, Trash2 } from 'lucide-react';
 import client from '../api/client';
 
 function History() {
@@ -7,6 +7,7 @@ function History() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('');
   const [selectedEmail, setSelectedEmail] = useState<any>(null);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     const fetchEmails = async () => {
@@ -29,6 +30,22 @@ function History() {
     email.name.toLowerCase().includes(filter.toLowerCase()) ||
     email.subject.toLowerCase().includes(filter.toLowerCase())
   );
+
+  const handleDelete = async (emailAddress: string) => {
+    if (!confirm(`Delete email history for ${emailAddress}?`)) return;
+
+    try {
+      setDeleting(true);
+      await client.delete(`/emails/sent/${encodeURIComponent(emailAddress)}`);
+      setEmails(emails.filter((e) => e.email !== emailAddress));
+      setSelectedEmail(null);
+    } catch (err) {
+      console.error('Failed to delete email:', err);
+      alert('Failed to delete email');
+    } finally {
+      setDeleting(false);
+    }
+  };
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -73,13 +90,14 @@ function History() {
                   <th className="text-left py-3 px-4 font-semibold text-white">Subject</th>
                   <th className="text-left py-3 px-4 font-semibold text-white">Sent At</th>
                   <th className="text-left py-3 px-4 font-semibold text-white">Status</th>
+                  <th className="text-center py-3 px-4 font-semibold text-white">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredEmails.map((email, idx) => (
                   <tr
                     key={idx}
-                    className="table-row-hover border-b border-gray-100 last:border-b-0"
+                    className="table-row-hover border-b border-gray-100 last:border-b-0 cursor-pointer"
                     onClick={() => setSelectedEmail(email)}
                   >
                     <td className="py-4 px-4 text-black font-medium">{email.email}</td>
@@ -93,6 +111,16 @@ function History() {
                         <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
                         Sent
                       </span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleDelete(email.email); }}
+                        disabled={deleting}
+                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-40"
+                        title="Delete from history"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -155,7 +183,15 @@ function History() {
             </div>
 
             {/* Modal Footer */}
-            <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-8 py-4 flex justify-end gap-3">
+            <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-8 py-4 flex justify-between gap-3">
+              <button
+                onClick={() => handleDelete(selectedEmail.email)}
+                disabled={deleting}
+                className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all font-semibold text-sm shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <Trash2 className="w-4 h-4" />
+                Delete
+              </button>
               <button
                 onClick={() => setSelectedEmail(null)}
                 className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-all font-semibold text-sm shadow-md hover:shadow-lg"
