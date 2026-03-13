@@ -7,6 +7,7 @@ function EmailSender() {
   const [preview, setPreview] = useState(false);
   const [results, setResults] = useState<any>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
+  const [editedDetails, setEditedDetails] = useState<{[key: number]: any}>({});
   const { sendEmails, sending } = useEmails();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -191,51 +192,108 @@ function EmailSender() {
 
             {/* Email Preview Cards */}
             <div className="space-y-4">
-              {results.details.map((detail: any, idx: number) => (
-                <div key={idx} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-black transition-colors duration-300">
-                  {/* Header */}
-                  <div className="bg-gray-50 p-4 sm:p-6 border-b-2 border-gray-200">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                      <div className="flex-1 min-w-0">
-                        <p className="font-bold text-black text-sm sm:text-base break-all">{detail.email}</p>
-                        <p className="text-gray-700 text-xs sm:text-sm mt-2 break-words">
-                          <span className="font-semibold">Subject:</span> {detail.subject}
-                        </p>
+              {results.details.map((detail: any, idx: number) => {
+                const isEdited = editedDetails[idx];
+                const displayDetail = isEdited || detail;
+                const isEditing = !!editedDetails[idx];
+
+                return (
+                  <div key={idx} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-black transition-colors duration-300">
+                    {/* Header */}
+                    <div className="bg-gray-50 p-4 sm:p-6 border-b-2 border-gray-200">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                        <div className="flex-1 min-w-0">
+                          <p className="font-bold text-black text-sm sm:text-base break-all">{detail.email}</p>
+                          <div className="mt-2">
+                            {isEditing ? (
+                              <input
+                                type="text"
+                                value={displayDetail.subject}
+                                onChange={(e) =>
+                                  setEditedDetails({
+                                    ...editedDetails,
+                                    [idx]: { ...displayDetail, subject: e.target.value },
+                                  })
+                                }
+                                className="input-field text-xs sm:text-sm"
+                              />
+                            ) : (
+                              <p className="text-gray-700 text-xs sm:text-sm break-words">
+                                <span className="font-semibold">Subject:</span> {displayDetail.subject}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          {results.dryRun && (detail.status === 'ready' || detail.status === 'sent') && (
+                            <button
+                              onClick={() => {
+                                if (isEditing) {
+                                  setEditedDetails({
+                                    ...editedDetails,
+                                    [idx]: null,
+                                  });
+                                } else {
+                                  setEditedDetails({
+                                    ...editedDetails,
+                                    [idx]: { ...detail },
+                                  });
+                                }
+                              }}
+                              className="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-black rounded text-xs font-semibold transition-colors"
+                            >
+                              {isEditing ? 'Done' : 'Edit'}
+                            </button>
+                          )}
+                          <span
+                            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
+                              detail.status === 'sent' || detail.status === 'ready'
+                                ? 'bg-green-100 text-green-700'
+                                : detail.status === 'skipped'
+                                ? 'bg-yellow-100 text-yellow-700'
+                                : 'bg-red-100 text-red-700'
+                            }`}
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
+                            {detail.status.charAt(0).toUpperCase() + detail.status.slice(1)}
+                          </span>
+                        </div>
                       </div>
-                      <span
-                        className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
-                          detail.status === 'sent' || detail.status === 'ready'
-                            ? 'bg-green-100 text-green-700'
-                            : detail.status === 'skipped'
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-red-100 text-red-700'
-                        }`}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
-                        {detail.status.charAt(0).toUpperCase() + detail.status.slice(1)}
-                      </span>
                     </div>
+
+                    {/* Email Body Preview */}
+                    {displayDetail.body && (
+                      <div className="p-4 sm:p-6 bg-white">
+                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Email Body</p>
+                        {isEditing ? (
+                          <textarea
+                            value={displayDetail.body}
+                            onChange={(e) =>
+                              setEditedDetails({
+                                ...editedDetails,
+                                [idx]: { ...displayDetail, body: e.target.value },
+                              })
+                            }
+                            className="input-field text-xs sm:text-sm font-mono min-h-[150px]"
+                          />
+                        ) : (
+                          <div className="text-xs sm:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-gray-50 p-4 rounded border border-gray-200 font-mono">
+                            {displayDetail.body}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Error/Reason if any */}
+                    {detail.reason && (
+                      <div className="p-4 sm:p-6 bg-red-50 border-t-2 border-red-200 flex items-start gap-3">
+                        <AlertCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-red-700"><span className="font-semibold">Reason:</span> {detail.reason}</p>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Email Body Preview */}
-                  {detail.body && (
-                    <div className="p-4 sm:p-6 bg-white">
-                      <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Email Body</p>
-                      <div className="text-xs sm:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-gray-50 p-4 rounded border border-gray-200 font-mono">
-                        {detail.body}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Error/Reason if any */}
-                  {detail.reason && (
-                    <div className="p-4 sm:p-6 bg-red-50 border-t-2 border-red-200 flex items-start gap-3">
-                      <AlertCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-red-700"><span className="font-semibold">Reason:</span> {detail.reason}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
