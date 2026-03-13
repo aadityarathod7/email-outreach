@@ -14,29 +14,29 @@ function EmailSender() {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
-    // Combine multiple CSV files into one
-    let combinedContent = '';
+    // Store file contents in order using indexed array (handles async FileReader correctly)
+    const fileContents: string[] = new Array(files.length);
     let processedFiles = 0;
 
     Array.from(files).forEach((file, fileIndex) => {
       const reader = new FileReader();
       reader.onload = (event) => {
-        const content = event.target?.result as string;
-        const lines = content.split('\n');
-
-        // Add header only for first file
-        if (fileIndex === 0) {
-          combinedContent += lines.join('\n');
-        } else {
-          // Skip header for subsequent files
-          const contentWithoutHeader = lines.slice(1).join('\n');
-          combinedContent += (combinedContent.endsWith('\n') ? '' : '\n') + contentWithoutHeader;
-        }
-
+        fileContents[fileIndex] = event.target?.result as string;
         processedFiles++;
-        // Update state after all files are processed
+
+        // Only combine after ALL files are read, preserving order
         if (processedFiles === files.length) {
-          setCsvContent(combinedContent);
+          let combined = '';
+          fileContents.forEach((content, idx) => {
+            const lines = content.split('\n').filter((l) => l.trim() !== '');
+            if (idx === 0) {
+              combined = lines.join('\n');
+            } else {
+              // Skip header row for subsequent files
+              combined += '\n' + lines.slice(1).join('\n');
+            }
+          });
+          setCsvContent(combined);
           setResults(null);
         }
       };
