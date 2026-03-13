@@ -10,9 +10,7 @@ let client: GoogleGenerativeAI | null = null;
  */
 function getClient(): GoogleGenerativeAI {
   if (!client) {
-    client = new GoogleGenerativeAI({
-      apiKey: config.llmApiKey || 'dummy-key',
-    });
+    client = new GoogleGenerativeAI(config.llmApiKey || 'dummy-key');
   }
   return client;
 }
