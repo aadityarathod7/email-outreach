@@ -1,175 +1,150 @@
-# Email Outreach - Quick Start
+# Quick Start Guide - Email Outreach App
 
-## Your LLM API is Already Configured ✅
+## Prerequisites
+- Node.js 18+ installed
+- Gmail account with app password
+- Groq API key
 
-Your `.env` file is pre-filled with your LLM API key:
-```
-LLM_API_KEY=ca0bb886f508c5b7ebd83ca5bee3e27f19263b33b665a3eee1b203c90e37347b
-```
+## Setup (One-time)
 
-Just follow these 3 steps to get started.
-
-## Step 1: Install Dependencies
-
+### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-## Step 2: Configure Email Account
+### 2. Create `.env` file
+Copy `.env.example` and fill in your values:
+```bash
+cp .env.example .env
+```
 
-Edit `.env` and update:
-```env
-# Gmail Account (for reading CSVs)
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
-
-# Email Sending Account (for SMTP)
+Edit `.env` with:
+```
+GMAIL_USER=aayushi@artnovaai.com
+GMAIL_APP_PASSWORD=[16-char app password from Google]
+SMTP_USER=aayushi@artnovaai.com
+SMTP_APP_PASSWORD=[same as above]
 EMAIL_SERVICE=gmail
-EMAIL_USER=your-sending-email@gmail.com
-EMAIL_PASSWORD=your-app-password
-
-# Your Brand
-BRAND_NAME=Your Brand
-BRAND_URL=https://yourbrand.com
-SENDER_NAME=Your Name
+EMAIL_USER=aayushi@artnovaai.com
+EMAIL_PASSWORD=[same as above]
+LLM_API_KEY=[your Groq API key from console.groq.com]
+BRAND_NAME=ArtNovaAI
+BRAND_URL=https://www.artnovaai.com
+SENDER_NAME=Aayushi
 ```
 
-**Need a Gmail App Password?** [See SETUP.md](SETUP.md#3-generate-gmail-app-password)
-
-## Step 3: Test & Run
-
-### Test with sample CSV (no real emails sent)
+### 3. Start the App
 ```bash
-npx ts-node src/index.ts --test-csv=data/test.csv
+npm run dev
 ```
 
-### Run normally (monitors Gmail, sends emails)
-```bash
-npx ts-node src/index.ts
+This starts both:
+- **Backend API**: http://localhost:3000
+- **Frontend**: http://localhost:5173
+
+## Using the App
+
+### 1. Open Dashboard
+Go to http://localhost:5173 in your browser
+
+### 2. Upload CSV
+Click "Email Sender" and upload a CSV with columns:
+```
+email,name,plan,totalImages,images.0,images.1,images.2
+user@example.com,John Doe,Gold,3,anime art,cyberpunk,abstract
 ```
 
-### Run in production
-```bash
-npm run build
-npm start
+### 3. Generate Emails
+- Click "Generate Emails"
+- Preview will show personalized emails with NEW subject lines for each person
+- Edit emails inline if needed
+
+### 4. Send Emails
+- Click "Send Now"
+- Emails are sent with the new brand-style format:
+  - Subject: Dynamic, benefit-focused
+  - Opening: "I know you're looking for..."
+  - Body: Problem + Solution
+  - CTA: "See how effortless it is with your 2 free credits"
+  - Signature: "Best, Aayushi"
+
+### 5. View History
+- Click "Email History" to see all sent emails
+- Filter by email, name, or subject
+- Delete individual records
+
+## Testing the New Email Style
+
+The emails now follow the exact format:
+
+```
+Subject: [Dynamic subject based on their creative niche]
+
+Hi [Name],
+
+I know you're looking for [relatable problem statement].
+
+[Specific problem + How ArtNovaAI solves it]
+
+See how effortless it is with your 2 free credits: artnovaai.com
+
+Best,
+Aayushi
 ```
 
----
-
-## What It Does
-
-1. **Every 2 hours** – Checks Gmail for new emails with CSV attachments
-2. **Parses CSV** – Extracts user email, name, plan, and image generation prompts
-3. **Generates Email** – Uses your LLM API to create personalized emails
-4. **Sends Email** – Sends via Gmail SMTP with rate limiting
-5. **Logs Everything** – Tracks sent emails in SQLite, prevents duplicates
-
-## CSV Format
-
-Send emails with CSV attachments in this format:
-
-```csv
-email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4
-john@example.com,John,free,12,"sunset over mountains","cyberpunk samurai","anime style","",""
-jane@example.com,Jane,pro,45,"abstract patterns","portrait","nature landscape","fantasy","sci-fi"
-```
-
-Columns:
-- `email` – user's email
-- `name` – user's name
-- `plan` – subscription plan
-- `totalImages` – total images generated
-- `images.0` through `images.4` – up to 5 image generation prompts
-
-## Email Generation Example
-
-Input CSV row:
-```
-john@example.com,John,free,12,"sunset watercolor","cyberpunk samurai","studio ghibli cat","",""
-```
-
-Generated email:
-```
-Subject: When your prompts come to life with AI
-
-Body:
-Hey John! I've been following what's happening in the AI art world, and your creative direction really caught my attention — those cyberpunk aesthetics mixed with whimsical character work are exactly the kind of thing that gets me excited about this space.
-
-Since you've been using our tool for a bit now, I thought you might appreciate checking out some of the new features we've built. They're designed specifically for artists like you who are pushing boundaries with different styles.
-
-What's your favorite prompt you've created so far? Would love to know what's resonating with you.
-```
-
-## Logs
-
-Check what the app is doing:
-```bash
-# View logs in real-time
-tail -f data/app.log
-
-# Check sent emails in database
-sqlite3 data/outreach.db "SELECT email, name, sent_at FROM sent_emails ORDER BY sent_at DESC LIMIT 10;"
-```
-
-## Configuration Reference
-
-| Setting | Value | Notes |
-|---------|-------|-------|
-| `POLL_INTERVAL_MINUTES` | 120 (default) | How often to check Gmail |
-| `MAX_EMAILS_PER_BATCH` | 50 (default) | Max emails per run |
-| `DELAY_BETWEEN_EMAILS_MS` | 15000 (default) | Milliseconds between sends |
-| `CSV_SENDER_EMAIL` | (optional) | Only process CSVs from this sender |
+Each email gets a **unique subject line** customized to their niche.
 
 ## Troubleshooting
 
-**"Missing required environment variable"**
-- Make sure all required fields in `.env` are filled
-
-**"IMAP authentication failed"**
-- Use Gmail App Password, not your regular password
-
-**"No new emails found"**
-- Check email was sent to GMAIL_USER
-- Verify email has CSV attachment
-- Check it matches CSV_SENDER_EMAIL (if configured)
-
-**"LLM API error"**
-- Verify LLM_API_KEY is correct (it's pre-filled)
-- Check API has access
-
-**"Email sending failed"**
-- Verify EMAIL_USER and EMAIL_PASSWORD are correct
-- Check account has SMTP access enabled
-
-## Project Structure
-
-```
-email-outreach/
-├── src/
-│   ├── ai/llmService.ts        ← Your LLM API integration
-│   ├── sender/emailSender.ts   ← Email sending
-│   ├── gmail/inboxReader.ts    ← Gmail reading
-│   ├── parser/csvParser.ts     ← CSV parsing
-│   ├── db/store.ts             ← Database
-│   ├── config/env.ts           ← Config
-│   ├── utils/logger.ts         ← Logging
-│   └── index.ts                ← Main entry
-├── data/
-│   ├── outreach.db             (auto-created)
-│   ├── app.log                 (auto-created)
-│   └── processed/              (CSV backups)
-├── .env                        ← Your configuration
-└── package.json
+### Port already in use
+If port 3000 or 5173 is taken:
+```bash
+lsof -i :3000 | grep LISTEN | awk '{print $2}' | xargs kill -9
 ```
 
-## Next Steps
+### Email sending fails
+- Check `.env` has all 11 variables
+- Verify Gmail app password (16 characters)
+- Check Groq API key is valid
 
-1. Generate Gmail App Password (if not done)
-2. Update `.env` with your email credentials
-3. Test: `npx ts-node src/index.ts --test-csv=data/test.csv`
-4. Run: `npx ts-node src/index.ts`
-5. Monitor: `tail -f data/app.log`
+### LLM not generating emails
+- Verify `LLM_API_KEY` is set
+- Check internet connection to api.groq.com
+- Look at backend logs for error messages
+
+## Commands
+
+```bash
+npm run dev              # Start both backend & frontend
+npm run dev:backend     # Backend only (port 3000)
+npm run dev:frontend    # Frontend only (port 5173)
+npm run build           # Build for production
+npm start               # Run production build
+```
+
+## File Structure
+- `src/frontend/` - React dashboard UI
+- `src/backend/` - Express API server
+- `src/ai/` - LLM email generation
+- `src/sender/` - Gmail SMTP
+- `src/db/` - SQLite database
+- `src/parser/` - CSV parsing
+
+## Next: Deployment
+
+Once you've tested locally and emails look good:
+
+**Option 1: Railway.app** ($5/month)
+- SMTP works on free tier
+- No code changes
+- Best option
+
+**Option 2: Render** (free + API)
+- Use Resend/SendGrid instead of SMTP
+- Requires code changes
+
+See `DEPLOYMENT_PLATFORMS.md` for comparison.
 
 ---
 
-**Your LLM API is ready to generate beautiful personalized emails!** 🚀
+**You're all set!** Run `npm run dev` and visit http://localhost:5173

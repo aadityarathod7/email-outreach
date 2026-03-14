@@ -38,6 +38,22 @@ function analyzeCreativeInterests(prompts: string[]): string {
 }
 
 /**
+ * Random opening phrases to vary the email tone
+ */
+const OPENING_PHRASES = [
+  "I know you're tired of",
+  "Most creators in your space struggle with",
+  "If you've ever felt frustrated by",
+  "The biggest challenge for artists like you is",
+  "You probably know the feeling of",
+  "What if you never had to worry about",
+  "Getting consistent results shouldn't be as hard as",
+  "Every creator hits a wall with",
+  "The thing that slows most artists down is",
+  "One thing that holds back creators like you is",
+];
+
+/**
  * Generate a personalized email using Groq API
  */
 export async function generateEmail(
@@ -45,6 +61,7 @@ export async function generateEmail(
 ): Promise<{ subject: string; body: string }> {
   try {
     const interests = analyzeCreativeInterests(user.prompts);
+    const openingPhrase = OPENING_PHRASES[Math.floor(Math.random() * OPENING_PHRASES.length)];
 
     const systemPrompt = `You are Aayushi, a friendly team member at ${config.brandName} (${config.brandUrl}). Your job is to write compelling, authentic emails to creators.
 
@@ -65,7 +82,14 @@ Aayushi
 CRITICAL RULES:
 1. Follow the EXACT structure above: Subject → Body → CTA → Signature
 2. Subject line: Should be benefit-focused, relatable to their niche. DIFFERENT for each email.
-3. Opening: "I know you're looking for..." or similar relatable statement
+3. Opening sentence: SAME EMOTION (empathy, understanding struggle) but DIFFERENT PHRASE each time. Rotate through:
+   - "I know you're tired of..."
+   - "Most creators in your space struggle with..."
+   - "If you've ever felt frustrated by..."
+   - "The biggest challenge for artists like you is..."
+   - "You probably know the feeling of..."
+   - "What if you never had to worry about..."
+   - VARY THE OPENING PHRASE - never repeat the same one
 4. Body: 3 sentences max. Talk about the PROBLEM they face and how ArtNovaAI solves it
 5. Always mention "2 free credits" and the website link
 6. Keep tone conversational, warm, human - NOT corporate or salesy
@@ -93,7 +117,7 @@ Subject: [Benefit-focused subject line, different from "Get perfect AI art witho
 Body:
 Hi ${user.name},
 
-I know you're looking for [relatable problem statement about their creative niche].
+${openingPhrase} [specific problem in their creative niche].
 
 [1-2 sentences: Explain the specific problem they face + How ArtNovaAI solves it naturally]
 
@@ -104,11 +128,13 @@ Aayushi
 
 REQUIREMENTS:
 - Subject: Create a NEW unique subject line (different each time) that speaks to their niche problem
-- Opening: Must start with "I know you're looking for..."
+- Opening: USE THIS EXACT PHRASE (system auto-selects a different one each time):
+  "${openingPhrase}"
+  Complete it with the specific problem they face in their creative niche.
 - Body: 2-3 sentences explaining their problem + ArtNovaAI solution
 - CTA: ALWAYS include "Curious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits."
-- URL: MUST include https://www.artnovaai.com in the CTA line (this is critical!)
-- Signature: "Best, Aayushi" only (NO "Aayushi — ArtNovaAI Team")
+- URL: MUST include https://www.artnovaai.com in the CTA line (critical!)
+- Signature: "Best, Aayushi" only
 - NO unsubscribe/opt-out/CAN-SPAM footer
 - Plain text only
 - Total body: 80-120 words
