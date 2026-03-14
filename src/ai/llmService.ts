@@ -97,7 +97,7 @@ I know you're looking for [relatable problem statement about their creative nich
 
 [1-2 sentences: Explain the specific problem they face + How ArtNovaAI solves it naturally]
 
-Curious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.
+Curious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits.
 
 Best,
 Aayushi
@@ -106,7 +106,8 @@ REQUIREMENTS:
 - Subject: Create a NEW unique subject line (different each time) that speaks to their niche problem
 - Opening: Must start with "I know you're looking for..."
 - Body: 2-3 sentences explaining their problem + ArtNovaAI solution
-- CTA: Always end with "Curious to see the difference? Visit [BRAND_URL] to start with your 2 free credits."
+- CTA: ALWAYS include "Curious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits."
+- URL: MUST include https://www.artnovaai.com in the CTA line (this is critical!)
 - Signature: "Best, Aayushi" only (NO "Aayushi — ArtNovaAI Team")
 - NO unsubscribe/opt-out/CAN-SPAM footer
 - Plain text only
@@ -115,7 +116,7 @@ REQUIREMENTS:
 Return ONLY valid JSON (no markdown code blocks):
 {
   "subject": "Subject line here",
-  "body": "Hi ${user.name},\\n\\nI know you're looking for...\\n\\n[problem + solution sentences]\\n\\nCurious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.\\n\\nBest,\\nAayushi"
+  "body": "Hi ${user.name},\\n\\nI know you're looking for...\\n\\n[problem + solution sentences]\\n\\nCurious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits.\\n\\nBest,\\nAayushi"
 }`;
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
