@@ -57,7 +57,7 @@ I know you're looking for a tool that just works. The biggest difference with Ar
 
 Our AI auto-optimizes every generation behind the scenes, guaranteeing high quality and perfect consistency without you wasting credits on trial-and-error.
 
-See how effortless it is with your 2 free credits: artnovaai.com
+Curious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.
 
 Best,
 Aayushi
@@ -97,9 +97,7 @@ I know you're looking for [relatable problem statement about their creative nich
 
 [1-2 sentences: Explain the specific problem they face + How ArtNovaAI solves it naturally]
 
-[Final sentence: Mention the benefit/gain and CTA]
-
-See how effortless it is with your 2 free credits: ${config.brandUrl}
+Curious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.
 
 Best,
 Aayushi
@@ -107,17 +105,17 @@ Aayushi
 REQUIREMENTS:
 - Subject: Create a NEW unique subject line (different each time) that speaks to their niche problem
 - Opening: Must start with "I know you're looking for..."
-- Body: 3-4 sentences, 70-100 words total
-- Always include "2 free credits" and the website link
-- Always sign with "Best, Aayushi" only
+- Body: 2-3 sentences explaining their problem + ArtNovaAI solution
+- CTA: Always end with "Curious to see the difference? Visit [BRAND_URL] to start with your 2 free credits."
+- Signature: "Best, Aayushi" only (NO "Aayushi — ArtNovaAI Team")
 - NO unsubscribe/opt-out/CAN-SPAM footer
-- NO "Aayushi — ArtNovaAI Team" (just "Aayushi")
 - Plain text only
+- Total body: 80-120 words
 
 Return ONLY valid JSON (no markdown code blocks):
 {
   "subject": "Subject line here",
-  "body": "Hi ${user.name},\\n\\nI know you're looking for...\\n\\n[rest of email]\\n\\nBest,\\nAayushi"
+  "body": "Hi ${user.name},\\n\\nI know you're looking for...\\n\\n[problem + solution sentences]\\n\\nCurious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.\\n\\nBest,\\nAayushi"
 }`;
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
