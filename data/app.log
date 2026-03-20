@@ -1906,3 +1906,21 @@ Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","
 [2026-03-17T16:09:54.951Z] [INFO] csvContent type: string, length: 8414
 [2026-03-17T16:09:54.952Z] [INFO] Successfully parsed CSV: 8 users
 [2026-03-17T16:09:54.952Z] [INFO] Processing 8 users from CSV
+[2026-03-20T13:57:24.562Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T13:57:24.567Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T13:57:49.946Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T13:57:49.948Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T13:58:07.381Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T13:58:07.382Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-20T13:58:07.382Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T13:58:07.382Z] [INFO] csvContent type: string, length: 8777
+[2026-03-20T13:58:07.384Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-20T13:58:07.385Z] [INFO] Processing 9 users from CSV
+[2026-03-20T13:58:11.000Z] [INFO] POST /api/emails/preview
+[2026-03-20T13:58:11.002Z] [INFO] Body: {"email":"cshody@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T13:58:18.041Z] [INFO] POST /api/emails/preview
+[2026-03-20T13:58:18.042Z] [INFO] Body: {"email":"dldix@mpcorp.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T13:59:24.408Z] [INFO] POST /api/emails/preview
+[2026-03-20T13:59:24.408Z] [INFO] Body: {"email":"elizabethwatson24@hotmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T13:59:27.734Z] [INFO] POST /api/emails/preview
+[2026-03-20T13:59:27.735Z] [INFO] Body: {"email":"pepe.ramirez.izquierdo@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
