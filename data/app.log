@@ -2256,3 +2256,169 @@ Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","
 [2026-03-20T15:45:45.797Z] [INFO] GET /api/emails/sent
 [2026-03-20T15:45:45.810Z] [INFO] GET /api/emails/sent
 [2026-03-20T15:45:48.326Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:55:14.057Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:55:14.063Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:55:15.827Z] [INFO] GET /api/stats
+[2026-03-20T15:55:15.829Z] [INFO] GET /api/stats
+[2026-03-20T15:59:05.849Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T15:59:05.850Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-20T15:59:05.850Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T15:59:05.850Z] [INFO] csvContent type: string, length: 40821
+[2026-03-20T15:59:05.852Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-20T15:59:05.853Z] [INFO] Processing 25 users from CSV
+[2026-03-20T15:59:08.431Z] [INFO] Waiting 3 minutes before next email...
+[2026-03-20T16:00:47.135Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T16:00:47.139Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T16:00:51.271Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:00:51.272Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-20T16:00:51.273Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:00:51.273Z] [INFO] csvContent type: string, length: 40821
+[2026-03-20T16:00:51.275Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-20T16:00:51.275Z] [INFO] Processing 25 users from CSV
+[2026-03-20T16:01:08.564Z] [WARN] JSON parse failed for brian@rocksoup.tv, retrying...
+[2026-03-20T16:01:09.068Z] [ERROR] Failed to generate email for brian@rocksoup.tv: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11515, Requested 501. Please try again in 80ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T16:02:02.345Z] [INFO] POST /api/emails/preview
+[2026-03-20T16:02:02.346Z] [INFO] Body: {"email":"brian@rocksoup.tv","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T16:02:42.404Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.405Z] [INFO] Body: {"email":"marthion@arti.gr","subject":"Martha, just following up","body":"Hi Martha,\nFollowing up from yesterday — wanted to make sure you had a chance to see this.\nThe short version: your subscript
+[2026-03-20T16:02:42.410Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.411Z] [INFO] Body: {"email":"cm.richards@gmail.com","subject":"Crystal, didn't want this to get buried","body":"Hi Crystal,\n\nJust looping back in case yesterday's message got lost.\nShort version: your current tool is
+[2026-03-20T16:02:42.414Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.415Z] [INFO] Body: {"email":"bryantdenise5@gmail.com","subject":"Denise, just following up","body":"Hi Denise,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't get burie
+[2026-03-20T16:02:42.419Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.420Z] [INFO] Body: {"email":"elenidan@icloud.com","subject":"evess, just checking in","body":"Following up from yesterday — wanted to make sure you had a chance to see this.\nBefore your current tool auto-renews — your 
+[2026-03-20T16:02:42.423Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.423Z] [INFO] Body: {"email":"bnpulidobooks@yahoo.com","subject":"BNPulido, didn't want this to get buried","body":"Hi BNPulido,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this
+[2026-03-20T16:02:42.425Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.427Z] [INFO] Body: {"email":"bnlinaburg@gmail.com","subject":"Brian, just following up","body":"Hi Brian,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your subscription is al
+[2026-03-20T16:02:42.431Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.432Z] [INFO] Body: {"email":"sarinamaria.tobler@uzh.ch","subject":"Sarina, didn't want this to get buried","body":"Hi Sarina,\n\nI know inboxes get busy — just wanted to resurface this quickly.\nBefore your current tool
+[2026-03-20T16:02:42.435Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.435Z] [INFO] Body: {"email":"john.lockie@gmail.com","subject":"John, still here if you need it","body":"Hi John,\n\nJust following up on my message from yesterday.\n\nYour ArtNovaAI account is ready with 2 free credits 
+[2026-03-20T16:02:42.437Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:42.438Z] [INFO] Body: {"email":"sparkybarry@yahoo.com","subject":"Christine, circling back quickly","body":"Hi Christine,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your subsc
+[2026-03-20T16:02:46.935Z] [INFO] Email sent to marthion@arti.gr
+[2026-03-20T16:02:46.940Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:46.940Z] [INFO] Body: {"email":"joshua.4.tyler@gmail.com","subject":"Joshua, just following up","body":"Hi Joshua,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nYour ArtNovaAI account is
+[2026-03-20T16:02:48.483Z] [INFO] Email sent to bryantdenise5@gmail.com
+[2026-03-20T16:02:48.492Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:48.493Z] [INFO] Body: {"email":"brian@rocksoup.tv","subject":"User, didn't want this to get buried","body":"Hi User,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nThe short version: your
+[2026-03-20T16:02:49.330Z] [INFO] Email sent to cm.richards@gmail.com
+[2026-03-20T16:02:49.336Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:49.337Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"Tifany, just checking in","body":"Hi Tifany,\n\nJust following up on my message from yesterday.\nYou already have an account on ArtNovaAI. No setup needed. Jus
+[2026-03-20T16:02:50.080Z] [INFO] Email sent to sarinamaria.tobler@uzh.ch
+[2026-03-20T16:02:50.084Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:50.084Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","subject":"Frans, one more thing before you decide","body":"Hi Frans,\n\nJust looping back in case yesterday's message got lost.\nI know things get busy — but your
+[2026-03-20T16:02:50.519Z] [INFO] Email sent to bnlinaburg@gmail.com
+[2026-03-20T16:02:50.524Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:50.524Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","subject":"Pilar, wasn't sure if you saw this","body":"Hi Pilar,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\nShort version: y
+[2026-03-20T16:02:51.253Z] [INFO] Email sent to john.lockie@gmail.com
+[2026-03-20T16:02:51.257Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:51.258Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"Ayeshah, just following up","body":"Hi Ayeshah,\n\nJust following up on my message from yesterday.\n\nShort version: your current tool is expiring soon, you 
+[2026-03-20T16:02:52.117Z] [INFO] Email sent to bnpulidobooks@yahoo.com
+[2026-03-20T16:02:52.122Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:52.123Z] [INFO] Body: {"email":"kachur7@hotmail.com","subject":"Logan, just checking in","body":"Hi Logan,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nShort version: your current tool is expiring soon, you al
+[2026-03-20T16:02:52.670Z] [INFO] Email sent to sparkybarry@yahoo.com
+[2026-03-20T16:02:52.674Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:52.675Z] [INFO] Body: {"email":"martykihn@gmail.com","subject":"Martin, wanted to make sure you saw this","body":"Hi Martin,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\nShort version: yo
+[2026-03-20T16:02:53.180Z] [INFO] Email sent to elenidan@icloud.com
+[2026-03-20T16:02:53.184Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:53.186Z] [INFO] Body: {"email":"aagh140503@gmail.com","subject":"Amy, wanted to make sure you saw this","body":"Hi Amy,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't get
+[2026-03-20T16:02:53.608Z] [INFO] Email sent to joshua.4.tyler@gmail.com
+[2026-03-20T16:02:53.612Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:53.613Z] [INFO] Body: {"email":"jrcprod@gmail.com","subject":"jordan, circling back quickly","body":"Hi jordan,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nYour ArtNovaAI account is ready with 2 free credits 
+[2026-03-20T16:02:54.237Z] [INFO] Email sent to brian@rocksoup.tv
+[2026-03-20T16:02:54.242Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:54.242Z] [INFO] Body: {"email":"mn365fit@gmail.com","subject":"Minh, still here if you need it","body":"Hi Minh,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nI know things get busy — but your current tool's su
+[2026-03-20T16:02:55.658Z] [INFO] Email sent to fjm.hazen@hoteldedraak.nl
+[2026-03-20T16:02:55.662Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:55.663Z] [INFO] Body: {"email":"ariel@turbogrease.com","subject":"ariel, just following up","body":"Hi ariel,\n\nJust following up on my message from yesterday.\n\nShort version: your current tool is expiring soon, you alr
+[2026-03-20T16:02:56.377Z] [INFO] Email sent to pilarciniegas2910@gmail.com
+[2026-03-20T16:02:56.380Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:56.382Z] [INFO] Body: {"email":"sn.nicole@gmail.com","subject":"Sofia, wanted to make sure you saw this","body":"Hi Sofia,\n\nReaching out once more — didn't want this to slip through the cracks.\n\nYour ArtNovaAI account 
+[2026-03-20T16:02:56.820Z] [INFO] Email sent to tifanydm@yahoo.com
+[2026-03-20T16:02:56.824Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:56.824Z] [INFO] Body: {"email":"millerjennifer400@gmail.com","subject":"Jennifer, circling back quickly","body":"Hi Jennifer,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your s
+[2026-03-20T16:02:59.413Z] [ERROR] Failed to send email to millerjennifer400@gmail.com: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 41be03b00d2f7-c743a7ff529sm2219565a12.2 - gsmtp
+[2026-03-20T16:02:59.416Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:02:59.416Z] [INFO] Body: {"email":"textil.vernerova@gmail.com","subject":"Hana, just checking in","body":"Hi Hana,\n\nDidn't hear back, so I wanted to follow up quickly.\nI know things get busy — but your current tool's subsc
+[2026-03-20T16:03:00.148Z] [INFO] Email sent to ayeshahfrj@gmail.com
+[2026-03-20T16:03:00.154Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:03:00.154Z] [INFO] Body: {"email":"tford1066@gmail.com","subject":"Taylor, one more thing before you decide","body":"Hi Taylor,\nFollowing up from yesterday — wanted to make sure you had a chance to see this.\nYour ArtNovaAI 
+[2026-03-20T16:03:00.640Z] [INFO] Email sent to kachur7@hotmail.com
+[2026-03-20T16:03:01.582Z] [INFO] Email sent to martykihn@gmail.com
+[2026-03-20T16:03:02.482Z] [INFO] Email sent to jrcprod@gmail.com
+[2026-03-20T16:03:02.863Z] [INFO] Email sent to mn365fit@gmail.com
+[2026-03-20T16:03:03.504Z] [INFO] Email sent to aagh140503@gmail.com
+[2026-03-20T16:03:04.071Z] [INFO] Email sent to ariel@turbogrease.com
+[2026-03-20T16:03:04.783Z] [INFO] Email sent to sn.nicole@gmail.com
+[2026-03-20T16:03:06.406Z] [INFO] Email sent to textil.vernerova@gmail.com
+[2026-03-20T16:03:07.025Z] [INFO] Email sent to tford1066@gmail.com
+[2026-03-20T16:06:08.329Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T16:06:08.331Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T16:06:33.395Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:33.395Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:33.396Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:33.396Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:33.397Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:33.397Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:06:34.327Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:34.328Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:34.328Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:34.329Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:34.329Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:34.330Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:06:35.246Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:35.246Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:35.247Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:35.247Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:35.248Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:35.248Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:06:35.730Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:35.731Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:35.731Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:35.731Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:35.732Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:35.732Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:06:35.904Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:35.905Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:35.905Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:35.905Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:35.906Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:35.907Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:06:36.083Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:06:36.083Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-20T16:06:36.084Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:06:36.086Z] [INFO] csvContent type: string, length: 180
+[2026-03-20T16:06:36.086Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T16:06:36.086Z] [ERROR] No valid users found in CSV
+[2026-03-20T16:07:15.367Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:07:15.369Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","d
+[2026-03-20T16:07:15.370Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:07:15.370Z] [INFO] csvContent type: string, length: 179
+[2026-03-20T16:07:15.371Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-20T16:07:15.371Z] [INFO] Processing 1 users from CSV
+[2026-03-20T16:09:54.990Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:09:54.991Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-20T16:09:54.992Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:09:54.992Z] [INFO] csvContent type: string, length: 511
+[2026-03-20T16:09:54.992Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-20T16:09:54.993Z] [INFO] Processing 4 users from CSV
+[2026-03-20T16:10:08.543Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:10:08.545Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","subject":"Aadi, just checking in","body":"Hi Aadi,\n\nJust following up on my message from yesterday.\nYou already have an account on ArtNovaAI. No setup needed. Jus
+[2026-03-20T16:10:12.821Z] [INFO] Email sent to iammr.x00001@gmail.com
+[2026-03-20T16:14:01.209Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T16:14:01.210Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T16:14:20.995Z] [INFO] GET /api/emails/sent
+[2026-03-20T16:14:21.025Z] [INFO] GET /api/emails/sent
+[2026-03-20T16:14:23.273Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T16:14:30.607Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T16:14:30.607Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-20T16:14:30.608Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T16:14:30.608Z] [INFO] csvContent type: string, length: 511
+[2026-03-20T16:14:30.609Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-20T16:14:30.610Z] [INFO] Processing 4 users from CSV
+[2026-03-20T16:14:51.496Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:14:51.497Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","subject":"Aadi, one more thing before you decide","body":"Hi Aadi,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nShort version: y
+[2026-03-20T16:14:55.893Z] [INFO] Email sent to iammr.x00001@gmail.com

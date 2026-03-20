@@ -167,10 +167,10 @@ router.post('/send-manual', async (req: Request, res: Response) => {
         });
       }
 
-      // 3-minute delay between emails regardless of success/failure (skip after last user)
-      if (user !== users[users.length - 1]) {
-        logger.log(`Waiting 3 minutes before next email...`);
-        await new Promise((resolve) => setTimeout(resolve, 3 * 60 * 1000));
+      // 3-minute delay between real sends only (skip during dry run/preview)
+      if (!dryRun && user !== users[users.length - 1]) {
+        logger.log(`Waiting 2 minutes before next email...`);
+        await new Promise((resolve) => setTimeout(resolve, 2 * 60 * 1000));
       }
     }
 

@@ -69,26 +69,46 @@ function EmailSender() {
     setPreview(false);
 
     try {
-      // Send each edited email directly via the API
-      const sendResults = await Promise.all(
-        finalDetails.map((detail: any) =>
-          fetch('/api/emails/send-single', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email: detail.email,
-              subject: detail.subject,
-              body: detail.body,
-            }),
-          })
-            .then((res) => res.json())
-            .catch((err) => ({ error: err.message }))
-        )
-      );
+      // Send emails sequentially with 3-minute delay between each
+      const sendResults: any[] = [];
+      const updatedDetails = [...finalDetails];
 
-      // Update results to show all sent
-      setResults({
-        ...results,
+      for (let i = 0; i < finalDetails.length; i++) {
+        const detail = finalDetails[i];
+
+        // Update UI to show which email is currently sending
+        setResults((prev: any) => ({
+          ...prev,
+          dryRun: false,
+          details: updatedDetails.map((d, j) => ({
+            ...d,
+            status: j < i ? (sendResults[j]?.error ? 'failed' : 'sent') : j === i ? 'sending' : d.status,
+          })),
+        }));
+
+        const result = await fetch('/api/emails/send-single', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: detail.email,
+            subject: detail.subject,
+            body: detail.body,
+          }),
+        })
+          .then((res) => res.json())
+          .catch((err) => ({ error: err.message }));
+
+        sendResults.push(result);
+
+        // Wait 2 minutes before next email (skip after last one)
+        if (i < finalDetails.length - 1) {
+          await new Promise((resolve) => setTimeout(resolve, 2 * 60 * 1000));
+        }
+      }
+
+      // Final update showing all results
+      setResults((prev: any) => ({
+        ...prev,
         dryRun: false,
         details: finalDetails.map((detail: any, idx: number) => ({
           ...detail,
@@ -97,7 +117,7 @@ function EmailSender() {
         })),
         sent: sendResults.filter((r) => !r.error).length,
         failed: sendResults.filter((r) => r.error).length,
-      });
+      }));
     } catch (err) {
       console.error('Error sending emails:', err);
       alert('Failed to send emails');
