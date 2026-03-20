@@ -184,5 +184,5 @@ Return ONLY valid JSON (no markdown code blocks, no extra text):
  * Add delay to respect API rate limits
  */
 export async function rateLimit(): Promise<void> {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 3 * 60 * 1000));
 }
