@@ -8,6 +8,7 @@ function History() {
   const [filter, setFilter] = useState('');
   const [selectedEmail, setSelectedEmail] = useState<any>(null);
   const [deleting, setDeleting] = useState(false);
+  const [clearingAll, setClearingAll] = useState(false);
 
   useEffect(() => {
     const fetchEmails = async () => {
@@ -47,6 +48,21 @@ function History() {
     }
   };
 
+  const handleClearAll = async () => {
+    if (!confirm(`Delete ALL ${emails.length} emails from history? This cannot be undone.`)) return;
+    try {
+      setClearingAll(true);
+      await client.delete('/emails/sent');
+      setEmails([]);
+      setSelectedEmail(null);
+    } catch (err) {
+      console.error('Failed to clear history:', err);
+      alert('Failed to clear history');
+    } finally {
+      setClearingAll(false);
+    }
+  };
+
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="card-elevated">
@@ -55,9 +71,21 @@ function History() {
             <h2 className="text-2xl font-bold text-black">Email History</h2>
             <p className="text-gray-600 text-sm mt-1">Review all sent emails</p>
           </div>
-          <div className="bg-gray-100 px-4 py-2 rounded-lg border border-gray-200">
-            <p className="text-black font-semibold text-lg">{filteredEmails.length}</p>
-            <p className="text-gray-600 text-xs">emails found</p>
+          <div className="flex items-center gap-3">
+            {emails.length > 0 && (
+              <button
+                onClick={handleClearAll}
+                disabled={clearingAll}
+                className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all font-semibold text-sm shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <Trash2 className="w-4 h-4" />
+                {clearingAll ? 'Clearing...' : 'Clear All'}
+              </button>
+            )}
+            <div className="bg-gray-100 px-4 py-2 rounded-lg border border-gray-200">
+              <p className="text-black font-semibold text-lg">{filteredEmails.length}</p>
+              <p className="text-gray-600 text-xs">emails found</p>
+            </div>
           </div>
         </div>
 

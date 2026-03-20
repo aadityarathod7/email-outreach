@@ -36,16 +36,17 @@ export function parseCsv(csvContent: string): UserRecord[] {
   const users: UserRecord[] = [];
 
   for (const row of results.data as Record<string, string>[]) {
-    // Trim header keys to handle messy CSV headers
+    // Normalize keys: lowercase + trim to handle messy CSV headers
     const trimmedRow: Record<string, string> = {};
     for (const [key, value] of Object.entries(row)) {
-      trimmedRow[key.trim()] = value as string;
+      trimmedRow[key.trim().toLowerCase()] = (value as string) || '';
     }
 
-    const email = (trimmedRow.email || '').trim();
-    const name = (trimmedRow.name || '').trim();
-    const plan = (trimmedRow.plan || '').trim();
-    const totalImagesStr = (trimmedRow.totalImages || '0').trim();
+    // Accept common column name variations
+    const email = (trimmedRow.email || trimmedRow['e-mail'] || trimmedRow['email address'] || '').trim();
+    const name = (trimmedRow.name || trimmedRow['full name'] || trimmedRow['username'] || '').trim();
+    const plan = (trimmedRow.plan || trimmedRow['plan type'] || trimmedRow['subscription'] || '').trim();
+    const totalImagesStr = (trimmedRow.totalimages || trimmedRow['total images'] || trimmedRow['total_images'] || '0').trim();
 
     // Validate required fields
     if (!email || !isValidEmail(email)) {
@@ -56,10 +57,10 @@ export function parseCsv(csvContent: string): UserRecord[] {
       continue;
     }
 
-    // Collect prompts from images.0 through images.4
+    // Collect prompts from images.0 through images.9 (case-insensitive keys already lowercased)
     const prompts: string[] = [];
-    for (let i = 0; i < 5; i++) {
-      const prompt = (trimmedRow[`images.${i}`] || '').trim();
+    for (let i = 0; i < 10; i++) {
+      const prompt = (trimmedRow[`images.${i}`] || trimmedRow[`image.${i}`] || trimmedRow[`prompt${i}`] || '').trim();
       if (prompt) {
         prompts.push(prompt);
       }

@@ -1924,3 +1924,335 @@ Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","
 [2026-03-20T13:59:24.408Z] [INFO] Body: {"email":"elizabethwatson24@hotmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
 [2026-03-20T13:59:27.734Z] [INFO] POST /api/emails/preview
 [2026-03-20T13:59:27.735Z] [INFO] Body: {"email":"pepe.ramirez.izquierdo@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:06:13.111Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:06:13.112Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:06:13.113Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:06:13.114Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:06:13.115Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:06:13.115Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:06:16.982Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:06:16.983Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:06:16.984Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:06:16.984Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:06:16.985Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:06:16.986Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:06:17.598Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:06:17.599Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:06:17.599Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:06:17.599Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:06:17.601Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:06:17.601Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:06:17.984Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:06:17.985Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:06:17.985Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:06:17.986Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:06:17.987Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:06:17.987Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:06:18.270Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:06:18.271Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:06:18.272Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:06:18.272Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:06:18.274Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:06:18.274Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:08:54.681Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:08:54.682Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:08:54.683Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:08:54.683Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:08:54.684Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:08:54.684Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:32:20.485Z] [INFO] GET /api/products/categories
+[2026-03-20T14:35:07.173Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:35:07.173Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:35:07.174Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:35:07.175Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:35:07.175Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:35:07.176Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:35:09.212Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:35:09.213Z] [INFO] Body: {"csvContent":"ayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse character described below Character Name: Space Mouse Description: A stylized,
+[2026-03-20T14:35:09.213Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:35:09.213Z] [INFO] csvContent type: string, length: 49623
+[2026-03-20T14:35:09.214Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-20T14:35:09.214Z] [ERROR] No valid users found in CSV
+[2026-03-20T14:37:35.605Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:37:35.613Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-20T14:37:35.615Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:37:35.616Z] [INFO] csvContent type: string, length: 49697
+[2026-03-20T14:37:35.618Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-20T14:37:35.620Z] [INFO] Processing 26 users from CSV
+[2026-03-20T14:37:54.975Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:37:54.976Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-20T14:37:54.976Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:37:54.977Z] [INFO] csvContent type: string, length: 49697
+[2026-03-20T14:37:54.978Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-20T14:37:54.978Z] [INFO] Processing 26 users from CSV
+[2026-03-20T14:38:02.424Z] [WARN] JSON parse failed for tifanydm@yahoo.com, retrying...
+[2026-03-20T14:38:02.897Z] [WARN] JSON parse failed for constance.fedor@gmail.com, retrying...
+[2026-03-20T14:38:03.000Z] [ERROR] Failed to generate email for tifanydm@yahoo.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11753, Requested 629. Please try again in 1.91s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.148Z] [WARN] JSON parse failed for jay@jayzerbe.com, retrying...
+[2026-03-20T14:38:03.258Z] [ERROR] Failed to generate email for jay@jayzerbe.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11697, Requested 631. Please try again in 1.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.330Z] [ERROR] Failed to generate email for constance.fedor@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11682, Requested 637. Please try again in 1.595s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.362Z] [WARN] JSON parse failed for jennynlee4@gmail.com, retrying...
+[2026-03-20T14:38:03.476Z] [WARN] JSON parse failed for abaumruk@valdivia-consulting.com, retrying...
+[2026-03-20T14:38:03.507Z] [ERROR] Failed to generate email for jennynlee4@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11655, Requested 614. Please try again in 1.345s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.603Z] [WARN] JSON parse failed for karen@kdynamics.net, retrying...
+[2026-03-20T14:38:03.634Z] [ERROR] Failed to generate email for abaumruk@valdivia-consulting.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11628, Requested 633. Please try again in 1.305s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.731Z] [WARN] JSON parse failed for marjan.greenblatt@gmail.com, retrying...
+[2026-03-20T14:38:03.760Z] [ERROR] Failed to generate email for karen@kdynamics.net: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11596, Requested 613. Please try again in 1.044999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.829Z] [ERROR] Failed to generate email for marjan.greenblatt@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11582, Requested 632. Please try again in 1.07s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:03.921Z] [WARN] JSON parse failed for quentin.receveur@gmail.com, retrying...
+[2026-03-20T14:38:03.980Z] [WARN] JSON parse failed for johnphaman@gmail.com, retrying...
+[2026-03-20T14:38:04.019Z] [ERROR] Failed to generate email for quentin.receveur@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11545, Requested 634. Please try again in 895ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.126Z] [ERROR] Failed to generate email for johnphaman@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11528, Requested 621. Please try again in 745ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.154Z] [WARN] JSON parse failed for lindseygutierrez@hotmail.com, retrying...
+[2026-03-20T14:38:04.257Z] [WARN] JSON parse failed for nermina_bubic@outlook.com, retrying...
+[2026-03-20T14:38:04.283Z] [ERROR] Failed to generate email for lindseygutierrez@hotmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11497, Requested 612. Please try again in 545ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.404Z] [ERROR] Failed to generate email for nermina_bubic@outlook.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11471, Requested 607. Please try again in 389.999999ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.414Z] [WARN] JSON parse failed for ellen.duwe@hxi.digital, retrying...
+[2026-03-20T14:38:04.517Z] [WARN] JSON parse failed for leeslate50@gmail.com, retrying...
+[2026-03-20T14:38:04.583Z] [ERROR] Failed to generate email for ellen.duwe@hxi.digital: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11438, Requested 635. Please try again in 365ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.666Z] [ERROR] Failed to generate email for leeslate50@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11420, Requested 616. Please try again in 180ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.712Z] [WARN] JSON parse failed for mochuch2@gmail.com, retrying...
+[2026-03-20T14:38:04.862Z] [ERROR] Failed to generate email for mochuch2@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11983, Requested 614. Please try again in 2.985s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:04.969Z] [WARN] JSON parse failed for horaniki99@gmail.com, retrying...
+[2026-03-20T14:38:05.103Z] [ERROR] Failed to generate email for horaniki99@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11936, Requested 634. Please try again in 2.85s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:05.238Z] [WARN] JSON parse failed for bkramich@gmail.com, retrying...
+[2026-03-20T14:38:05.369Z] [ERROR] Failed to generate email for bkramich@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11959, Requested 618. Please try again in 2.885s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:05.489Z] [WARN] JSON parse failed for b.deuzeman@hotmail.com, retrying...
+[2026-03-20T14:38:05.619Z] [ERROR] Failed to generate email for b.deuzeman@hotmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11908, Requested 628. Please try again in 2.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:05.751Z] [WARN] JSON parse failed for luminaxcreative@gmail.com, retrying...
+[2026-03-20T14:38:05.862Z] [ERROR] Failed to generate email for luminaxcreative@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11856, Requested 630. Please try again in 2.43s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:05.968Z] [WARN] JSON parse failed for bibilorenzano@gmail.com, retrying...
+[2026-03-20T14:38:06.118Z] [ERROR] Failed to generate email for bibilorenzano@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11809, Requested 646. Please try again in 2.275s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:06.228Z] [WARN] JSON parse failed for constance.fedor@gmail.com, retrying...
+[2026-03-20T14:38:06.289Z] [WARN] JSON parse failed for nickgatland@gmail.com, retrying...
+[2026-03-20T14:38:06.356Z] [ERROR] Failed to generate email for constance.fedor@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11761, Requested 624. Please try again in 1.924999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:06.390Z] [ERROR] Failed to generate email for nickgatland@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11749, Requested 619. Please try again in 1.839999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:06.499Z] [WARN] JSON parse failed for abaumruk@valdivia-consulting.com, retrying...
+[2026-03-20T14:38:06.622Z] [ERROR] Failed to generate email for abaumruk@valdivia-consulting.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11708, Requested 625. Please try again in 1.665s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:06.753Z] [WARN] JSON parse failed for marjan.greenblatt@gmail.com, retrying...
+[2026-03-20T14:38:06.894Z] [ERROR] Failed to generate email for marjan.greenblatt@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11653, Requested 633. Please try again in 1.43s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:07.073Z] [WARN] JSON parse failed for johnphaman@gmail.com, retrying...
+[2026-03-20T14:38:07.210Z] [ERROR] Failed to generate email for johnphaman@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11589, Requested 629. Please try again in 1.09s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:07.369Z] [WARN] JSON parse failed for nermina_bubic@outlook.com, retrying...
+[2026-03-20T14:38:07.503Z] [ERROR] Failed to generate email for nermina_bubic@outlook.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11532, Requested 640. Please try again in 860ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:07.643Z] [WARN] JSON parse failed for leeslate50@gmail.com, retrying...
+[2026-03-20T14:38:07.769Z] [ERROR] Failed to generate email for leeslate50@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11478, Requested 626. Please try again in 520ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:07.891Z] [WARN] JSON parse failed for lisa.kelly1977@gmail.com, retrying...
+[2026-03-20T14:38:08.037Z] [ERROR] Failed to generate email for lisa.kelly1977@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11424, Requested 608. Please try again in 160ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:08.188Z] [WARN] JSON parse failed for nickgatland@gmail.com, retrying...
+[2026-03-20T14:38:08.344Z] [ERROR] Failed to generate email for nickgatland@gmail.com: Groq API error: Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkjys9rnfrsrxqyha0p7snvj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11366, Requested 640. Please try again in 30ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing
+[2026-03-20T14:38:42.785Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:42.785Z] [INFO] Body: {"email":"tifanydm@yahoo.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:45.264Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:45.265Z] [INFO] Body: {"email":"jay@jayzerbe.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:48.441Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:48.441Z] [INFO] Body: {"email":"jennynlee4@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:50.371Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:50.374Z] [INFO] Body: {"email":"karen@kdynamics.net","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:52.304Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:52.304Z] [INFO] Body: {"email":"quentin.receveur@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:55.582Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:55.582Z] [INFO] Body: {"email":"lindseygutierrez@hotmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:38:58.151Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:38:58.152Z] [INFO] Body: {"email":"ellen.duwe@hxi.digital","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:00.769Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:00.770Z] [INFO] Body: {"email":"mochuch2@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:05.195Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:05.196Z] [INFO] Body: {"email":"horaniki99@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:09.104Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:09.125Z] [INFO] Body: {"email":"bkramich@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:13.088Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:13.114Z] [INFO] Body: {"email":"b.deuzeman@hotmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:22.257Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:22.258Z] [INFO] Body: {"email":"luminaxcreative@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:25.102Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:25.103Z] [INFO] Body: {"email":"bibilorenzano@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:27.061Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:27.061Z] [INFO] Body: {"email":"constance.fedor@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:29.092Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:29.092Z] [INFO] Body: {"email":"abaumruk@valdivia-consulting.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:29.848Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:29.849Z] [INFO] Body: {"email":"marjan.greenblatt@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:31.919Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:31.920Z] [INFO] Body: {"email":"nermina_bubic@outlook.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:32.780Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:32.782Z] [INFO] Body: {"email":"johnphaman@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:33.903Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:33.904Z] [INFO] Body: {"email":"marjan.greenblatt@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:35.852Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:35.852Z] [INFO] Body: {"email":"leeslate50@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:37.647Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:37.648Z] [INFO] Body: {"email":"lisa.kelly1977@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:39:39.564Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:39:39.565Z] [INFO] Body: {"email":"nickgatland@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:47:01.766Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.767Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"Ayeshah, know your options first","body":"Hi Ayeshah,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\n
+[2026-03-20T14:47:01.773Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.774Z] [INFO] Body: {"email":"brian@rocksoup.tv","subject":"Brian, don't renew just yet","body":"Hi Brian,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNovaAI a shot.\n\nYou
+[2026-03-20T14:47:01.778Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.778Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","subject":"Pilar, before you hit renew","body":"Hi Pilar,\n\nYour current tool's subscription is expiring — and honestly, that's a great opportunity to explore s
+[2026-03-20T14:47:01.782Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.783Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","subject":"Frans, your subscription is ending — see this first","body":"Hi Frans,\n\nWe know your current tool's subscription is coming to an end — and we want to 
+[2026-03-20T14:47:01.786Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.786Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"Tifany, don't renew just yet","body":"Hi Tifany,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\nYou alr
+[2026-03-20T14:47:01.789Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.791Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"Tifany, before you hit renew","body":"Hi Tifany,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\nYou alr
+[2026-03-20T14:47:01.794Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.795Z] [INFO] Body: {"email":"jennynlee4@gmail.com","subject":"Jenny, one thing before you renew","body":"Hi Jenny,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\nY
+[2026-03-20T14:47:01.797Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.798Z] [INFO] Body: {"email":"karen@kdynamics.net","subject":"karen, before you hit renew","body":"Hi Karen,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\nYour Art
+[2026-03-20T14:47:01.802Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:01.803Z] [INFO] Body: {"email":"jay@jayzerbe.com","subject":"Jay, don't renew just yet","body":"Hi Jay,\n\nWe know your current tool's subscription is coming to an end — and we want to make this decision easy for you.\n\nY
+[2026-03-20T14:47:06.357Z] [INFO] Email sent to ayeshahfrj@gmail.com
+[2026-03-20T14:47:06.363Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:06.364Z] [INFO] Body: {"email":"quentin.receveur@gmail.com","subject":"quentin, a better option before you renew","body":"Hi Quentin,\n\nYour current tool's subscription is ending soon — and before you renew, we'd love for
+[2026-03-20T14:47:06.899Z] [INFO] Email sent to karen@kdynamics.net
+[2026-03-20T14:47:06.904Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:06.905Z] [INFO] Body: {"email":"lindseygutierrez@hotmail.com","subject":"lindsey, your renewal date is actually good news","body":"Hi lindsey,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to t
+[2026-03-20T14:47:07.421Z] [INFO] Email sent to pilarciniegas2910@gmail.com
+[2026-03-20T14:47:07.424Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:07.425Z] [INFO] Body: {"email":"ellen.duwe@hxi.digital","subject":"Matthias, this might be perfect timing","body":"Hi Matthias,\n\nYour current tool's subscription is ending soon — and before you renew, we'd love for you t
+[2026-03-20T14:47:08.164Z] [INFO] Email sent to tifanydm@yahoo.com
+[2026-03-20T14:47:08.169Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:08.171Z] [INFO] Body: {"email":"mochuch2@gmail.com","subject":"mochuch, your current tool is expiring — try this","body":"Hi mochuch,\n\nWe know your current tool's subscription is coming to an end — and we want to make th
+[2026-03-20T14:47:08.470Z] [INFO] Email sent to fjm.hazen@hoteldedraak.nl
+[2026-03-20T14:47:08.474Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:08.474Z] [INFO] Body: {"email":"horaniki99@gmail.com","subject":"horaniki, before you hit renew","body":"Hi horaniki,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\nY
+[2026-03-20T14:47:09.570Z] [INFO] Email sent to jennynlee4@gmail.com
+[2026-03-20T14:47:09.575Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:09.576Z] [INFO] Body: {"email":"bkramich@gmail.com","subject":"bkramich, read this before deciding","body":"Hi bkramich,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNovaAI a 
+[2026-03-20T14:47:10.018Z] [INFO] Email sent to tifanydm@yahoo.com
+[2026-03-20T14:47:10.018Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-20T14:47:10.021Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:10.022Z] [INFO] Body: {"email":"b.deuzeman@hotmail.com","subject":"deuzeman, know your options first","body":"Hi deuzeman,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.
+[2026-03-20T14:47:10.787Z] [INFO] Email sent to jay@jayzerbe.com
+[2026-03-20T14:47:10.791Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:10.793Z] [INFO] Body: {"email":"luminaxcreative@gmail.com","subject":"luminax, one thing before you renew","body":"Hi luminax,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNov
+[2026-03-20T14:47:11.287Z] [INFO] Email sent to brian@rocksoup.tv
+[2026-03-20T14:47:11.291Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:11.292Z] [INFO] Body: {"email":"bibilorenzano@gmail.com","subject":"Bibi, switching is easier than you think","body":"Hi Bibi lorenzano,\n\nWe know your current tool's subscription is coming to an end — and we want to make
+[2026-03-20T14:47:12.541Z] [INFO] Email sent to quentin.receveur@gmail.com
+[2026-03-20T14:47:12.546Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:12.546Z] [INFO] Body: {"email":"constance.fedor@gmail.com","subject":"your renewal date is actually good news","body":"Hi User,\n\nWe know your current tool's subscription is coming to an end — and we want to make this dec
+[2026-03-20T14:47:13.138Z] [INFO] Email sent to lindseygutierrez@hotmail.com
+[2026-03-20T14:47:13.141Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:13.142Z] [INFO] Body: {"email":"abaumruk@valdivia-consulting.com","subject":"Abaumruk, know your options first","body":"Hi Abaumruk,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try somethi
+[2026-03-20T14:47:14.084Z] [INFO] Email sent to ellen.duwe@hxi.digital
+[2026-03-20T14:47:14.089Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:14.089Z] [INFO] Body: {"email":"marjan.greenblatt@gmail.com","subject":"Marjan, your subscription is ending — see this first","body":"Hi Marjan,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to
+[2026-03-20T14:47:14.689Z] [INFO] Email sent to mochuch2@gmail.com
+[2026-03-20T14:47:14.693Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:14.694Z] [INFO] Body: {"email":"johnphaman@gmail.com","subject":"John, your subscription is ending — see this first","body":"Hi John,\n\nYour current tool's subscription is ending soon — and before you renew, we'd love for
+[2026-03-20T14:47:15.069Z] [INFO] Email sent to horaniki99@gmail.com
+[2026-03-20T14:47:15.073Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:15.074Z] [INFO] Body: {"email":"nermina_bubic@outlook.com","subject":"Nermina, read this before deciding","body":"Hi Nermina,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNova
+[2026-03-20T14:47:16.482Z] [INFO] Email sent to bkramich@gmail.com
+[2026-03-20T14:47:16.486Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:16.486Z] [INFO] Body: {"email":"nickgatland@gmail.com","subject":"Nick, know your options first","body":"Hi Nick,\n\nYour current tool's subscription is expiring — and honestly, that's a great opportunity to explore someth
+[2026-03-20T14:47:16.782Z] [INFO] Email sent to luminaxcreative@gmail.com
+[2026-03-20T14:47:16.786Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:16.787Z] [INFO] Body: {"email":"lisa.kelly1977@gmail.com","subject":"Lisa, one thing before you renew","body":"Hi Lisa,\n\nYour current tool's subscription is expiring — and honestly, that's a great opportunity to explore 
+[2026-03-20T14:47:17.730Z] [INFO] Email sent to b.deuzeman@hotmail.com
+[2026-03-20T14:47:17.734Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:47:17.736Z] [INFO] Body: {"email":"leeslate50@gmail.com","subject":"Lee, a better option before you renew","body":"Hi Lee,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNovaAI a s
+[2026-03-20T14:47:18.341Z] [INFO] Email sent to bibilorenzano@gmail.com
+[2026-03-20T14:47:18.750Z] [INFO] Email sent to constance.fedor@gmail.com
+[2026-03-20T14:47:19.402Z] [INFO] Email sent to abaumruk@valdivia-consulting.com
+[2026-03-20T14:47:19.835Z] [INFO] Email sent to marjan.greenblatt@gmail.com
+[2026-03-20T14:47:20.387Z] [INFO] Email sent to johnphaman@gmail.com
+[2026-03-20T14:47:20.606Z] [INFO] Email sent to nermina_bubic@outlook.com
+[2026-03-20T14:47:21.295Z] [INFO] Email sent to nickgatland@gmail.com
+[2026-03-20T14:47:21.619Z] [INFO] Email sent to lisa.kelly1977@gmail.com
+[2026-03-20T14:47:22.059Z] [INFO] Email sent to leeslate50@gmail.com
+[2026-03-20T14:49:14.023Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T14:49:14.024Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T14:50:13.238Z] [INFO] POST /api/emails/send-manual
+[2026-03-20T14:50:13.238Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-20T14:50:13.239Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-20T14:50:13.239Z] [INFO] csvContent type: string, length: 49697
+[2026-03-20T14:50:13.241Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-20T14:50:13.242Z] [INFO] Processing 26 users from CSV
+[2026-03-20T14:50:16.440Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:50:16.441Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:50:19.546Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:50:19.548Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:50:21.754Z] [INFO] POST /api/emails/preview
+[2026-03-20T14:50:21.754Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-20T14:51:05.000Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.001Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"ayesha, one thing before you renew","body":"Hi ayesha,\n\nBefore your current subscription auto-renews — give yourself 60 seconds to try something better.\n\
+[2026-03-20T14:51:05.008Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.009Z] [INFO] Body: {"email":"karen@kdynamics.net"}
+[2026-03-20T14:51:05.012Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.013Z] [INFO] Body: {"email":"jay@jayzerbe.com"}
+[2026-03-20T14:51:05.018Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.019Z] [INFO] Body: {"email":"constance.fedor@gmail.com"}
+[2026-03-20T14:51:05.022Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.023Z] [INFO] Body: {"email":"horaniki99@gmail.com"}
+[2026-03-20T14:51:05.026Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.027Z] [INFO] Body: {"email":"jennynlee4@gmail.com"}
+[2026-03-20T14:51:05.028Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.028Z] [INFO] Body: {"email":"bibilorenzano@gmail.com"}
+[2026-03-20T14:51:05.033Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.034Z] [INFO] Body: {"email":"johnphaman@gmail.com"}
+[2026-03-20T14:51:05.036Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.036Z] [INFO] Body: {"email":"luminaxcreative@gmail.com"}
+[2026-03-20T14:51:05.039Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.041Z] [INFO] Body: {"email":"marjan.greenblatt@gmail.com"}
+[2026-03-20T14:51:05.042Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.044Z] [INFO] Body: {"email":"abaumruk@valdivia-consulting.com"}
+[2026-03-20T14:51:05.046Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.048Z] [INFO] Body: {"email":"tifanydm@yahoo.com"}
+[2026-03-20T14:51:05.052Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.052Z] [INFO] Body: {"email":"brian@rocksoup.tv"}
+[2026-03-20T14:51:05.054Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.056Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","subject":"fjm, read this before deciding","body":"Hi fjm,\n\nYour current subscription is wrapping up — and this is honestly the best time to give ArtNovaAI a sho
+[2026-03-20T14:51:05.058Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.059Z] [INFO] Body: {"email":"tifanydm@yahoo.com"}
+[2026-03-20T14:51:05.060Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.060Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","subject":"pilarciniegas, don't renew just yet","body":"Hi pilarciniegas,\n\nWe know your current tool's subscription is coming to an end — and we want to make t
+[2026-03-20T14:51:05.063Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.064Z] [INFO] Body: {"email":"quentin.receveur@gmail.com"}
+[2026-03-20T14:51:05.065Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.066Z] [INFO] Body: {"email":"lindseygutierrez@hotmail.com"}
+[2026-03-20T14:51:05.068Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.069Z] [INFO] Body: {"email":"ellen.duwe@hxi.digital"}
+[2026-03-20T14:51:05.070Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.071Z] [INFO] Body: {"email":"mochuch2@gmail.com"}
+[2026-03-20T14:51:05.072Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.073Z] [INFO] Body: {"email":"bkramich@gmail.com"}
+[2026-03-20T14:51:05.076Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.077Z] [INFO] Body: {"email":"b.deuzeman@hotmail.com"}
+[2026-03-20T14:51:05.078Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.079Z] [INFO] Body: {"email":"nermina_bubic@outlook.com"}
+[2026-03-20T14:51:05.080Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.082Z] [INFO] Body: {"email":"leeslate50@gmail.com"}
+[2026-03-20T14:51:05.083Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.084Z] [INFO] Body: {"email":"lisa.kelly1977@gmail.com"}
+[2026-03-20T14:51:05.085Z] [INFO] POST /api/emails/send-single
+[2026-03-20T14:51:05.085Z] [INFO] Body: {"email":"nickgatland@gmail.com"}
+[2026-03-20T14:51:08.631Z] [INFO] Email sent to ayeshahfrj@gmail.com
+[2026-03-20T14:51:08.636Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-20T14:51:09.019Z] [INFO] Email sent to fjm.hazen@hoteldedraak.nl
+[2026-03-20T14:51:09.020Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-20T14:51:09.460Z] [INFO] Email sent to pilarciniegas2910@gmail.com
+[2026-03-20T14:51:09.461Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-20T14:51:22.134Z] [INFO] GET /api/emails/sent
+[2026-03-20T14:51:22.136Z] [INFO] GET /api/emails/sent
+[2026-03-20T14:51:25.385Z] [INFO] DELETE /api/emails/sent/leeslate50%40gmail.com
+[2026-03-20T14:52:18.508Z] [INFO] GET /api/emails/sent
+[2026-03-20T14:52:18.520Z] [INFO] GET /api/emails/sent
+[2026-03-20T14:52:30.561Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:39:21.880Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:39:25.891Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:39:32.263Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:39:34.575Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:39:34.584Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:39:50.191Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:40:00.428Z] [INFO] DELETE /api/emails/sent
+[2026-03-20T15:41:48.674Z] [ERROR] Error: Unexpected token 'n', "null" is not valid JSON
+[2026-03-20T15:41:48.675Z] [INFO] GET /api/products/categories
+[2026-03-20T15:45:42.565Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-20T15:45:42.567Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-20T15:45:45.797Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:45:45.810Z] [INFO] GET /api/emails/sent
+[2026-03-20T15:45:48.326Z] [INFO] DELETE /api/emails/sent

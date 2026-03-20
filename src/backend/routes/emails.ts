@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 import { parseCsv, type UserRecord } from '../../parser/csvParser';
 import { generateEmail } from '../../ai/llmService';
 import { sendEmail } from '../../sender/emailSender';
-import { recordSent, isAlreadySent, getRecentSent, deleteSentEmail } from '../../db/store';
+import { recordSent, isAlreadySent, getRecentSent, deleteSentEmail, deleteAllSentEmails } from '../../db/store';
 import { logger } from '../../utils/logger';
 
 const router: Router = express.Router();
@@ -158,8 +158,6 @@ router.post('/send-manual', async (req: Request, res: Response) => {
           });
         }
 
-        // Rate limiting
-        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (err) {
         results.failed++;
         results.details.push({
@@ -167,6 +165,12 @@ router.post('/send-manual', async (req: Request, res: Response) => {
           status: 'error',
           reason: err instanceof Error ? err.message : String(err),
         });
+      }
+
+      // 3-minute delay between emails regardless of success/failure (skip after last user)
+      if (user !== users[users.length - 1]) {
+        logger.log(`Waiting 3 minutes before next email...`);
+        await new Promise((resolve) => setTimeout(resolve, 3 * 60 * 1000));
       }
     }
 
@@ -204,6 +208,20 @@ router.post('/send-single', async (req: Request, res: Response) => {
   } catch (err) {
     logger.error(`Error sending single email: ${err}`);
     res.status(500).json({ error: 'Failed to send email' });
+  }
+});
+
+/**
+ * DELETE /api/emails/sent
+ * Delete all sent emails from history
+ */
+router.delete('/sent', (req: Request, res: Response) => {
+  try {
+    const count = deleteAllSentEmails();
+    res.json({ success: true, message: `Deleted ${count} emails from history` });
+  } catch (err) {
+    logger.error(`Error deleting all emails: ${err}`);
+    res.status(500).json({ error: 'Failed to delete emails' });
   }
 });
 

@@ -16,8 +16,9 @@ export default defineConfig({
         target: 'http://localhost:3000',
         changeOrigin: true,
         bypass(req) {
-          // Only bypass actual source/asset file extensions, not API paths with dots (e.g. email addresses)
-          if (/\.(ts|tsx|js|jsx|css|png|svg|ico|html|json|map|woff|woff2)(\?|$)/.test(req.url || '')) {
+          // Only bypass GET requests for actual source/asset files
+          // Never bypass DELETE/POST/PUT — always proxy those to backend
+          if (req.method === 'GET' && /\.(ts|tsx|js|jsx|css|png|svg|ico|html|json|map|woff|woff2)(\?|$)/.test(req.url || '')) {
             return req.url;
           }
         },

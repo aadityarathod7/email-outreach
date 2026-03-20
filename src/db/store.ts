@@ -114,6 +114,16 @@ export function getRecentSent(
 }
 
 /**
+ * Delete all sent emails
+ */
+export function deleteAllSentEmails(): number {
+  const db = getDb();
+  const stmt = db.prepare('DELETE FROM sent_emails');
+  const result = stmt.run();
+  return result.changes;
+}
+
+/**
  * Delete a sent email by email address
  */
 export function deleteSentEmail(email: string): boolean {
