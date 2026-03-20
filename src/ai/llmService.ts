@@ -38,19 +38,43 @@ function analyzeCreativeInterests(prompts: string[]): string {
 }
 
 /**
- * Random opening phrases to vary the email tone
+ * Casual subject line openers to vary per email
  */
-const OPENING_PHRASES = [
-  "I know you're tired of",
-  "Most creators in your space struggle with",
-  "If you've ever felt frustrated by",
-  "The biggest challenge for artists like you is",
-  "You probably know the feeling of",
-  "What if you never had to worry about",
-  "Getting consistent results shouldn't be as hard as",
-  "Every creator hits a wall with",
-  "The thing that slows most artists down is",
-  "One thing that holds back creators like you is",
+const SUBJECT_LINES = [
+  'quick question',
+  'a thought',
+  'something I noticed',
+  'wondering something',
+  'had to share this',
+  'one thing creators tell me',
+  'honest question',
+  'just a thought',
+  'something worth knowing',
+  'a quick note',
+];
+
+/**
+ * Varied engagement questions
+ */
+const QUESTIONS = [
+  'Is that something you deal with too?',
+  'Does that sound familiar?',
+  'Ring any bells?',
+  'Sound like something you run into?',
+  'Does that resonate with you?',
+  'Is that a challenge on your end as well?',
+];
+
+/**
+ * Varied empathy + CTA lines
+ */
+const EMPATHY_LINES = [
+  "You're not alone — and there's actually a fix for it: https://www.artnovaai.com",
+  "You're definitely not the only one — and there's a solution worth checking out: https://www.artnovaai.com",
+  "It's a common problem, and there's actually a really good fix: https://www.artnovaai.com",
+  "Totally understandable — and there's something that genuinely helps: https://www.artnovaai.com",
+  "You're in good company — and there's a tool that takes care of exactly that: https://www.artnovaai.com",
+  "It's more common than you'd think — and there's a clean solution: https://www.artnovaai.com",
 ];
 
 /**
@@ -61,88 +85,71 @@ export async function generateEmail(
 ): Promise<{ subject: string; body: string }> {
   try {
     const interests = analyzeCreativeInterests(user.prompts);
-    const openingPhrase = OPENING_PHRASES[Math.floor(Math.random() * OPENING_PHRASES.length)];
+    const pick = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+    const subject = pick(SUBJECT_LINES);
+    const question = pick(QUESTIONS);
+    const empathy = pick(EMPATHY_LINES);
 
-    const systemPrompt = `You are Aayushi, a friendly team member at ${config.brandName} (${config.brandUrl}). Your job is to write compelling, authentic emails to creators.
+    const systemPrompt = `You are Aayushi, a team member at ${config.brandName}. You write short, personal, conversational emails to AI art creators.
 
-EMAIL STYLE EXAMPLE (COPY THIS EXACTLY):
-Subject: Get perfect AI art without endless prompting
-Body:
+EXACT EMAIL STRUCTURE TO FOLLOW:
+
+Subject: quick question
+
 Hi [Name],
 
-I know you're looking for a tool that just works. The biggest difference with ArtNovaAI is that you don't have to manually fine-tune prompts or worry about quality settings.
+I work with a lot of creators in the fantasy art space — and the one thing they all say is that getting AI to nail the fine details consistently is still the most frustrating part.
 
-Our AI auto-optimizes every generation behind the scenes, guaranteeing high quality and perfect consistency without you wasting credits on trial-and-error.
+Is that something you deal with too?
 
-Curious to see the difference? Visit ${config.brandUrl} to start with your 2 free credits.
+You're not alone — and there's actually a fix for it: https://www.artnovaai.com
 
-Best,
+Warm regards,
 Aayushi
+ArtNovaAI Team
 
-CRITICAL RULES:
-1. Follow the EXACT structure above: Subject → Body → CTA → Signature
-2. Subject line: Should be benefit-focused, relatable to their niche. DIFFERENT for each email.
-3. Opening sentence: SAME EMOTION (empathy, understanding struggle) but DIFFERENT PHRASE each time. Rotate through:
-   - "I know you're tired of..."
-   - "Most creators in your space struggle with..."
-   - "If you've ever felt frustrated by..."
-   - "The biggest challenge for artists like you is..."
-   - "You probably know the feeling of..."
-   - "What if you never had to worry about..."
-   - VARY THE OPENING PHRASE - never repeat the same one
-4. Body: 3 sentences max. Talk about the PROBLEM they face and how ArtNovaAI solves it
-5. Always mention "2 free credits" and the website link
-6. Keep tone conversational, warm, human - NOT corporate or salesy
-7. NO urgency, NO FOMO, NO "limited time" language
-8. NO unsubscribe/opt-out language anywhere
-9. Sign-off: "Best, Aayushi" (simple, personal)
-10. Plain text only - no HTML, markdown, or bullet points
-11. Word count: 70-100 words for body section
-12. NEVER say "I noticed your X" or "I saw you created Y"
-13. NEVER mention their specific prompts or past work
-14. DO reveal the SPECIFIC PROBLEM creators in their niche face
-15. Show how ArtNovaAI solves THAT problem naturally
-
-TONE: You're a knowledgeable friend who found a solution and genuinely thinks they'll benefit. Be specific about pain points. Be helpful, not salesy.`;
+RULES:
+1. Subject line is already provided — use it exactly as given
+2. Opening line MUST start with a variation of "I work with a lot of creators in the [niche] space" — rephrase slightly each time but keep the same feel
+3. The opening line must name a SPECIFIC pain point for that creative niche
+4. Second paragraph is a short question — rephrase it slightly but keep the same casual tone
+5. Third paragraph is empathy + link — rephrase slightly but ALWAYS include https://www.artnovaai.com
+6. Sign-off: "Warm regards,\nAayushi\nArtNovaAI Team" — always the same
+7. Plain text only. No HTML, no bullet points, no markdown
+8. NEVER mention their specific prompts, past work, or stalk-y observations
+9. Keep the whole email under 80 words in the body
+10. Vary the WORDING across emails — same structure, different phrasing each time`;
 
     const userPrompt = `Write a personalized email for this creator:
 
 Name: ${user.name}
-Email: ${user.email}
 Creative Niche: ${interests}
+
+Use these pre-selected elements (chosen randomly for variety):
+- Subject line: "${subject}"
+- Question line: "${question}"
+- Empathy + link line: "${empathy}"
 
 FOLLOW THIS STRUCTURE EXACTLY:
 
-Subject: [Benefit-focused subject line, different from "Get perfect AI art without endless prompting"]
-Body:
+Subject: ${subject}
+
 Hi ${user.name},
 
-${openingPhrase} [specific problem in their creative niche].
+[Opening: A variation of "I work with a lot of creators in the ${interests} space — and the one thing they all say is that [specific pain point] is still the most frustrating part." Rephrase slightly but keep same feel and structure.]
 
-[1-2 sentences: Explain the specific problem they face + How ArtNovaAI solves it naturally]
+${question}
 
-Curious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits.
+${empathy}
 
-Best,
+Warm regards,
 Aayushi
-
-REQUIREMENTS:
-- Subject: Create a NEW unique subject line (different each time) that speaks to their niche problem
-- Opening: USE THIS EXACT PHRASE (system auto-selects a different one each time):
-  "${openingPhrase}"
-  Complete it with the specific problem they face in their creative niche.
-- Body: 2-3 sentences explaining their problem + ArtNovaAI solution
-- CTA: ALWAYS include "Curious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits."
-- URL: MUST include https://www.artnovaai.com in the CTA line (critical!)
-- Signature: "Best, Aayushi" only
-- NO unsubscribe/opt-out/CAN-SPAM footer
-- Plain text only
-- Total body: 80-120 words
+ArtNovaAI Team
 
 Return ONLY valid JSON (no markdown code blocks):
 {
-  "subject": "Subject line here",
-  "body": "Hi ${user.name},\\n\\nI know you're looking for...\\n\\n[problem + solution sentences]\\n\\nCurious to see the difference? Visit https://www.artnovaai.com to start with your 2 free credits.\\n\\nBest,\\nAayushi"
+  "subject": "${subject}",
+  "body": "Hi ${user.name},\\n\\n[opening sentence about creators in ${interests} space + pain point]\\n\\n${question}\\n\\n${empathy}\\n\\nWarm regards,\\nAayushi\\nArtNovaAI Team"
 }`;
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {

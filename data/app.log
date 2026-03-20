@@ -1,0 +1,1908 @@
+[2026-03-11T06:59:21.589Z] [INFO] Initializing email-outreach application...
+[2026-03-11T06:59:21.591Z] [INFO] Initialization complete
+[2026-03-11T06:59:21.591Z] [INFO] Running in test mode with CSV: data/test.csv
+[2026-03-11T06:59:21.592Z] [ERROR] Test mode error: ENOENT: no such file or directory, open 'data/test.csv'
+[2026-03-11T06:59:53.639Z] [INFO] Initializing email-outreach application...
+[2026-03-11T06:59:53.640Z] [INFO] Initialization complete
+[2026-03-11T06:59:53.641Z] [INFO] Running in test mode with CSV: data/test.csv
+[2026-03-11T06:59:53.642Z] [INFO] Parsed 2 test users
+[2026-03-11T06:59:53.642Z] [INFO] Generating demo email for John...
+[2026-03-11T06:59:58.039Z] [INFO] ---
+[2026-03-11T06:59:58.042Z] [INFO] Subject: Exploring Cyberpunk Nature & Beyond
+[2026-03-11T06:59:58.043Z] [INFO] ---
+[2026-03-11T06:59:58.044Z] [INFO] Hey John,
+
+I was just pondering the amazing blend of cyberpunk and nature aesthetics and thought of your recent creations—it's such a fascinating mix! It's truly exciting how AI lets us bring these imaginative worlds to life. If you're ever looking to dive deeper or try out different themes, I've found YourAITool really handy for experimenting with new ideas.
+
+Would love to hear which themes you're planning to explore next, or if there's anything cool you've been working on lately. Feel free to drop me a line!
+
+Take care, and happy creating!
+[2026-03-11T06:59:58.047Z] [INFO] ---
+[2026-03-11T07:21:59.934Z] [INFO] Initializing email-outreach application...
+[2026-03-11T07:21:59.936Z] [INFO] Initialization complete
+[2026-03-11T07:21:59.936Z] [INFO] Running in test mode with CSV: /Users/sjat/Desktop/email-outreach/data/File - File.csv
+[2026-03-11T07:21:59.938Z] [INFO] Parsed 10 test users
+[2026-03-11T07:21:59.938Z] [INFO] Generating demo email for K Diete...
+[2026-03-11T07:22:04.649Z] [INFO] ---
+[2026-03-11T07:22:04.649Z] [INFO] Subject: Exploring Creative Styles with AI Art
+[2026-03-11T07:22:04.650Z] [INFO] ---
+[2026-03-11T07:22:04.650Z] [INFO] Hi K Diete,
+
+I hope you're having a great day! I noticed your knack for turning everyday items into engaging pieces of AI art. It’s fascinating to see how you bring unique style and flair to something like a fruit market. I also love experimenting with different art styles myself, and it’s incredible how YourAITool can spark new ideas.
+
+I'm curious, have you tried blending any unusual styles recently? Would love to see what you're working on next.
+
+Take care,
+[Your Name]
+[2026-03-11T07:22:04.650Z] [INFO] ---
+[2026-03-11T07:29:57.445Z] [WARN] JSON parse failed for souvenirs.sweden@gmail.com, retrying...
+[2026-03-11T07:35:31.939Z] [WARN] JSON parse failed for souvenirs.sweden@gmail.com, retrying...
+[2026-03-11T07:35:36.561Z] [ERROR] Failed to generate email for souvenirs.sweden@gmail.com: Unexpected token '`', "```json
+{
+"... is not valid JSON
+[2026-03-12T06:09:31.338Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-12T06:10:49.587Z] [INFO] Email sent to aayushipatidar07@gmail.com
+[2026-03-12T06:15:20.045Z] [INFO] Email sent to patidaraayushi900@gmail.com
+[2026-03-12T06:32:38.768Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-12T06:34:09.640Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-12T06:35:38.903Z] [INFO] Email sent to aayushipatidar07@gmail.com
+[2026-03-12T06:42:21.944Z] [ERROR] IMAP fetch attempt 1/3 failed: Not authenticated
+[2026-03-12T06:42:23.947Z] [ERROR] IMAP fetch attempt 2/3 failed: Not authenticated
+[2026-03-12T06:42:27.949Z] [ERROR] IMAP fetch attempt 3/3 failed: Not authenticated
+[2026-03-12T06:42:27.949Z] [ERROR] All IMAP fetch attempts failed
+[2026-03-12T07:25:54.711Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:25:54.713Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:31:38.490Z] [INFO] GET /api/health
+[2026-03-12T07:32:02.994Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:32:02.996Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:32:48.974Z] [INFO] GET /
+[2026-03-12T07:32:48.993Z] [INFO] GET /
+[2026-03-12T07:32:50.609Z] [INFO] GET /sw.js
+[2026-03-12T07:32:52.145Z] [INFO] GET /
+[2026-03-12T07:32:52.167Z] [INFO] GET /favicon.ico
+[2026-03-12T07:33:20.094Z] [INFO] GET /sw.js
+[2026-03-12T07:34:20.839Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:34:20.841Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:34:42.528Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:34:42.530Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:35:18.200Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:35:18.202Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:35:40.981Z] [INFO] GET /
+[2026-03-12T07:35:40.995Z] [INFO] GET /
+[2026-03-12T07:35:42.607Z] [INFO] GET /sw.js
+[2026-03-12T07:35:44.170Z] [INFO] GET /
+[2026-03-12T07:35:44.199Z] [INFO] GET /favicon.ico
+[2026-03-12T07:36:12.094Z] [INFO] GET /sw.js
+[2026-03-12T07:36:23.775Z] [INFO] GET /api/client.ts
+[2026-03-12T07:36:34.768Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:36:34.770Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:36:53.058Z] [INFO] GET /api/client.ts
+[2026-03-12T07:36:56.093Z] [INFO] GET /api/stats
+[2026-03-12T07:36:56.150Z] [INFO] GET /api/stats
+[2026-03-12T07:37:08.489Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:37:08.490Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:37:08.595Z] [INFO] GET /api/stats
+[2026-03-12T07:37:08.603Z] [INFO] GET /api/stats
+[2026-03-12T07:37:15.304Z] [INFO] GET /api/stats
+[2026-03-12T07:37:15.307Z] [INFO] GET /api/stats
+[2026-03-12T07:37:21.263Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:37:21.265Z] [INFO] Processing 10 users from CSV
+[2026-03-12T07:38:40.800Z] [INFO] GET /api/stats
+[2026-03-12T07:38:40.803Z] [INFO] GET /api/stats
+[2026-03-12T07:38:48.281Z] [INFO] GET /api/emails/sent
+[2026-03-12T07:38:48.284Z] [INFO] GET /api/emails/sent
+[2026-03-12T07:38:53.060Z] [INFO] GET /api/config
+[2026-03-12T07:38:53.064Z] [INFO] GET /api/config
+[2026-03-12T07:38:56.629Z] [INFO] GET /api/stats
+[2026-03-12T07:38:56.633Z] [INFO] GET /api/stats
+[2026-03-12T07:39:26.620Z] [INFO] GET /api/stats
+[2026-03-12T07:39:45.380Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:39:45.382Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:40:15.069Z] [INFO] GET /api/stats
+[2026-03-12T07:40:45.066Z] [INFO] GET /api/stats
+[2026-03-12T07:41:01.362Z] [INFO] GET /api/stats
+[2026-03-12T07:41:01.382Z] [INFO] GET /api/stats
+[2026-03-12T07:41:09.784Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:41:09.786Z] [INFO] Processing 10 users from CSV
+[2026-03-12T07:42:27.284Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:42:27.285Z] [INFO] Processing 10 users from CSV
+[2026-03-12T07:43:10.079Z] [INFO] GET /api/stats
+[2026-03-12T07:43:10.083Z] [INFO] GET /api/stats
+[2026-03-12T07:43:11.669Z] [INFO] GET /api/stats
+[2026-03-12T07:43:11.674Z] [INFO] GET /api/stats
+[2026-03-12T07:43:28.500Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:43:28.502Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:43:28.575Z] [INFO] GET /api/stats
+[2026-03-12T07:43:28.583Z] [INFO] GET /api/stats
+[2026-03-12T07:43:30.986Z] [INFO] GET /api/stats
+[2026-03-12T07:43:30.989Z] [INFO] GET /api/stats
+[2026-03-12T07:43:46.910Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:43:46.911Z] [INFO] [SEND-MANUAL] dryRun=true, CSV size=21245
+[2026-03-12T07:43:46.914Z] [INFO] Processing 10 users from CSV (dryRun=true)
+[2026-03-12T07:44:48.356Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:44:48.357Z] [INFO] [SEND-MANUAL] dryRun=true, CSV size=21245
+[2026-03-12T07:44:48.358Z] [INFO] Processing 10 users from CSV (dryRun=true)
+[2026-03-12T07:46:04.067Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:46:04.067Z] [INFO] [SEND-MANUAL] dryRun=true, CSV size=21245
+[2026-03-12T07:46:04.068Z] [INFO] Processing 10 users from CSV (dryRun=true)
+[2026-03-12T07:49:19.941Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:49:19.942Z] [INFO] [SEND-MANUAL] dryRun=true, CSV size=21245
+[2026-03-12T07:49:19.943Z] [INFO] Processing 10 users from CSV (dryRun=true)
+[2026-03-12T07:50:37.518Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T07:50:37.520Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T07:51:23.806Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:51:23.808Z] [INFO] Processing 9 users from CSV
+[2026-03-12T07:59:34.545Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:59:34.546Z] [INFO] Processing 1 users from CSV
+[2026-03-12T07:59:43.702Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T07:59:43.703Z] [INFO] Processing 1 users from CSV
+[2026-03-12T07:59:49.431Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-12T08:00:19.705Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T08:00:19.705Z] [INFO] Processing 9 users from CSV
+[2026-03-12T08:00:59.058Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T08:00:59.058Z] [INFO] Processing 9 users from CSV
+[2026-03-12T08:01:05.361Z] [INFO] Email sent to patstafford2121@gmail.com
+[2026-03-12T08:01:11.345Z] [INFO] Email sent to jcrispownage@gmail.com
+[2026-03-12T08:01:18.582Z] [INFO] Email sent to manuelaarangobastidas@gmail.com
+[2026-03-12T08:01:25.837Z] [INFO] Email sent to hkvymg6v94@privaterelay.appleid.com
+[2026-03-12T08:01:35.544Z] [INFO] Email sent to paamato78@gmail.com
+[2026-03-12T08:01:42.874Z] [INFO] Email sent to jonswihart@aol.com
+[2026-03-12T08:01:50.202Z] [INFO] Email sent to frida.ditlefsen@gmail.com
+[2026-03-12T08:01:56.748Z] [INFO] Email sent to amandarhuston@gmail.com
+[2026-03-12T08:02:04.651Z] [INFO] Email sent to paalbmartens@gmail.com
+[2026-03-12T08:02:32.735Z] [INFO] GET /api/stats
+[2026-03-12T08:02:32.738Z] [INFO] GET /api/stats
+[2026-03-12T08:02:40.507Z] [INFO] GET /api/stats
+[2026-03-12T08:02:40.510Z] [INFO] GET /api/stats
+[2026-03-12T08:02:49.904Z] [INFO] GET /api/stats
+[2026-03-12T08:02:49.907Z] [INFO] GET /api/stats
+[2026-03-12T08:03:20.539Z] [INFO] GET /api/stats
+[2026-03-12T08:18:48.349Z] [INFO] GET /api/stats
+[2026-03-12T08:19:18.342Z] [INFO] GET /api/stats
+[2026-03-12T08:34:46.015Z] [INFO] GET /api/stats
+[2026-03-12T08:35:16.020Z] [INFO] GET /api/stats
+[2026-03-12T08:35:46.022Z] [INFO] GET /api/stats
+[2026-03-12T08:36:17.025Z] [INFO] GET /api/stats
+[2026-03-12T08:37:17.034Z] [INFO] GET /api/stats
+[2026-03-12T08:49:34.405Z] [INFO] GET /api/stats
+[2026-03-12T08:49:53.246Z] [INFO] GET /api/stats
+[2026-03-12T08:50:23.256Z] [INFO] GET /api/stats
+[2026-03-12T08:50:53.821Z] [INFO] GET /api/stats
+[2026-03-12T08:51:24.810Z] [INFO] GET /api/stats
+[2026-03-12T08:51:53.263Z] [INFO] GET /api/stats
+[2026-03-12T08:52:23.263Z] [INFO] GET /api/stats
+[2026-03-12T08:52:53.261Z] [INFO] GET /api/stats
+[2026-03-12T08:53:23.263Z] [INFO] GET /api/stats
+[2026-03-12T08:53:53.263Z] [INFO] GET /api/stats
+[2026-03-12T08:54:23.262Z] [INFO] GET /api/stats
+[2026-03-12T08:54:54.301Z] [INFO] GET /api/stats
+[2026-03-12T08:55:54.267Z] [INFO] GET /api/stats
+[2026-03-12T08:56:54.272Z] [INFO] GET /api/stats
+[2026-03-12T08:57:54.265Z] [INFO] GET /api/stats
+[2026-03-12T08:58:54.270Z] [INFO] GET /api/stats
+[2026-03-12T08:59:54.270Z] [INFO] GET /api/stats
+[2026-03-12T09:00:54.271Z] [INFO] GET /api/stats
+[2026-03-12T09:01:54.270Z] [INFO] GET /api/stats
+[2026-03-12T09:02:42.897Z] [INFO] GET /api/stats
+[2026-03-12T09:02:49.103Z] [INFO] GET /api/stats
+[2026-03-12T09:02:49.106Z] [INFO] GET /api/stats
+[2026-03-12T09:03:00.848Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:03:00.852Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:03:13.475Z] [INFO] GET /api/stats
+[2026-03-12T09:03:13.478Z] [INFO] GET /api/stats
+[2026-03-12T09:03:30.581Z] [INFO] GET /api/config
+[2026-03-12T09:03:30.583Z] [INFO] GET /api/config
+[2026-03-12T09:03:33.250Z] [INFO] GET /api/stats
+[2026-03-12T09:03:33.253Z] [INFO] GET /api/stats
+[2026-03-12T09:04:03.246Z] [INFO] GET /api/stats
+[2026-03-12T09:04:33.245Z] [INFO] GET /api/stats
+[2026-03-12T09:04:34.140Z] [INFO] GET /api/stats
+[2026-03-12T09:04:44.642Z] [INFO] GET /api/stats
+[2026-03-12T09:05:14.634Z] [INFO] GET /api/stats
+[2026-03-12T09:05:44.628Z] [INFO] GET /api/stats
+[2026-03-12T09:05:55.682Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:05:55.687Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:06:01.531Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:07:59.217Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:07:59.219Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:08:21.519Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:08:21.521Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:08:27.647Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:08:27.652Z] [ERROR] Error fetching sent emails: SqliteError: no such column: body
+[2026-03-12T09:08:27.655Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:08:27.656Z] [ERROR] Error fetching sent emails: SqliteError: no such column: body
+[2026-03-12T09:08:29.052Z] [INFO] GET /api/stats
+[2026-03-12T09:08:29.052Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:29.055Z] [INFO] GET /api/stats
+[2026-03-12T09:08:29.056Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:30.726Z] [INFO] GET /api/stats
+[2026-03-12T09:08:30.727Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:30.732Z] [INFO] GET /api/stats
+[2026-03-12T09:08:30.732Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:32.803Z] [INFO] GET /api/stats
+[2026-03-12T09:08:32.804Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:32.807Z] [INFO] GET /api/stats
+[2026-03-12T09:08:32.808Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:08:40.943Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:08:40.945Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:09:03.865Z] [INFO] GET /api/stats
+[2026-03-12T09:09:03.872Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:03.876Z] [INFO] GET /api/stats
+[2026-03-12T09:09:03.877Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.378Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.379Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.382Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.383Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.575Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.576Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.580Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.581Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.787Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.788Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.790Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.791Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.988Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.988Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:04.991Z] [INFO] GET /api/stats
+[2026-03-12T09:09:04.992Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:05.195Z] [INFO] GET /api/stats
+[2026-03-12T09:09:05.196Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:05.201Z] [INFO] GET /api/stats
+[2026-03-12T09:09:05.201Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:05.423Z] [INFO] GET /api/stats
+[2026-03-12T09:09:05.424Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:05.427Z] [INFO] GET /api/stats
+[2026-03-12T09:09:05.428Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:08.304Z] [INFO] GET /api/stats
+[2026-03-12T09:09:08.304Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:08.305Z] [INFO] GET /api/stats
+[2026-03-12T09:09:08.307Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:08.886Z] [INFO] GET /api/stats
+[2026-03-12T09:09:08.888Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:08.889Z] [INFO] GET /api/stats
+[2026-03-12T09:09:08.889Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.045Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.047Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.049Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.049Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.227Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.229Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.230Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.230Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.395Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.395Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.396Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.398Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.554Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.555Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.557Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.558Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.714Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.715Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.717Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.718Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.851Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.852Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:09.853Z] [INFO] GET /api/stats
+[2026-03-12T09:09:09.854Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:09:39.857Z] [INFO] GET /api/stats
+[2026-03-12T09:09:39.858Z] [ERROR] Error fetching stats: SqliteError: no such column: body
+[2026-03-12T09:10:06.472Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:10:06.474Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:10:11.251Z] [INFO] GET /api/stats
+[2026-03-12T09:10:11.263Z] [INFO] GET /api/stats
+[2026-03-12T09:10:14.882Z] [INFO] GET /api/stats
+[2026-03-12T09:10:14.884Z] [INFO] GET /api/stats
+[2026-03-12T09:10:17.363Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:10:17.369Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:10:18.498Z] [INFO] GET /api/stats
+[2026-03-12T09:10:18.501Z] [INFO] GET /api/stats
+[2026-03-12T09:10:48.491Z] [INFO] GET /api/stats
+[2026-03-12T09:11:24.757Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:11:24.759Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:11:24.816Z] [INFO] GET /api/stats
+[2026-03-12T09:11:24.826Z] [INFO] GET /api/stats
+[2026-03-12T09:11:29.297Z] [INFO] GET /api/stats
+[2026-03-12T09:11:29.300Z] [INFO] GET /api/stats
+[2026-03-12T09:11:59.302Z] [INFO] GET /api/stats
+[2026-03-12T09:12:29.301Z] [INFO] GET /api/stats
+[2026-03-12T09:13:39.659Z] [INFO] GET /api/stats
+[2026-03-12T09:13:39.661Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:39.663Z] [INFO] GET /api/stats
+[2026-03-12T09:13:39.664Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:46.476Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:46.478Z] [INFO] GET /api/stats
+[2026-03-12T09:13:46.482Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:46.484Z] [INFO] GET /api/stats
+[2026-03-12T09:13:47.232Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:47.234Z] [INFO] GET /api/stats
+[2026-03-12T09:13:47.237Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:47.238Z] [INFO] GET /api/stats
+[2026-03-12T09:13:48.399Z] [INFO] GET /api/stats
+[2026-03-12T09:13:48.402Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:48.404Z] [INFO] GET /api/stats
+[2026-03-12T09:13:48.405Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:49.639Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:13:49.641Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:26.978Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:14:26.980Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:14:27.265Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:27.274Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:29.792Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:29.796Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:30.668Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:30.671Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:30.858Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:30.882Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:32.787Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:14:32.789Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.257Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.260Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.801Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.804Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.979Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:03.981Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:04.296Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:04.300Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:04.531Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:16:04.534Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:17:40.550Z] [INFO] GET /api/config
+[2026-03-12T09:17:40.553Z] [INFO] GET /api/config
+[2026-03-12T09:17:41.053Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:17:41.055Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:17:45.167Z] [INFO] GET /api/stats
+[2026-03-12T09:17:45.171Z] [INFO] GET /api/stats
+[2026-03-12T09:17:46.977Z] [INFO] GET /api/stats
+[2026-03-12T09:17:46.981Z] [INFO] GET /api/stats
+[2026-03-12T09:17:48.072Z] [INFO] GET /api/stats
+[2026-03-12T09:17:48.078Z] [INFO] GET /api/stats
+[2026-03-12T09:17:49.184Z] [INFO] GET /api/stats
+[2026-03-12T09:17:49.187Z] [INFO] GET /api/stats
+[2026-03-12T09:17:54.329Z] [INFO] GET /api/stats
+[2026-03-12T09:17:54.342Z] [INFO] GET /api/stats
+[2026-03-12T09:17:55.436Z] [INFO] GET /api/stats
+[2026-03-12T09:17:55.439Z] [INFO] GET /api/stats
+[2026-03-12T09:17:58.870Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:17:58.872Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:19:18.527Z] [INFO] GET /api/stats
+[2026-03-12T09:19:18.530Z] [INFO] GET /api/stats
+[2026-03-12T09:19:19.504Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:19:19.507Z] [INFO] GET /api/emails/sent
+[2026-03-12T09:19:19.915Z] [INFO] GET /api/config
+[2026-03-12T09:19:19.918Z] [INFO] GET /api/config
+[2026-03-12T09:19:23.457Z] [INFO] GET /api/stats
+[2026-03-12T09:19:23.459Z] [INFO] GET /api/stats
+[2026-03-12T09:19:53.457Z] [INFO] GET /api/stats
+[2026-03-12T09:20:23.453Z] [INFO] GET /api/stats
+[2026-03-12T09:20:54.241Z] [INFO] GET /api/stats
+[2026-03-12T09:21:24.233Z] [INFO] GET /api/stats
+[2026-03-12T09:21:54.235Z] [INFO] GET /api/stats
+[2026-03-12T09:22:24.233Z] [INFO] GET /api/stats
+[2026-03-12T09:22:54.258Z] [INFO] GET /api/stats
+[2026-03-12T09:23:54.239Z] [INFO] GET /api/stats
+[2026-03-12T09:24:54.237Z] [INFO] GET /api/stats
+[2026-03-12T09:25:42.086Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T09:25:42.088Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T09:25:54.241Z] [INFO] GET /api/stats
+[2026-03-12T09:26:54.242Z] [INFO] GET /api/stats
+[2026-03-12T09:27:54.238Z] [INFO] GET /api/stats
+[2026-03-12T09:28:54.239Z] [INFO] GET /api/stats
+[2026-03-12T09:29:54.239Z] [INFO] GET /api/stats
+[2026-03-12T09:30:54.244Z] [INFO] GET /api/stats
+[2026-03-12T09:31:54.248Z] [INFO] GET /api/stats
+[2026-03-12T09:32:54.239Z] [INFO] GET /api/stats
+[2026-03-12T09:33:54.241Z] [INFO] GET /api/stats
+[2026-03-12T09:34:54.243Z] [INFO] GET /api/stats
+[2026-03-12T09:35:54.277Z] [INFO] GET /api/stats
+[2026-03-12T09:36:54.293Z] [INFO] GET /api/stats
+[2026-03-12T09:37:54.275Z] [INFO] GET /api/stats
+[2026-03-12T09:38:54.274Z] [INFO] GET /api/stats
+[2026-03-12T09:39:54.273Z] [INFO] GET /api/stats
+[2026-03-12T09:40:54.278Z] [INFO] GET /api/stats
+[2026-03-12T09:41:54.295Z] [INFO] GET /api/stats
+[2026-03-12T09:42:54.276Z] [INFO] GET /api/stats
+[2026-03-12T09:43:54.282Z] [INFO] GET /api/stats
+[2026-03-12T09:44:54.291Z] [INFO] GET /api/stats
+[2026-03-12T09:45:54.280Z] [INFO] GET /api/stats
+[2026-03-12T09:46:54.279Z] [INFO] GET /api/stats
+[2026-03-12T09:47:54.281Z] [INFO] GET /api/stats
+[2026-03-12T09:48:54.285Z] [INFO] GET /api/stats
+[2026-03-12T09:49:54.288Z] [INFO] GET /api/stats
+[2026-03-12T09:50:54.302Z] [INFO] GET /api/stats
+[2026-03-12T09:51:54.306Z] [INFO] GET /api/stats
+[2026-03-12T09:52:54.311Z] [INFO] GET /api/stats
+[2026-03-12T09:53:54.308Z] [INFO] GET /api/stats
+[2026-03-12T09:54:54.304Z] [INFO] GET /api/stats
+[2026-03-12T09:55:54.313Z] [INFO] GET /api/stats
+[2026-03-12T09:56:54.314Z] [INFO] GET /api/stats
+[2026-03-12T09:57:54.310Z] [INFO] GET /api/stats
+[2026-03-12T09:58:54.313Z] [INFO] GET /api/stats
+[2026-03-12T09:59:54.313Z] [INFO] GET /api/stats
+[2026-03-12T10:00:54.321Z] [INFO] GET /api/stats
+[2026-03-12T10:01:54.312Z] [INFO] GET /api/stats
+[2026-03-12T10:02:54.310Z] [INFO] GET /api/stats
+[2026-03-12T10:03:54.312Z] [INFO] GET /api/stats
+[2026-03-12T10:04:54.315Z] [INFO] GET /api/stats
+[2026-03-12T10:05:54.331Z] [INFO] GET /api/stats
+[2026-03-12T10:06:54.335Z] [INFO] GET /api/stats
+[2026-03-12T10:07:54.332Z] [INFO] GET /api/stats
+[2026-03-12T10:08:54.342Z] [INFO] GET /api/stats
+[2026-03-12T10:09:54.342Z] [INFO] GET /api/stats
+[2026-03-12T10:10:54.336Z] [INFO] GET /api/stats
+[2026-03-12T10:17:29.935Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T10:17:29.938Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T10:17:42.908Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T10:17:42.910Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T10:17:54.343Z] [INFO] GET /api/stats
+[2026-03-12T10:17:56.309Z] [INFO] GET /api/stats
+[2026-03-12T10:17:56.314Z] [INFO] GET /api/stats
+[2026-03-12T10:18:03.589Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T10:18:03.590Z] [INFO] Processing 1 users from CSV
+[2026-03-12T10:18:04.171Z] [ERROR] Failed to generate email for aadityarathod7@gmail.com: 401 Incorrect API key provided: ca0bb886****************************************************347b. You can find your API key at https://platform.openai.com/account/api-keys.
+[2026-03-12T10:18:54.346Z] [INFO] GET /api/stats
+[2026-03-12T10:19:54.343Z] [INFO] GET /api/stats
+[2026-03-12T10:20:03.240Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T10:20:03.241Z] [INFO] Processing 1 users from CSV
+[2026-03-12T10:20:03.747Z] [ERROR] Failed to generate email for aadityarathod7@gmail.com: 401 Incorrect API key provided: ca0bb886****************************************************347b. You can find your API key at https://platform.openai.com/account/api-keys.
+[2026-03-12T10:20:54.347Z] [INFO] GET /api/stats
+[2026-03-12T10:21:54.260Z] [INFO] GET /api/stats
+[2026-03-12T10:22:19.898Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T10:22:19.900Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T10:22:28.707Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T10:22:28.708Z] [INFO] Processing 1 users from CSV
+[2026-03-12T10:22:37.511Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T10:22:37.513Z] [INFO] Processing 1 users from CSV
+[2026-03-12T10:22:44.046Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-12T10:22:54.261Z] [INFO] GET /api/stats
+[2026-03-12T10:23:54.267Z] [INFO] GET /api/stats
+[2026-03-12T10:24:54.265Z] [INFO] GET /api/stats
+[2026-03-12T10:25:54.260Z] [INFO] GET /api/stats
+[2026-03-12T10:39:51.301Z] [INFO] GET /api/stats
+[2026-03-12T12:00:52.894Z] [INFO] GET /api/stats
+[2026-03-12T14:17:38.682Z] [INFO] GET /api/stats
+[2026-03-12T15:52:25.310Z] [INFO] GET /api/stats
+[2026-03-12T15:54:15.814Z] [INFO] GET /api/stats
+[2026-03-12T15:55:15.815Z] [INFO] GET /api/stats
+[2026-03-12T15:56:15.814Z] [INFO] GET /api/stats
+[2026-03-12T15:57:15.817Z] [INFO] GET /api/stats
+[2026-03-12T15:58:15.810Z] [INFO] GET /api/stats
+[2026-03-12T15:59:15.811Z] [INFO] GET /api/stats
+[2026-03-12T16:00:10.097Z] [INFO] GET /api/stats
+[2026-03-12T16:00:10.100Z] [INFO] GET /api/stats
+[2026-03-12T16:00:15.804Z] [INFO] GET /api/stats
+[2026-03-12T16:00:34.594Z] [INFO] GET /api/stats
+[2026-03-12T16:00:34.598Z] [INFO] GET /api/stats
+[2026-03-12T16:00:50.460Z] [INFO] GET /api/stats
+[2026-03-12T16:00:50.590Z] [INFO] GET /api/stats
+[2026-03-12T16:00:50.594Z] [INFO] GET /api/stats
+[2026-03-12T16:11:02.803Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T16:11:02.805Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T16:11:19.054Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:11:19.056Z] [INFO] Processing 1 users from CSV
+[2026-03-12T16:11:25.151Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:11:25.152Z] [INFO] Processing 1 users from CSV
+[2026-03-12T16:12:32.995Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:12:32.997Z] [INFO] Processing 1 users from CSV
+[2026-03-12T16:12:44.868Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:12:44.869Z] [INFO] Processing 1 users from CSV
+[2026-03-12T16:12:52.046Z] [INFO] Email sent to aadityarathod6@gmail.com
+[2026-03-12T16:19:25.509Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T16:19:25.510Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T16:19:55.874Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:19:55.876Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:21:19.119Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:21:19.121Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:21:26.901Z] [INFO] Email sent to vanes_tremblay@hotmail.com
+[2026-03-12T16:21:36.121Z] [INFO] Email sent to marieflavie.rodrigue@gmail.com
+[2026-03-12T16:21:43.427Z] [INFO] Email sent to patstafford2121@gmail.com
+[2026-03-12T16:21:50.458Z] [INFO] Email sent to jcrispownage@gmail.com
+[2026-03-12T16:21:57.003Z] [INFO] Email sent to manuelaarangobastidas@gmail.com
+[2026-03-12T16:22:04.091Z] [INFO] Email sent to hkvymg6v94@privaterelay.appleid.com
+[2026-03-12T16:22:11.142Z] [INFO] Email sent to paamato78@gmail.com
+[2026-03-12T16:22:18.514Z] [INFO] Email sent to jonswihart@aol.com
+[2026-03-12T16:22:25.729Z] [INFO] Email sent to frida.ditlefsen@gmail.com
+[2026-03-12T16:26:30.897Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T16:26:30.898Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T16:27:20.196Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:27:20.198Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:27:52.320Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:27:52.321Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:27:59.130Z] [INFO] Email sent to amandarhuston@gmail.com
+[2026-03-12T16:28:06.041Z] [INFO] Email sent to paalbmartens@gmail.com
+[2026-03-12T16:28:22.288Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:28:22.289Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:29:45.702Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T16:29:45.704Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T16:29:54.951Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:29:54.953Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:30:04.238Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:30:04.239Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:30:11.197Z] [INFO] Email sent to kaitlinemarch@gmail.com
+[2026-03-12T16:35:05.121Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:35:05.123Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:35:17.811Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:35:17.812Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:35:24.305Z] [INFO] Email sent to 6hg66tc56p@privaterelay.appleid.com
+[2026-03-12T16:35:31.230Z] [INFO] Email sent to patricia.k.ohara@gmail.com
+[2026-03-12T16:36:01.665Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:36:01.667Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:36:16.703Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:36:16.704Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:36:26.817Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:36:26.818Z] [INFO] Processing 10 users from CSV
+[2026-03-12T16:36:32.811Z] [INFO] Email sent to m80m802@gmail.com
+[2026-03-12T16:36:42.938Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:36:42.939Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:36:51.712Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:36:51.713Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:37:30.763Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:37:30.764Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:37:37.058Z] [INFO] Email sent to meredithschmidt7@gmail.com
+[2026-03-12T16:37:44.888Z] [INFO] Email sent to rich@mallowfields.co
+[2026-03-12T16:39:26.212Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-12T16:39:26.214Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-12T16:39:32.699Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:39:32.701Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:39:57.759Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:39:57.760Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:40:03.494Z] [INFO] Email sent to mbetton@earthlink.net
+[2026-03-12T16:40:09.899Z] [INFO] Email sent to heddi3550@googlemail.com
+[2026-03-12T16:40:16.246Z] [INFO] Email sent to katriskina@posteo.net
+[2026-03-12T16:40:24.800Z] [INFO] Email sent to josh.troesh@gmail.com
+[2026-03-12T16:40:32.220Z] [INFO] Email sent to sophie.downer@gmx.de
+[2026-03-12T16:40:38.916Z] [INFO] Email sent to luquitashaurie@gmail.com
+[2026-03-12T16:41:11.102Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:41:11.104Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:41:21.195Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:41:21.197Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:41:29.185Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:41:29.186Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:41:35.664Z] [INFO] Email sent to support@cavoodlecreations.shop
+[2026-03-12T16:41:45.444Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:41:45.445Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:41:58.431Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:41:58.435Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:42:07.890Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:42:07.892Z] [INFO] Processing 8 users from CSV
+[2026-03-12T16:42:22.723Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:42:22.724Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:42:30.375Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:42:30.377Z] [INFO] Processing 9 users from CSV
+[2026-03-12T16:42:38.658Z] [INFO] POST /api/emails/send-manual
+[2026-03-12T16:42:38.660Z] [INFO] Processing 9 users from CSV
+[2026-03-13T05:17:36.759Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:17:36.761Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:17:57.546Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:17:57.547Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:18:57.625Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:18:58.995Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:18:59.639Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:05.282Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:06.185Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:06.617Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:06.836Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:07.044Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:07.222Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:07.403Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:07.594Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:07.810Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:08.256Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:08.438Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:08.645Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:08.835Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:09.034Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:09.222Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:09.448Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:09.882Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:10.464Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:10.839Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:11.061Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:29.391Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:30.536Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:30.967Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:31.313Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:31.518Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:31.726Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:31.917Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:32.102Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:32.280Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:32.465Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:32.654Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:32.845Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:19:36.438Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:20:04.994Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:20:04.996Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:20:13.848Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:20:14.643Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:20:15.410Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:20:24.762Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:20:48.844Z] [INFO] GET /api/client.ts
+[2026-03-13T05:21:00.700Z] [INFO] GET /api/client.ts
+[2026-03-13T05:21:34.829Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:21:34.831Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:21:45.103Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:21:45.105Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:21:51.252Z] [INFO] GET /api/client.ts
+[2026-03-13T05:21:52.972Z] [INFO] GET /api/client.ts
+[2026-03-13T05:22:21.046Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:05.270Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:23:05.272Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:23:05.852Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:07.343Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:08.645Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:08.856Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:09.047Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:10.063Z] [INFO] GET /api/client.ts
+[2026-03-13T05:23:10.282Z] [INFO] GET /api/client.ts
+[2026-03-13T05:26:13.505Z] [INFO] GET /api/client.ts
+[2026-03-13T05:27:01.127Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:27:20.470Z] [INFO] GET /api/client.ts
+[2026-03-13T05:27:34.923Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:27:49.495Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:27:49.497Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:27:55.603Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:27:55.604Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:27:55.604Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T05:28:27.552Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:28:27.553Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:28:27.554Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T05:30:43.721Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:30:43.722Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:30:43.722Z] [INFO] csvContent type: string, length: 173
+[2026-03-13T05:30:43.723Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:30:54.747Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:30:54.747Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:30:54.748Z] [INFO] csvContent type: string, length: 173
+[2026-03-13T05:30:54.748Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:31:29.464Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:31:29.465Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:31:29.466Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:31:29.467Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:31:29.972Z] [ERROR] Failed to generate email for iammr.x00001@gmail.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 29.771587926s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"29s"}]
+[2026-03-13T05:32:19.442Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:32:19.444Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:32:24.246Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:32:24.247Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\niammr.x00001@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":t
+[2026-03-13T05:32:24.247Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:32:24.248Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:32:24.249Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:32:24.249Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:32:24.584Z] [ERROR] Failed to generate email for iammr.x00001@gmail.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-03-13T05:32:49.301Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:32:49.304Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:32:53.956Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:32:53.956Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\niammr.x00001@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":t
+[2026-03-13T05:32:53.956Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:32:53.957Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:32:53.958Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:32:53.958Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:32:54.354Z] [ERROR] Failed to generate email for iammr.x00001@gmail.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-latest:generateContent: [404 Not Found] models/gemini-1.5-flash-latest is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-03-13T05:34:04.592Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:34:04.594Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:34:09.366Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:34:09.374Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\niammr.x00001@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":t
+[2026-03-13T05:34:09.375Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:34:09.375Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:34:09.376Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:34:09.377Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:34:09.878Z] [ERROR] Failed to generate email for iammr.x00001@gmail.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-3-flash-preview:generateContent: [404 Not Found] models/gemini-3-flash-preview is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-03-13T05:35:06.551Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:35:06.553Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:35:14.691Z] [INFO] GET /api/emails/debug/models
+[2026-03-13T05:35:15.099Z] [INFO] Available models:
+[2026-03-13T05:35:15.099Z] [INFO] - models/gemini-2.5-flash
+[2026-03-13T05:35:15.100Z] [INFO] - models/gemini-2.5-pro
+[2026-03-13T05:35:15.100Z] [INFO] - models/gemini-2.0-flash
+[2026-03-13T05:35:15.100Z] [INFO] - models/gemini-2.0-flash-001
+[2026-03-13T05:35:15.100Z] [INFO] - models/gemini-2.0-flash-lite-001
+[2026-03-13T05:35:15.101Z] [INFO] - models/gemini-2.0-flash-lite
+[2026-03-13T05:35:15.101Z] [INFO] - models/gemini-2.5-flash-preview-tts
+[2026-03-13T05:35:15.101Z] [INFO] - models/gemini-2.5-pro-preview-tts
+[2026-03-13T05:35:15.101Z] [INFO] - models/gemma-3-1b-it
+[2026-03-13T05:35:15.101Z] [INFO] - models/gemma-3-4b-it
+[2026-03-13T05:35:15.102Z] [INFO] - models/gemma-3-12b-it
+[2026-03-13T05:35:15.102Z] [INFO] - models/gemma-3-27b-it
+[2026-03-13T05:35:15.102Z] [INFO] - models/gemma-3n-e4b-it
+[2026-03-13T05:35:15.102Z] [INFO] - models/gemma-3n-e2b-it
+[2026-03-13T05:35:15.102Z] [INFO] - models/gemini-flash-latest
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-flash-lite-latest
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-pro-latest
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-2.5-flash-lite
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-2.5-flash-image
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-2.5-flash-lite-preview-09-2025
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-3-pro-preview
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-3-flash-preview
+[2026-03-13T05:35:15.103Z] [INFO] - models/gemini-3.1-pro-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-3.1-pro-preview-customtools
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-3.1-flash-lite-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-3-pro-image-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/nano-banana-pro-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-3.1-flash-image-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-robotics-er-1.5-preview
+[2026-03-13T05:35:15.104Z] [INFO] - models/gemini-2.5-computer-use-preview-10-2025
+[2026-03-13T05:35:15.105Z] [INFO] - models/deep-research-pro-preview-12-2025
+[2026-03-13T05:35:15.105Z] [INFO] - models/gemini-embedding-001
+[2026-03-13T05:35:15.105Z] [INFO] - models/gemini-embedding-2-preview
+[2026-03-13T05:35:15.105Z] [INFO] - models/aqa
+[2026-03-13T05:35:15.105Z] [INFO] - models/imagen-4.0-generate-001
+[2026-03-13T05:35:15.106Z] [INFO] - models/imagen-4.0-ultra-generate-001
+[2026-03-13T05:35:15.106Z] [INFO] - models/imagen-4.0-fast-generate-001
+[2026-03-13T05:35:15.106Z] [INFO] - models/veo-2.0-generate-001
+[2026-03-13T05:35:15.106Z] [INFO] - models/veo-3.0-generate-001
+[2026-03-13T05:35:15.106Z] [INFO] - models/veo-3.0-fast-generate-001
+[2026-03-13T05:35:15.107Z] [INFO] - models/veo-3.1-generate-preview
+[2026-03-13T05:35:15.107Z] [INFO] - models/veo-3.1-fast-generate-preview
+[2026-03-13T05:35:15.107Z] [INFO] - models/gemini-2.5-flash-native-audio-latest
+[2026-03-13T05:35:15.107Z] [INFO] - models/gemini-2.5-flash-native-audio-preview-09-2025
+[2026-03-13T05:35:15.107Z] [INFO] - models/gemini-2.5-flash-native-audio-preview-12-2025
+[2026-03-13T05:35:15.181Z] [INFO] GET /favicon.ico
+[2026-03-13T05:35:16.710Z] [INFO] GET /sw.js
+[2026-03-13T05:35:51.571Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:35:51.573Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:36:02.459Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:36:02.460Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\niammr.x00001@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":t
+[2026-03-13T05:36:02.460Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:36:02.461Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:36:02.462Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:36:02.462Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:36:19.604Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:36:19.605Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\niammr.x00001@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":f
+[2026-03-13T05:36:19.605Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:36:19.605Z] [INFO] csvContent type: string, length: 171
+[2026-03-13T05:36:19.606Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:36:19.606Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:36:32.430Z] [INFO] Email sent to iammr.x00001@gmail.com
+[2026-03-13T05:37:48.842Z] [INFO] GET /api/emails/sent
+[2026-03-13T05:37:48.849Z] [INFO] GET /api/emails/sent
+[2026-03-13T05:41:43.918Z] [INFO] GET /api/stats
+[2026-03-13T05:41:43.928Z] [INFO] GET /api/stats
+[2026-03-13T05:41:48.719Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:41:48.720Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod6@gmail.com,Aaditya Rathod,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun"
+[2026-03-13T05:41:48.720Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:41:48.721Z] [INFO] csvContent type: string, length: 173
+[2026-03-13T05:41:48.721Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:41:48.722Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:42:31.450Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:42:31.451Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:42:31.451Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:42:31.451Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:42:31.452Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:42:31.453Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:42:45.284Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:42:45.286Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:42:45.286Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:42:45.286Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:42:45.287Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:42:45.287Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:47:01.070Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:47:01.071Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:47:01.071Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:47:01.072Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:47:01.072Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:47:01.072Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:48:45.162Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:48:45.164Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:48:51.156Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:48:51.157Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:48:51.157Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:48:51.157Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:48:51.158Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:48:51.159Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:50:24.380Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:50:24.382Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:50:30.506Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:50:30.507Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:50:30.507Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:50:30.508Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:50:30.509Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:50:30.509Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:52:08.783Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:52:08.785Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:52:58.623Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:52:58.624Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:52:58.624Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:52:58.625Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:52:58.626Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:52:58.626Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:53:05.298Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:53:05.298Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:53:05.298Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:53:05.299Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:53:05.299Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:53:05.300Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:53:32.417Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:53:32.418Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:53:36.743Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:53:36.744Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:53:36.745Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:53:36.745Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:53:36.746Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:53:36.746Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:53:43.393Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:53:43.394Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:53:43.395Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:53:43.395Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:53:43.395Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:53:43.396Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:54:01.371Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:54:01.372Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:54:01.372Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:54:01.372Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:54:01.373Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:54:01.373Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:54:35.253Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T05:54:35.255Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T05:54:44.446Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:54:44.446Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:54:44.446Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:54:44.447Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:54:44.448Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:54:44.448Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:54:46.678Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[2026-03-13T05:54:58.511Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T05:54:58.512Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T05:54:58.512Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T05:54:58.512Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T05:54:58.513Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T05:54:58.513Z] [INFO] Processing 1 users from CSV
+[2026-03-13T05:56:57.864Z] [INFO] GET /api/stats
+[2026-03-13T05:56:57.873Z] [INFO] GET /api/stats
+[2026-03-13T05:57:12.015Z] [INFO] GET /api/config
+[2026-03-13T05:57:12.017Z] [INFO] GET /api/config
+[2026-03-13T05:57:22.525Z] [INFO] GET /api/stats
+[2026-03-13T05:57:22.528Z] [INFO] GET /api/stats
+[2026-03-13T05:57:52.518Z] [INFO] GET /api/stats
+[2026-03-13T05:58:19.431Z] [INFO] GET /api/stats
+[2026-03-13T05:58:49.434Z] [INFO] GET /api/stats
+[2026-03-13T05:59:19.433Z] [INFO] GET /api/stats
+[2026-03-13T05:59:49.434Z] [INFO] GET /api/stats
+[2026-03-13T06:00:19.433Z] [INFO] GET /api/stats
+[2026-03-13T06:00:49.434Z] [INFO] GET /api/stats
+[2026-03-13T06:01:19.437Z] [INFO] GET /api/stats
+[2026-03-13T06:01:44.297Z] [INFO] GET /api/stats
+[2026-03-13T06:01:44.301Z] [INFO] GET /api/stats
+[2026-03-13T06:02:14.292Z] [INFO] GET /api/stats
+[2026-03-13T06:02:44.290Z] [INFO] GET /api/stats
+[2026-03-13T06:03:14.291Z] [INFO] GET /api/stats
+[2026-03-13T06:03:32.417Z] [INFO] GET /api/stats
+[2026-03-13T06:03:32.419Z] [INFO] GET /api/stats
+[2026-03-13T06:03:37.943Z] [INFO] GET /api/stats
+[2026-03-13T06:03:37.946Z] [INFO] GET /api/stats
+[2026-03-13T06:03:58.952Z] [INFO] GET /api/stats
+[2026-03-13T06:03:58.955Z] [INFO] GET /api/stats
+[2026-03-13T06:04:28.961Z] [INFO] GET /api/stats
+[2026-03-13T06:04:53.688Z] [INFO] GET /api/stats
+[2026-03-13T06:04:53.692Z] [INFO] GET /api/stats
+[2026-03-13T06:05:10.134Z] [INFO] GET /api/stats
+[2026-03-13T06:05:10.138Z] [INFO] GET /api/stats
+[2026-03-13T06:05:11.659Z] [INFO] GET /api/stats
+[2026-03-13T06:05:11.661Z] [INFO] GET /api/stats
+[2026-03-13T06:07:36.865Z] [INFO] GET /api/stats
+[2026-03-13T06:07:36.867Z] [INFO] GET /api/stats
+[2026-03-13T06:07:38.218Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:07:38.221Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:07:51.284Z] [INFO] GET /api/stats
+[2026-03-13T06:07:51.287Z] [INFO] GET /api/stats
+[2026-03-13T06:07:52.567Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:07:52.569Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:08:58.002Z] [INFO] GET /api/stats
+[2026-03-13T06:08:58.004Z] [INFO] GET /api/stats
+[2026-03-13T06:08:59.136Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:08:59.139Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:08:59.968Z] [INFO] GET /api/config
+[2026-03-13T06:08:59.970Z] [INFO] GET /api/config
+[2026-03-13T06:09:00.431Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:09:00.435Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:09:54.622Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:09:54.625Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:09:55.406Z] [INFO] GET /api/stats
+[2026-03-13T06:09:55.410Z] [INFO] GET /api/stats
+[2026-03-13T06:09:59.598Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:09:59.600Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:10:05.057Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:10:05.057Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:10:05.057Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:10:05.058Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:10:05.058Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:10:05.058Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:10:20.534Z] [INFO] GET /api/stats
+[2026-03-13T06:10:20.537Z] [INFO] GET /api/stats
+[2026-03-13T06:10:23.409Z] [INFO] GET /api/stats
+[2026-03-13T06:10:23.412Z] [INFO] GET /api/stats
+[2026-03-13T06:10:25.665Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:10:25.668Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:11:13.392Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:11:13.401Z] [INFO] GET /api/emails/sent
+[2026-03-13T06:11:18.106Z] [INFO] GET /api/stats
+[2026-03-13T06:11:18.109Z] [INFO] GET /api/stats
+[2026-03-13T06:11:48.105Z] [INFO] GET /api/stats
+[2026-03-13T06:12:18.103Z] [INFO] GET /api/stats
+[2026-03-13T06:12:48.103Z] [INFO] GET /api/stats
+[2026-03-13T06:13:18.104Z] [INFO] GET /api/stats
+[2026-03-13T06:13:48.104Z] [INFO] GET /api/stats
+[2026-03-13T06:14:18.102Z] [INFO] GET /api/stats
+[2026-03-13T06:14:48.103Z] [INFO] GET /api/stats
+[2026-03-13T06:15:18.102Z] [INFO] GET /api/stats
+[2026-03-13T06:15:35.975Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:15:35.975Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:15:35.976Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:15:35.976Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:15:35.976Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:15:35.976Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:16:44.687Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:16:44.691Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:17:26.843Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:17:26.845Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:17:43.281Z] [INFO] GET /api/stats
+[2026-03-13T06:18:36.319Z] [INFO] GET /api/stats
+[2026-03-13T06:18:38.415Z] [INFO] GET /api/stats
+[2026-03-13T06:18:38.418Z] [INFO] GET /api/stats
+[2026-03-13T06:18:49.872Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:18:49.872Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\npatstafford2121@gmail.com,Pat Stafford,Gold,219,World of warcraft Death Knight and Paladin fighting,World of wa
+[2026-03-13T06:18:49.873Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:18:49.873Z] [INFO] csvContent type: string, length: 26392
+[2026-03-13T06:18:49.875Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-13T06:18:49.875Z] [INFO] Processing 9 users from CSV
+[2026-03-13T06:32:17.041Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:32:17.044Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\npatstafford2121@gmail.com,Pat Stafford,Gold,219,World of warcraft Death Knight and Paladin fighting,World of wa
+[2026-03-13T06:32:17.045Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:32:17.045Z] [INFO] csvContent type: string, length: 61254
+[2026-03-13T06:32:17.046Z] [INFO] Successfully parsed CSV: 19 users
+[2026-03-13T06:32:17.047Z] [INFO] Processing 19 users from CSV
+[2026-03-13T06:32:31.771Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:32:31.771Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T06:32:31.772Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:32:31.772Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T06:32:31.772Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T06:32:31.772Z] [ERROR] No valid users found in CSV
+[2026-03-13T06:32:33.317Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:32:33.318Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T06:32:33.318Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:32:33.318Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T06:32:33.318Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T06:32:33.319Z] [ERROR] No valid users found in CSV
+[2026-03-13T06:32:40.224Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:32:40.225Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:32:40.226Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:32:40.226Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:32:40.226Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:32:40.226Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:33:13.383Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:33:13.383Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:33:13.383Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:33:13.383Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:33:13.384Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:33:13.384Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:33:14.213Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 45.919232037s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"45s"}]
+[2026-03-13T06:33:18.352Z] [INFO] POST /api/emails/preview
+[2026-03-13T06:33:18.353Z] [INFO] Body: {"email":"sjat@paypal.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T06:33:19.130Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 40.759305214s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"40s"}]
+[2026-03-13T06:33:19.131Z] [ERROR] Error generating preview: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 40.759305214s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"40s"}]
+[2026-03-13T06:33:20.301Z] [INFO] POST /api/emails/preview
+[2026-03-13T06:33:20.302Z] [INFO] Body: {"email":"sjat@paypal.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T06:33:23.561Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 36.308719721s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"36s"}]
+[2026-03-13T06:33:23.561Z] [ERROR] Error generating preview: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 36.308719721s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"36s"}]
+[2026-03-13T06:33:28.832Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:33:28.832Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:33:28.833Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:33:28.834Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:33:28.834Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:33:28.834Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:33:29.610Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 30.274886227s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"30s"}]
+[2026-03-13T06:33:41.259Z] [INFO] GET /api/stats
+[2026-03-13T06:33:41.272Z] [INFO] GET /api/stats
+[2026-03-13T06:33:48.948Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:33:48.949Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:33:48.949Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:33:48.950Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:33:48.950Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:33:48.950Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:33:50.833Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 9.054800558s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"9s"}]
+[2026-03-13T06:33:55.930Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:33:55.930Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:33:55.931Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:33:55.932Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:33:55.932Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:33:55.932Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:33:56.607Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 3.340359373s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.5-flash","location":"global"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"3s"}]
+[2026-03-13T06:37:38.189Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:37:38.190Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:37:38.193Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:37:38.194Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:37:38.195Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:37:38.196Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:37:39.130Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 20.736404163s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"20s"}]
+[2026-03-13T06:38:10.846Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:38:10.848Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:38:46.072Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:38:46.072Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:38:46.073Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:38:46.073Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:38:46.074Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:38:46.074Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:38:46.589Z] [ERROR] Failed to generate email for sjat@paypal.com: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite-001:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash-lite","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-lite"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash-lite","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]
+[2026-03-13T06:43:53.921Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:43:53.923Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:44:08.332Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:44:08.332Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:44:08.333Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:44:08.333Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:44:08.335Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:44:08.335Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:44:09.864Z] [ERROR] Failed to generate email for sjat@paypal.com: Groq API error: The model `llama-3.1-70b-versatile` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+[2026-03-13T06:45:32.016Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:45:32.018Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:45:39.360Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:45:39.361Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns\n","dryRun":true}
+[2026-03-13T06:45:39.361Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:45:39.361Z] [INFO] csvContent type: string, length: 154
+[2026-03-13T06:45:39.363Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:45:39.363Z] [INFO] Processing 1 users from CSV
+[2026-03-13T06:46:24.656Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:46:24.657Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\njcrispownage@gmail.com,James Crisafulli,Gold,7,\"Please create a poster for a concert. The two bands performing
+[2026-03-13T06:46:24.659Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:46:24.659Z] [INFO] csvContent type: string, length: 26659
+[2026-03-13T06:46:24.660Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-13T06:46:24.661Z] [INFO] Processing 9 users from CSV
+[2026-03-13T06:46:29.374Z] [INFO] POST /api/emails/preview
+[2026-03-13T06:46:29.375Z] [INFO] Body: {"email":"jcrispownage@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T06:46:37.713Z] [INFO] GET /api/stats
+[2026-03-13T06:46:37.724Z] [INFO] GET /api/stats
+[2026-03-13T06:46:43.597Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:46:43.598Z] [INFO] Body: {"csvContent":"\njcrispownage@gmail.com,James Crisafulli,Gold,7,\"Please create a poster for a concert. The two bands performing are \"\"Shock Diamonds\"\" and \"\"Good Excuse.\"\" The text of those b
+[2026-03-13T06:46:43.598Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:46:43.598Z] [INFO] csvContent type: string, length: 79566
+[2026-03-13T06:46:43.599Z] [ERROR] CSV parsing error: CSV parsing errors: [{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"FieldMismatch","code":"TooManyFields","message":"Too many fields: expected 9 fields but parsed 13","row":7}]
+[2026-03-13T06:46:45.697Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:46:45.697Z] [INFO] Body: {"csvContent":"\njcrispownage@gmail.com,James Crisafulli,Gold,7,\"Please create a poster for a concert. The two bands performing are \"\"Shock Diamonds\"\" and \"\"Good Excuse.\"\" The text of those b
+[2026-03-13T06:46:45.698Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:46:45.698Z] [INFO] csvContent type: string, length: 79566
+[2026-03-13T06:46:45.699Z] [ERROR] CSV parsing error: CSV parsing errors: [{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"FieldMismatch","code":"TooManyFields","message":"Too many fields: expected 9 fields but parsed 13","row":7}]
+[2026-03-13T06:46:52.349Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:46:52.350Z] [INFO] Body: {"csvContent":"\njcrispownage@gmail.com,James Crisafulli,Gold,7,\"Please create a poster for a concert. The two bands performing are \"\"Shock Diamonds\"\" and \"\"Good Excuse.\"\" The text of those b
+[2026-03-13T06:46:52.351Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:46:52.351Z] [INFO] csvContent type: string, length: 79566
+[2026-03-13T06:46:52.351Z] [ERROR] CSV parsing error: CSV parsing errors: [{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"Quotes","code":"InvalidQuotes","message":"Trailing quote on quoted field is malformed","row":9,"index":25575},{"type":"FieldMismatch","code":"TooManyFields","message":"Too many fields: expected 9 fields but parsed 13","row":7}]
+[2026-03-13T06:48:17.862Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T06:48:17.864Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T06:48:25.992Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:48:25.992Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\njcrispownage@gmail.com,James Crisafulli,Gold,7,\"Please create a poster for a concert. The two bands performing
+[2026-03-13T06:48:25.993Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:48:25.993Z] [INFO] csvContent type: string, length: 114198
+[2026-03-13T06:48:25.995Z] [INFO] Successfully parsed CSV: 37 users
+[2026-03-13T06:48:25.996Z] [INFO] Processing 37 users from CSV
+[2026-03-13T06:48:39.867Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T06:48:39.868Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T06:48:39.868Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T06:48:39.868Z] [INFO] csvContent type: string, length: 153
+[2026-03-13T06:48:39.869Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T06:48:39.869Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:03:43.771Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:03:43.773Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:03:43.774Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:03:43.774Z] [INFO] csvContent type: string, length: 153
+[2026-03-13T07:03:43.774Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:03:43.775Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:04:40.337Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:04:40.337Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:04:40.338Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:04:40.338Z] [INFO] csvContent type: string, length: 153
+[2026-03-13T07:04:40.338Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:04:40.338Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:04:55.441Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:04:55.441Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":false}
+[2026-03-13T07:04:55.442Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:04:55.442Z] [INFO] csvContent type: string, length: 153
+[2026-03-13T07:04:55.442Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:04:55.443Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:04:59.521Z] [INFO] Email sent to sjat@paypal.com
+[2026-03-13T07:05:06.310Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:05:06.311Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:06:40.971Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:06:40.975Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:06:46.474Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:06:46.474Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\nsjat@paypal.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:06:46.475Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:06:46.475Z] [INFO] csvContent type: string, length: 153
+[2026-03-13T07:06:46.475Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:06:46.475Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:06:48.800Z] [INFO] POST /api/emails/preview
+[2026-03-13T07:06:48.801Z] [INFO] Body: {"email":"sjat@paypal.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T07:07:35.342Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:07:35.344Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:07:35.344Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:07:35.344Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:07:35.346Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:07:35.346Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:07:38.196Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:07:38.196Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:07:38.197Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:07:38.198Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:07:38.198Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:07:38.198Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:07:47.616Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:07:47.616Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:07:47.617Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:07:47.617Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:07:47.617Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:07:47.618Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:07:56.865Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:07:56.865Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nmarieflavie.rodrigue@gmail.com,Marie-Flavie Rodrigue,Gold,5,\"Le Premier Plan (L'Action) : Émilie est au centre
+[2026-03-13T07:07:56.865Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:07:56.866Z] [INFO] csvContent type: string, length: 34864
+[2026-03-13T07:07:56.866Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-13T07:07:56.867Z] [INFO] Processing 10 users from CSV
+[2026-03-13T07:08:18.431Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:08:18.432Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nvanes_tremblay@hotmail.com,Vanessa Tremblay-Plouffe ,Platinum,9,\"Ultra realistic cinematic Avengers full tatto
+[2026-03-13T07:08:18.432Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:08:18.432Z] [INFO] csvContent type: string, length: 25079
+[2026-03-13T07:08:18.433Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-13T07:08:18.433Z] [INFO] Processing 9 users from CSV
+[2026-03-13T07:08:28.987Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:08:28.987Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:08:28.988Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:08:28.988Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:08:28.989Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:08:28.989Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:08:29.867Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:08:29.867Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:08:29.867Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:08:29.868Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:08:29.868Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:08:29.868Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:08:36.883Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:08:36.883Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:08:36.884Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:08:36.885Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:08:36.885Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:08:36.885Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:08:38.641Z] [INFO] POST /api/emails/preview
+[2026-03-13T07:08:38.641Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T07:09:02.611Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:09:02.612Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":false}
+[2026-03-13T07:09:02.612Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:09:02.612Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:09:02.613Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:09:02.613Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:09:47.915Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:09:47.917Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:09:57.298Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:09:57.298Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:09:57.299Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:09:57.299Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:09:57.300Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:09:57.300Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:09:59.143Z] [INFO] POST /api/emails/preview
+[2026-03-13T07:09:59.144Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T07:10:11.689Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:10:11.690Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":false}
+[2026-03-13T07:10:11.690Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:10:11.690Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:10:11.691Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:10:11.691Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:10:26.710Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:10:26.711Z] [INFO] Body: {"csvContent":"","dryRun":false}
+[2026-03-13T07:10:26.711Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:10:26.711Z] [INFO] csvContent type: string, length: 0
+[2026-03-13T07:10:26.711Z] [ERROR] Missing csvContent in request body
+[2026-03-13T07:17:09.034Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:17:09.036Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:17:20.163Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:17:20.175Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:18:39.485Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:18:39.487Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:18:44.709Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:18:44.732Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:18:46.173Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:18:46.175Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:19:21.615Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:19:21.617Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:19:23.479Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:19:23.485Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:19:50.424Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:19:50.428Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:20:02.960Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:20:02.962Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:20:20.352Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:20:20.354Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:20:21.121Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:20:21.128Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:20:37.918Z] [INFO] DELETE /api/emails/sent/sjat%40paypal.com
+[2026-03-13T07:20:42.740Z] [INFO] DELETE /api/emails/sent/aadityarathod6%40gmail.com
+[2026-03-13T07:20:44.887Z] [INFO] DELETE /api/emails/sent/aadityarathod7%40gmail.com
+[2026-03-13T07:20:53.856Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:20:53.857Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5","
+[2026-03-13T07:20:53.857Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:20:53.857Z] [INFO] csvContent type: string, length: 180
+[2026-03-13T07:20:53.859Z] [INFO] Successfully parsed CSV: 0 users
+[2026-03-13T07:20:53.859Z] [ERROR] No valid users found in CSV
+[2026-03-13T07:21:00.350Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:21:00.350Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:21:00.351Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:21:00.351Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:21:00.352Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:21:00.352Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:21:16.774Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:21:16.774Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":false}
+[2026-03-13T07:21:16.774Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:21:16.775Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:21:16.775Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:21:16.775Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:21:20.522Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-13T07:22:17.694Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-13T07:22:17.696Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-13T07:22:26.971Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:22:26.978Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:22:29.772Z] [INFO] DELETE /api/emails/sent/aadityarathod7%40gmail.com
+[2026-03-13T07:22:35.497Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:22:35.498Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod7@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:22:35.498Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:22:35.498Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:22:35.499Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:22:35.500Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:22:51.046Z] [INFO] POST /api/emails/send-single
+[2026-03-13T07:22:51.047Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Elevate Your Art","body":"Hi aadi,\n\nCreating unique anime and cyberpunk-inspired art can be time-consuming, especially when it comes to refining detail
+[2026-03-13T07:22:53.959Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-13T07:30:13.389Z] [INFO] GET /
+[2026-03-13T07:30:13.406Z] [INFO] GET /
+[2026-03-13T07:30:14.386Z] [INFO] GET /sw.js
+[2026-03-13T07:30:16.208Z] [INFO] GET /
+[2026-03-13T07:30:16.219Z] [INFO] GET /assets/index-XUgiZMWg.js
+[2026-03-13T07:30:16.220Z] [INFO] GET /assets/index-C1NbV7ld.css
+[2026-03-13T07:30:16.247Z] [INFO] GET /api/stats
+[2026-03-13T07:30:16.259Z] [INFO] GET /vite.svg
+[2026-03-13T07:30:37.423Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:30:37.427Z] [INFO] GET /api/emails/sent
+[2026-03-13T07:30:40.740Z] [INFO] DELETE /api/emails/sent/aadityarathod7%40gmail.com
+[2026-03-13T07:30:44.399Z] [INFO] GET /sw.js
+[2026-03-13T07:30:46.250Z] [INFO] GET /api/stats
+[2026-03-13T07:30:47.485Z] [INFO] DELETE /api/emails/sent/iammr.x00001%40gmail.com
+[2026-03-13T07:31:16.265Z] [INFO] GET /api/stats
+[2026-03-13T07:31:46.252Z] [INFO] GET /api/stats
+[2026-03-13T07:32:16.248Z] [INFO] GET /api/stats
+[2026-03-13T07:32:46.252Z] [INFO] GET /api/stats
+[2026-03-13T07:33:16.247Z] [INFO] GET /api/stats
+[2026-03-13T07:33:46.248Z] [INFO] GET /api/stats
+[2026-03-13T07:34:01.224Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T07:34:01.224Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod6@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T07:34:01.225Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T07:34:01.225Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T07:34:01.226Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T07:34:01.226Z] [INFO] Processing 1 users from CSV
+[2026-03-13T07:34:05.703Z] [INFO] POST /api/emails/send-single
+[2026-03-13T07:34:05.704Z] [INFO] Body: {"email":"aadityarathod6@gmail.com","subject":"Elevate Your Anime Art","body":"Hi sjat,\n\nCreating cohesive anime and cyberpunk art can be tough, especially when it comes to balancing vibrant colors 
+[2026-03-13T07:34:10.798Z] [INFO] Email sent to aadityarathod6@gmail.com
+[2026-03-13T07:34:16.253Z] [INFO] GET /api/stats
+[2026-03-13T07:34:46.245Z] [INFO] GET /api/stats
+[2026-03-13T07:35:16.262Z] [INFO] GET /api/stats
+[2026-03-13T07:35:46.245Z] [INFO] GET /api/stats
+[2026-03-13T07:36:16.246Z] [INFO] GET /api/stats
+[2026-03-13T07:36:46.251Z] [INFO] GET /api/stats
+[2026-03-13T07:37:16.245Z] [INFO] GET /api/stats
+[2026-03-13T07:37:46.245Z] [INFO] GET /api/stats
+[2026-03-13T07:38:16.249Z] [INFO] GET /api/stats
+[2026-03-13T07:38:46.245Z] [INFO] GET /api/stats
+[2026-03-13T07:39:16.244Z] [INFO] GET /api/stats
+[2026-03-13T07:39:46.243Z] [INFO] GET /api/stats
+[2026-03-13T07:40:16.244Z] [INFO] GET /api/stats
+[2026-03-13T07:40:46.249Z] [INFO] GET /api/stats
+[2026-03-13T07:41:16.242Z] [INFO] GET /api/stats
+[2026-03-13T07:41:46.226Z] [INFO] GET /api/stats
+[2026-03-13T07:42:16.216Z] [INFO] GET /api/stats
+[2026-03-13T07:42:46.219Z] [INFO] GET /api/stats
+[2026-03-13T07:43:16.215Z] [INFO] GET /api/stats
+[2026-03-13T07:43:46.241Z] [INFO] GET /api/stats
+[2026-03-13T07:44:16.214Z] [INFO] GET /api/stats
+[2026-03-13T07:44:46.217Z] [INFO] GET /api/stats
+[2026-03-13T07:45:16.231Z] [INFO] GET /api/stats
+[2026-03-13T07:45:46.214Z] [INFO] GET /api/stats
+[2026-03-13T07:46:16.213Z] [INFO] GET /api/stats
+[2026-03-13T07:46:46.211Z] [INFO] GET /api/stats
+[2026-03-13T07:47:16.215Z] [INFO] GET /api/stats
+[2026-03-13T07:47:46.213Z] [INFO] GET /api/stats
+[2026-03-13T07:48:16.216Z] [INFO] GET /api/stats
+[2026-03-13T07:48:46.231Z] [INFO] GET /api/stats
+[2026-03-13T07:49:16.213Z] [INFO] GET /api/stats
+[2026-03-13T07:49:46.213Z] [INFO] GET /api/stats
+[2026-03-13T07:50:16.214Z] [INFO] GET /api/stats
+[2026-03-13T07:50:46.214Z] [INFO] GET /api/stats
+[2026-03-13T07:51:16.214Z] [INFO] GET /api/stats
+[2026-03-13T07:51:46.214Z] [INFO] GET /api/stats
+[2026-03-13T07:52:16.214Z] [INFO] GET /api/stats
+[2026-03-13T07:52:46.211Z] [INFO] GET /api/stats
+[2026-03-13T07:53:16.207Z] [INFO] GET /api/stats
+[2026-03-13T07:53:46.205Z] [INFO] GET /api/stats
+[2026-03-13T07:54:16.206Z] [INFO] GET /api/stats
+[2026-03-13T07:54:46.206Z] [INFO] GET /api/stats
+[2026-03-13T07:55:16.205Z] [INFO] GET /api/stats
+[2026-03-13T07:55:46.210Z] [INFO] GET /api/stats
+[2026-03-13T07:56:16.204Z] [INFO] GET /api/stats
+[2026-03-13T07:56:46.203Z] [INFO] GET /api/stats
+[2026-03-13T07:57:16.281Z] [INFO] GET /api/stats
+[2026-03-13T07:57:46.279Z] [INFO] GET /api/stats
+[2026-03-13T08:15:26.256Z] [INFO] GET /api/stats
+[2026-03-13T08:15:56.315Z] [INFO] GET /api/stats
+[2026-03-13T08:18:27.517Z] [INFO] GET /api/stats
+[2026-03-13T08:35:24.711Z] [INFO] GET /api/stats
+[2026-03-13T08:36:24.691Z] [INFO] GET /api/stats
+[2026-03-13T08:37:24.690Z] [INFO] GET /api/stats
+[2026-03-13T08:38:24.691Z] [INFO] GET /api/stats
+[2026-03-13T08:39:24.692Z] [INFO] GET /api/stats
+[2026-03-13T08:40:24.691Z] [INFO] GET /api/stats
+[2026-03-13T08:41:24.691Z] [INFO] GET /api/stats
+[2026-03-13T08:59:11.899Z] [INFO] GET /api/stats
+[2026-03-13T09:00:11.895Z] [INFO] GET /api/stats
+[2026-03-13T09:01:11.894Z] [INFO] GET /api/stats
+[2026-03-13T09:02:11.895Z] [INFO] GET /api/stats
+[2026-03-13T09:03:11.906Z] [INFO] GET /api/stats
+[2026-03-13T09:04:11.984Z] [INFO] GET /api/stats
+[2026-03-13T09:05:11.931Z] [INFO] GET /api/stats
+[2026-03-13T09:21:17.173Z] [INFO] GET /api/stats
+[2026-03-13T09:21:41.160Z] [INFO] GET /api/stats
+[2026-03-13T09:22:11.167Z] [INFO] GET /api/stats
+[2026-03-13T09:23:17.215Z] [INFO] GET /api/stats
+[2026-03-13T09:24:17.170Z] [INFO] GET /api/stats
+[2026-03-13T09:25:17.173Z] [INFO] GET /api/stats
+[2026-03-13T09:26:17.173Z] [INFO] GET /api/stats
+[2026-03-13T09:27:17.173Z] [INFO] GET /api/stats
+[2026-03-13T09:28:17.176Z] [INFO] GET /api/stats
+[2026-03-13T09:29:17.172Z] [INFO] GET /api/stats
+[2026-03-13T09:30:17.175Z] [INFO] GET /api/stats
+[2026-03-13T09:31:17.178Z] [INFO] GET /api/stats
+[2026-03-13T09:32:17.174Z] [INFO] GET /api/stats
+[2026-03-13T09:33:17.177Z] [INFO] GET /api/stats
+[2026-03-13T09:34:17.177Z] [INFO] GET /api/stats
+[2026-03-13T09:35:17.177Z] [INFO] GET /api/stats
+[2026-03-13T09:36:17.115Z] [INFO] GET /api/stats
+[2026-03-13T09:37:17.113Z] [INFO] GET /api/stats
+[2026-03-13T09:38:17.115Z] [INFO] GET /api/stats
+[2026-03-13T09:39:17.115Z] [INFO] GET /api/stats
+[2026-03-13T09:39:38.647Z] [INFO] POST /api/emails/send-manual
+[2026-03-13T09:39:38.647Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2\naadityarathod6@gmail.com,sjat,Gold,3,anime character design,cyberpunk landscape,abstract geometric patterns","dryRun":true}
+[2026-03-13T09:39:38.648Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-13T09:39:38.648Z] [INFO] csvContent type: string, length: 162
+[2026-03-13T09:39:38.648Z] [INFO] Successfully parsed CSV: 1 users
+[2026-03-13T09:39:38.648Z] [INFO] Processing 1 users from CSV
+[2026-03-13T09:39:42.537Z] [INFO] POST /api/emails/preview
+[2026-03-13T09:39:42.537Z] [INFO] Body: {"email":"aadityarathod6@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-13T09:39:48.169Z] [INFO] POST /api/emails/send-single
+[2026-03-13T09:39:48.169Z] [INFO] Body: {"email":"aadityarathod6@gmail.com","subject":"Elevate Your AI Art","body":"Hi User,\n\nCreating unique AI-generated images can be a challenge, especially when it comes to consistency and quality. Art
+[2026-03-13T09:39:50.941Z] [INFO] Email sent to aadityarathod6@gmail.com
+[2026-03-13T09:39:50.942Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-13T09:39:51.849Z] [INFO] GET /api/emails/sent
+[2026-03-13T09:39:51.852Z] [INFO] GET /api/emails/sent
+[2026-03-13T09:40:17.120Z] [INFO] GET /api/stats
+[2026-03-13T09:41:17.115Z] [INFO] GET /api/stats
+[2026-03-13T09:42:17.119Z] [INFO] GET /api/stats
+[2026-03-13T09:43:17.116Z] [INFO] GET /api/stats
+[2026-03-13T09:44:17.120Z] [INFO] GET /api/stats
+[2026-03-13T09:45:17.118Z] [INFO] GET /api/stats
+[2026-03-13T09:46:17.117Z] [INFO] GET /api/stats
+[2026-03-13T09:47:17.117Z] [INFO] GET /api/stats
+[2026-03-13T09:48:17.117Z] [INFO] GET /api/stats
+[2026-03-13T09:49:17.118Z] [INFO] GET /api/stats
+[2026-03-13T09:50:17.117Z] [INFO] GET /api/stats
+[2026-03-13T09:51:17.119Z] [INFO] GET /api/stats
+[2026-03-13T09:52:17.116Z] [INFO] GET /api/stats
+[2026-03-13T09:53:17.114Z] [INFO] GET /api/stats
+[2026-03-13T09:54:17.113Z] [INFO] GET /api/stats
+[2026-03-13T09:55:17.116Z] [INFO] GET /api/stats
+[2026-03-13T09:56:17.113Z] [INFO] GET /api/stats
+[2026-03-13T09:57:17.118Z] [INFO] GET /api/stats
+[2026-03-13T09:58:17.114Z] [INFO] GET /api/stats
+[2026-03-13T09:59:17.114Z] [INFO] GET /api/stats
+[2026-03-13T10:00:17.112Z] [INFO] GET /api/stats
+[2026-03-13T10:01:17.118Z] [INFO] GET /api/stats
+[2026-03-13T10:02:17.118Z] [INFO] GET /api/stats
+[2026-03-13T10:03:17.118Z] [INFO] GET /api/stats
+[2026-03-13T10:04:17.116Z] [INFO] GET /api/stats
+[2026-03-13T10:05:17.116Z] [INFO] GET /api/stats
+[2026-03-13T10:06:17.117Z] [INFO] GET /api/stats
+[2026-03-13T10:07:17.156Z] [INFO] GET /api/stats
+[2026-03-13T10:08:17.164Z] [INFO] GET /api/stats
+[2026-03-13T10:09:17.166Z] [INFO] GET /api/stats
+[2026-03-13T10:10:17.167Z] [INFO] GET /api/stats
+[2026-03-13T10:11:17.169Z] [INFO] GET /api/stats
+[2026-03-13T10:12:17.169Z] [INFO] GET /api/stats
+[2026-03-13T10:13:17.167Z] [INFO] GET /api/stats
+[2026-03-13T10:14:17.167Z] [INFO] GET /api/stats
+[2026-03-13T10:15:17.175Z] [INFO] GET /api/stats
+[2026-03-13T10:16:17.169Z] [INFO] GET /api/stats
+[2026-03-13T10:17:17.171Z] [INFO] GET /api/stats
+[2026-03-13T10:18:17.171Z] [INFO] GET /api/stats
+[2026-03-13T10:19:17.172Z] [INFO] GET /api/stats
+[2026-03-13T10:20:17.171Z] [INFO] GET /api/stats
+[2026-03-13T10:21:17.175Z] [INFO] GET /api/stats
+[2026-03-13T10:22:17.174Z] [INFO] GET /api/stats
+[2026-03-13T10:23:17.207Z] [INFO] GET /api/stats
+[2026-03-13T10:24:17.217Z] [INFO] GET /api/stats
+[2026-03-13T10:42:02.209Z] [INFO] GET /api/stats
+[2026-03-13T10:57:51.556Z] [INFO] GET /api/stats
+[2026-03-13T10:58:51.540Z] [INFO] GET /api/stats
+[2026-03-13T11:17:37.190Z] [INFO] GET /api/stats
+[2026-03-13T11:55:12.107Z] [INFO] GET /api/stats
+[2026-03-13T11:56:11.422Z] [INFO] GET /api/stats
+[2026-03-13T12:26:25.571Z] [INFO] GET /api/stats
+[2026-03-13T12:27:25.571Z] [INFO] GET /api/stats
+[2026-03-13T12:28:25.571Z] [INFO] GET /api/stats
+[2026-03-13T13:02:16.086Z] [INFO] GET /api/stats
+[2026-03-13T15:20:26.257Z] [INFO] GET /api/stats
+[2026-03-13T16:16:20.317Z] [INFO] GET /api/stats
+[2026-03-13T16:48:26.562Z] [INFO] GET /api/stats
+[2026-03-13T16:49:26.563Z] [INFO] GET /api/stats
+[2026-03-13T17:31:16.736Z] [INFO] GET /api/stats
+[2026-03-13T17:32:16.740Z] [INFO] GET /api/stats
+[2026-03-13T17:33:16.739Z] [INFO] GET /api/stats
+[2026-03-13T17:34:16.737Z] [INFO] GET /api/stats
+[2026-03-13T17:35:16.737Z] [INFO] GET /api/stats
+[2026-03-13T17:52:28.235Z] [INFO] GET /api/stats
+[2026-03-13T18:31:53.501Z] [INFO] GET /api/stats
+[2026-03-13T18:49:06.846Z] [INFO] GET /api/stats
+[2026-03-13T20:05:41.529Z] [INFO] GET /api/stats
+[2026-03-13T22:29:57.726Z] [INFO] GET /api/stats
+[2026-03-13T22:30:57.732Z] [INFO] GET /api/stats
+[2026-03-13T22:31:57.742Z] [INFO] GET /api/stats
+[2026-03-13T22:32:57.736Z] [INFO] GET /api/stats
+[2026-03-13T23:40:14.379Z] [INFO] GET /api/stats
+[2026-03-14T00:31:00.907Z] [INFO] GET /api/stats
+[2026-03-14T00:32:00.891Z] [INFO] GET /api/stats
+[2026-03-14T01:33:27.308Z] [INFO] GET /api/stats
+[2026-03-14T01:50:35.390Z] [INFO] GET /api/stats
+[2026-03-14T01:51:35.382Z] [INFO] GET /api/stats
+[2026-03-14T02:24:50.831Z] [INFO] GET /api/stats
+[2026-03-14T02:32:09.735Z] [INFO] GET /api/stats
+[2026-03-14T02:33:09.734Z] [INFO] GET /api/stats
+[2026-03-14T02:34:09.731Z] [INFO] GET /api/stats
+[2026-03-14T02:35:09.731Z] [INFO] GET /api/stats
+[2026-03-14T05:06:39.155Z] [INFO] GET /api/stats
+[2026-03-14T06:08:08.334Z] [INFO] GET /api/stats
+[2026-03-14T06:09:07.745Z] [INFO] GET /api/stats
+[2026-03-14T06:35:52.395Z] [INFO] GET /api/stats
+[2026-03-14T06:36:52.415Z] [INFO] GET /api/stats
+[2026-03-14T07:09:24.234Z] [INFO] GET /api/stats
+[2026-03-14T08:54:19.855Z] [INFO] GET /api/stats
+[2026-03-14T08:58:23.586Z] [INFO] GET /api/stats
+[2026-03-14T08:59:23.590Z] [INFO] GET /api/stats
+[2026-03-14T09:00:23.588Z] [INFO] GET /api/stats
+[2026-03-14T09:17:46.092Z] [INFO] GET /api/stats
+[2026-03-14T09:18:46.096Z] [INFO] GET /api/stats
+[2026-03-14T09:39:07.053Z] [INFO] GET /api/stats
+[2026-03-14T09:40:07.061Z] [INFO] GET /api/stats
+[2026-03-14T10:25:06.021Z] [INFO] GET /api/stats
+[2026-03-14T10:26:06.029Z] [INFO] GET /api/stats
+[2026-03-14T11:57:04.794Z] [INFO] GET /api/stats
+[2026-03-14T13:42:40.570Z] [INFO] GET /api/stats
+[2026-03-14T14:15:34.899Z] [INFO] GET /api/stats
+[2026-03-14T14:16:34.898Z] [INFO] GET /api/stats
+[2026-03-14T14:17:34.901Z] [INFO] GET /api/stats
+[2026-03-14T14:18:34.898Z] [INFO] GET /api/stats
+[2026-03-14T14:36:47.394Z] [INFO] GET /api/stats
+[2026-03-14T14:49:12.607Z] [INFO] GET /api/stats
+[2026-03-14T14:50:12.603Z] [INFO] GET /api/stats
+[2026-03-14T14:51:12.625Z] [INFO] GET /api/stats
+[2026-03-14T14:52:12.523Z] [INFO] GET /api/stats
+[2026-03-14T14:53:12.517Z] [INFO] GET /api/stats
+[2026-03-14T14:54:12.517Z] [INFO] GET /api/stats
+[2026-03-14T14:55:12.517Z] [INFO] GET /api/stats
+[2026-03-14T14:56:12.528Z] [INFO] GET /api/stats
+[2026-03-14T14:57:12.532Z] [INFO] GET /api/stats
+[2026-03-14T14:58:12.529Z] [INFO] GET /api/stats
+[2026-03-14T14:59:12.531Z] [INFO] GET /api/stats
+[2026-03-14T15:00:12.530Z] [INFO] GET /api/stats
+[2026-03-14T15:01:12.531Z] [INFO] GET /api/stats
+[2026-03-14T15:02:12.532Z] [INFO] GET /api/stats
+[2026-03-14T15:03:12.529Z] [INFO] GET /api/stats
+[2026-03-14T15:04:12.527Z] [INFO] GET /api/stats
+[2026-03-14T15:05:06.104Z] [INFO] GET /api/stats
+[2026-03-14T15:05:36.522Z] [INFO] GET /api/stats
+[2026-03-14T15:06:06.520Z] [INFO] GET /api/stats
+[2026-03-14T15:07:12.539Z] [INFO] GET /api/stats
+[2026-03-14T15:08:12.547Z] [INFO] GET /api/stats
+[2026-03-14T15:09:14.040Z] [INFO] GET /api/stats
+[2026-03-14T15:44:13.667Z] [INFO] GET /api/stats
+[2026-03-14T16:16:24.595Z] [INFO] GET /api/stats
+[2026-03-14T16:49:48.462Z] [INFO] GET /api/stats
+[2026-03-14T17:22:25.980Z] [INFO] GET /api/stats
+[2026-03-14T17:23:25.979Z] [INFO] GET /api/stats
+[2026-03-14T17:24:25.979Z] [INFO] GET /api/stats
+[2026-03-14T17:25:25.990Z] [INFO] GET /api/stats
+[2026-03-14T17:25:52.215Z] [INFO] GET /api/stats
+[2026-03-14T17:25:59.089Z] [INFO] GET /
+[2026-03-14T17:25:59.106Z] [INFO] GET /
+[2026-03-14T17:25:59.426Z] [INFO] GET /
+[2026-03-14T17:25:59.446Z] [INFO] GET /
+[2026-03-14T17:26:00.335Z] [INFO] GET /
+[2026-03-14T17:26:00.352Z] [INFO] GET /
+[2026-03-14T17:26:01.899Z] [INFO] GET /sw.js
+[2026-03-14T17:26:02.471Z] [INFO] GET /
+[2026-03-14T17:26:02.482Z] [INFO] GET /assets/index-C1NbV7ld.css
+[2026-03-14T17:26:02.482Z] [INFO] GET /assets/index-XUgiZMWg.js
+[2026-03-14T17:26:02.504Z] [INFO] GET /api/stats
+[2026-03-14T17:26:02.527Z] [INFO] GET /vite.svg
+[2026-03-14T17:26:13.460Z] [INFO] GET /api/emails/sent
+[2026-03-14T17:26:13.465Z] [INFO] GET /api/emails/sent
+[2026-03-14T17:26:16.334Z] [INFO] GET /api/emails/sent
+[2026-03-14T17:26:16.335Z] [INFO] GET /api/emails/sent
+[2026-03-14T17:53:03.371Z] [INFO] GET /api/stats
+[2026-03-14T17:53:03.377Z] [INFO] GET /api/stats
+[2026-03-14T17:53:35.446Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T17:53:35.446Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T17:53:35.448Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T17:53:35.449Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T17:53:35.450Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T17:53:35.450Z] [INFO] Processing 9 users from CSV
+[2026-03-14T17:59:48.642Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T17:59:48.644Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T17:59:48.645Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T17:59:48.646Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T17:59:48.647Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T17:59:48.647Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:02:43.682Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:02:43.683Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:02:43.683Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:02:43.683Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:02:43.683Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:02:43.684Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:05:58.980Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-14T18:05:58.983Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-14T18:06:05.827Z] [INFO] GET /api/stats
+[2026-03-14T18:06:05.841Z] [INFO] GET /api/stats
+[2026-03-14T18:06:08.721Z] [INFO] GET /api/stats
+[2026-03-14T18:06:08.722Z] [INFO] GET /api/stats
+[2026-03-14T18:06:21.449Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:06:21.450Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:06:21.450Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:06:21.450Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:06:21.452Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:06:21.452Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:09:08.009Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-14T18:09:08.011Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-14T18:09:15.485Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:09:15.485Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:09:15.486Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:09:15.486Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:09:15.487Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:09:15.488Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:11:51.469Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-14T18:11:51.470Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-14T18:12:04.545Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:12:04.546Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:12:04.546Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:12:04.547Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:12:04.548Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:12:04.548Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:13:37.134Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.135Z] [INFO] Body: {"email":"cshody@gmail.com","subject":"Elevate Your Portraits with Less Effort","body":"Hi Karen Depierre,\n\nI know you're tired of spending hours fine-tuning prompts to get the perfect abstract aest
+[2026-03-14T18:13:37.140Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.141Z] [INFO] Body: {"email":"djshamelessjames@gmail.com","subject":"Unlock Consistent Style Switching in AI Art","body":"Hi James Goldman,\n\nThe biggest challenge for artists like you is maintaining consistency when ex
+[2026-03-14T18:13:37.143Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.143Z] [INFO] Body: {"email":"dldix@mpcorp.com","subject":"Unlock Consistent Style Across Your AI Art","body":"Hi Daniel Dix,\n\nWhat if you never had to worry about inconsistent art styles in your AI-generated pieces. O
+[2026-03-14T18:13:37.145Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.147Z] [INFO] Body: {"email":"squirrelscroat@gmail.com","subject":"Mastering diverse AI art styles made easy","body":"Hi Scroat Squirrel,\n\nWhat if you never had to worry about inconsistent results when exploring differ
+[2026-03-14T18:13:37.149Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.150Z] [INFO] Body: {"email":"elizabethwatson24@hotmail.com","subject":"Mastering Multiple AI Art Styles Just Got Easier","body":"Hi Liz Watson,\n\nI know you're tired of struggling to achieve consistent results across d
+[2026-03-14T18:13:37.152Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.152Z] [INFO] Body: {"email":"mmertaktas@gmail.com","subject":"Elevate your cyberpunk art with ease","body":"Hi Mert Aktaş,\n\nWhat if you never had to worry about inconsistent neon accents and dark tones in your cyberpu
+[2026-03-14T18:13:37.154Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.154Z] [INFO] Body: {"email":"pepe.ramirez.izquierdo@gmail.com","subject":"Mastering Multiple AI Art Styles Made Easy","body":"Hi José Ramírez Izquierdo,\n\nYou probably know the feeling of struggling to achieve consiste
+[2026-03-14T18:13:37.155Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.155Z] [INFO] Body: {"email":"timothyruga@gmail.com","subject":"Unlock seamless style switching in AI art","body":"Hi Timothy Ruga,\n\nThe biggest challenge for artists like you is consistently achieving diverse AI art s
+[2026-03-14T18:13:37.157Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:13:37.157Z] [INFO] Body: {"email":"mitchell.askenas@comcast.com","subject":"Easily Master Multiple AI Art Styles","body":"Hi mitch askenas,\n\nMost creators in your space struggle with consistently producing high-quality art 
+[2026-03-14T18:13:40.007Z] [INFO] Email sent to mmertaktas@gmail.com
+[2026-03-14T18:13:40.229Z] [INFO] Email sent to mitchell.askenas@comcast.com
+[2026-03-14T18:13:40.448Z] [INFO] Email sent to elizabethwatson24@hotmail.com
+[2026-03-14T18:13:40.820Z] [INFO] Email sent to timothyruga@gmail.com
+[2026-03-14T18:13:41.220Z] [INFO] Email sent to pepe.ramirez.izquierdo@gmail.com
+[2026-03-14T18:13:41.498Z] [INFO] Email sent to squirrelscroat@gmail.com
+[2026-03-14T18:13:41.739Z] [INFO] Email sent to dldix@mpcorp.com
+[2026-03-14T18:13:41.973Z] [INFO] Email sent to cshody@gmail.com
+[2026-03-14T18:13:42.820Z] [INFO] Email sent to djshamelessjames@gmail.com
+[2026-03-14T18:13:53.929Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:13:53.929Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:13:53.930Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:13:53.930Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:13:53.931Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:13:53.932Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:13:56.372Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:13:56.373Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:13:56.373Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:13:56.374Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:13:56.374Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:13:56.374Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:13:57.558Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:13:57.559Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:13:57.559Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:13:57.559Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:13:57.560Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:13:57.560Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:14:08.826Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:14:08.827Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-14T18:14:08.828Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:14:08.828Z] [INFO] csvContent type: string, length: 8777
+[2026-03-14T18:14:08.829Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:14:08.829Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:14:17.086Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:14:17.088Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nelizabethwatson24@hotmail.com,Liz Watson,Gold,118,\"a silhouette of a man wearing a dirt bike helmet on a dirt 
+[2026-03-14T18:14:17.088Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:14:17.088Z] [INFO] csvContent type: string, length: 10150
+[2026-03-14T18:14:17.088Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-14T18:14:17.089Z] [INFO] Processing 9 users from CSV
+[2026-03-14T18:14:40.938Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.939Z] [INFO] Body: {"email":"elizabethwatson24@hotmail.com"}
+[2026-03-14T18:14:40.940Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.940Z] [INFO] Body: {"email":"pepe.ramirez.izquierdo@gmail.com"}
+[2026-03-14T18:14:40.941Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.942Z] [INFO] Body: {"email":"mitchell.askenas@comcast.com"}
+[2026-03-14T18:14:40.943Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.944Z] [INFO] Body: {"email":"timothyruga@gmail.com"}
+[2026-03-14T18:14:40.945Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.946Z] [INFO] Body: {"email":"squirrelscroat@gmail.com"}
+[2026-03-14T18:14:40.947Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.947Z] [INFO] Body: {"email":"mmertaktas@gmail.com"}
+[2026-03-14T18:14:40.948Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.948Z] [INFO] Body: {"email":"djshamelessjames@gmail.com"}
+[2026-03-14T18:14:40.949Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.949Z] [INFO] Body: {"email":"ken.souri@gmail.com","subject":"Elevate Your Anime Portraits with Ease","body":"Hi Ken SOURI,\n\nEvery creator hits a wall with capturing the perfect blend of Eastern and Western aesthetics 
+[2026-03-14T18:14:40.951Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:14:40.953Z] [INFO] Body: {"email":"baseballssundee030@gmail.com","subject":"Elevate your nature portraits with effortless consistency","body":"Hi Peach Clapper,\n\nIf you've ever felt frustrated by capturing the perfect blend
+[2026-03-14T18:14:44.103Z] [INFO] Email sent to baseballssundee030@gmail.com
+[2026-03-14T18:14:44.860Z] [INFO] Email sent to ken.souri@gmail.com
+[2026-03-14T18:15:02.973Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:15:02.974Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nsamba-ka@outlook.fr,samba Ka,Gold,32,\"Modern compact 3-star hotel named “Pulaaku Hotel”, with 30 rooms, locate
+[2026-03-14T18:15:02.974Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:15:02.974Z] [INFO] csvContent type: string, length: 36779
+[2026-03-14T18:15:02.975Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-14T18:15:02.975Z] [INFO] Processing 10 users from CSV
+[2026-03-14T18:15:43.865Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.865Z] [INFO] Body: {"email":"samba-ka@outlook.fr","subject":"Elevate Your Nature-Inspired Art with Ease","body":"Hi samba Ka,\n\nOne thing that holds back creators like you is capturing the intricate details of nature i
+[2026-03-14T18:15:43.867Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.867Z] [INFO] Body: {"email":"tdavis12351@gmail.com","subject":"Elevate Your Portraits with Effortless Abstract Aesthetics","body":"Hi Tyler Marques Davis,\n\nYou probably know the feeling of struggling to achieve consis
+[2026-03-14T18:15:43.868Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.869Z] [INFO] Body: {"email":"hannus.saikkonen@gmail.com","subject":"Unlock seamless style switching in AI art","body":"Hi Hannu Saikkonen,\n\nYou probably know the feeling of struggling to achieve consistent quality acr
+[2026-03-14T18:15:43.870Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.871Z] [INFO] Body: {"email":"parnevaap@gmail.com","subject":"Mastering diverse AI art styles made easy","body":"Hi Александра Парневая,\n\nYou probably know the feeling of struggling to achieve consistent results across
+[2026-03-14T18:15:43.872Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.872Z] [INFO] Body: {"email":"converge_ice@yahoo.co.in","subject":"Easily master multiple AI art styles","body":"Hi Parimal Bhatnagar,\n\nThe biggest challenge for artists like you is creating consistent and high-quality
+[2026-03-14T18:15:43.874Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.874Z] [INFO] Body: {"email":"tramoreprint@gmail.com","subject":"Unlock Consistent Style in Your AI Art","body":"Hi Barry Connor,\n\nYou probably know the feeling of struggling to achieve consistent results across differ
+[2026-03-14T18:15:43.875Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.875Z] [INFO] Body: {"email":"jeffrey.s.krugh@gmail.com","subject":"Mastering diverse AI art styles made easy","body":"Hi Jeffrey Krugh,\n\nGetting consistent results shouldn't be as hard as achieving a cohesive look acr
+[2026-03-14T18:15:43.877Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.877Z] [INFO] Body: {"email":"yateamllc@gmail.com","subject":"Elevate Your Portrait Aesthetics with Ease","body":"Hi Your Admin Team,\n\nGetting consistent results shouldn't be as hard as capturing the perfect facial exp
+[2026-03-14T18:15:43.878Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:43.879Z] [INFO] Body: {"email":"lara.djurasovic@student.kcd.org","subject":"Unlock Consistent Style in Your AI Art","body":"Hi Lara Djurasovic,\n\nYou probably know the feeling of struggling to achieve consistent results a
+[2026-03-14T18:15:46.689Z] [INFO] Email sent to tramoreprint@gmail.com
+[2026-03-14T18:15:46.694Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:46.694Z] [INFO] Body: {"email":"mariasolanalell0@gmail.com","subject":"Unlock seamless style switching in AI art","body":"Hi maria solana lell,\n\nEvery creator hits a wall with inconsistent art styles across different pie
+[2026-03-14T18:15:46.855Z] [INFO] Email sent to samba-ka@outlook.fr
+[2026-03-14T18:15:47.084Z] [INFO] Email sent to yateamllc@gmail.com
+[2026-03-14T18:15:47.636Z] [INFO] Email sent to jeffrey.s.krugh@gmail.com
+[2026-03-14T18:15:47.835Z] [INFO] Email sent to hannus.saikkonen@gmail.com
+[2026-03-14T18:15:48.079Z] [INFO] Email sent to parnevaap@gmail.com
+[2026-03-14T18:15:48.415Z] [INFO] Email sent to tdavis12351@gmail.com
+[2026-03-14T18:15:48.774Z] [INFO] Email sent to lara.djurasovic@student.kcd.org
+[2026-03-14T18:15:49.461Z] [INFO] Email sent to converge_ice@yahoo.co.in
+[2026-03-14T18:15:50.432Z] [INFO] Email sent to mariasolanalell0@gmail.com
+[2026-03-14T18:15:57.692Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.692Z] [INFO] Body: {"email":"samba-ka@outlook.fr","subject":"Elevate Your Nature-Inspired Art with Ease","body":"Hi samba Ka,\n\nOne thing that holds back creators like you is capturing the intricate details of nature i
+[2026-03-14T18:15:57.693Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.693Z] [INFO] Body: {"email":"jeffrey.s.krugh@gmail.com","subject":"Mastering diverse AI art styles made easy","body":"Hi Jeffrey Krugh,\n\nGetting consistent results shouldn't be as hard as achieving a cohesive look acr
+[2026-03-14T18:15:57.695Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.696Z] [INFO] Body: {"email":"lara.djurasovic@student.kcd.org","subject":"Unlock Consistent Style in Your AI Art","body":"Hi Lara Djurasovic,\n\nYou probably know the feeling of struggling to achieve consistent results a
+[2026-03-14T18:15:57.696Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.697Z] [INFO] Body: {"email":"yateamllc@gmail.com","subject":"Elevate Your Portrait Aesthetics with Ease","body":"Hi Your Admin Team,\n\nGetting consistent results shouldn't be as hard as capturing the perfect facial exp
+[2026-03-14T18:15:57.698Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.698Z] [INFO] Body: {"email":"tdavis12351@gmail.com","subject":"Elevate Your Portraits with Effortless Abstract Aesthetics","body":"Hi Tyler Marques Davis,\n\nYou probably know the feeling of struggling to achieve consis
+[2026-03-14T18:15:57.700Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.700Z] [INFO] Body: {"email":"parnevaap@gmail.com","subject":"Mastering diverse AI art styles made easy","body":"Hi Александра Парневая,\n\nYou probably know the feeling of struggling to achieve consistent results across
+[2026-03-14T18:15:57.701Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.701Z] [INFO] Body: {"email":"mariasolanalell0@gmail.com","subject":"Unlock seamless style switching in AI art","body":"Hi maria solana lell,\n\nEvery creator hits a wall with inconsistent art styles across different pie
+[2026-03-14T18:15:57.702Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.702Z] [INFO] Body: {"email":"converge_ice@yahoo.co.in","subject":"Easily master multiple AI art styles","body":"Hi Parimal Bhatnagar,\n\nThe biggest challenge for artists like you is creating consistent and high-quality
+[2026-03-14T18:15:57.704Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:15:57.704Z] [INFO] Body: {"email":"tramoreprint@gmail.com","subject":"Unlock Consistent Style in Your AI Art","body":"Hi Barry Connor,\n\nYou probably know the feeling of struggling to achieve consistent results across differ
+[2026-03-14T18:16:00.561Z] [INFO] Email sent to lara.djurasovic@student.kcd.org
+[2026-03-14T18:16:00.562Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:00.565Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:00.566Z] [INFO] Body: {"email":"hannus.saikkonen@gmail.com","subject":"Unlock seamless style switching in AI art","body":"Hi Hannu Saikkonen,\n\nYou probably know the feeling of struggling to achieve consistent quality acr
+[2026-03-14T18:16:00.772Z] [INFO] Email sent to yateamllc@gmail.com
+[2026-03-14T18:16:00.773Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:00.963Z] [INFO] Email sent to samba-ka@outlook.fr
+[2026-03-14T18:16:00.965Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:01.277Z] [INFO] Email sent to tdavis12351@gmail.com
+[2026-03-14T18:16:01.278Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:01.530Z] [INFO] Email sent to converge_ice@yahoo.co.in
+[2026-03-14T18:16:01.531Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:01.790Z] [INFO] Email sent to parnevaap@gmail.com
+[2026-03-14T18:16:01.790Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:02.063Z] [INFO] Email sent to jeffrey.s.krugh@gmail.com
+[2026-03-14T18:16:02.064Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:02.342Z] [INFO] Email sent to mariasolanalell0@gmail.com
+[2026-03-14T18:16:02.343Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:02.773Z] [INFO] Email sent to tramoreprint@gmail.com
+[2026-03-14T18:16:02.774Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:03.481Z] [INFO] Email sent to hannus.saikkonen@gmail.com
+[2026-03-14T18:16:03.481Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-14T18:16:29.159Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:16:29.160Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nsamba-ka@outlook.fr,samba Ka,Gold,32,\"Modern compact 3-star hotel named “Pulaaku Hotel”, with 30 rooms, locate
+[2026-03-14T18:16:29.160Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:16:29.161Z] [INFO] csvContent type: string, length: 36779
+[2026-03-14T18:16:29.161Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-14T18:16:29.162Z] [INFO] Processing 10 users from CSV
+[2026-03-14T18:16:38.717Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:16:38.718Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nsamba-ka@outlook.fr,samba Ka,Gold,32,\"Modern compact 3-star hotel named “Pulaaku Hotel”, with 30 rooms, locate
+[2026-03-14T18:16:38.719Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:16:38.719Z] [INFO] csvContent type: string, length: 36779
+[2026-03-14T18:16:38.720Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-14T18:16:38.720Z] [INFO] Processing 10 users from CSV
+[2026-03-14T18:16:47.553Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:16:47.554Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ntdavis12351@gmail.com,Tyler Marques Davis,Platinum,69,\"Hyper-Real AI Prompt for Silver — Baku Shadow Assassin 
+[2026-03-14T18:16:47.554Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:16:47.555Z] [INFO] csvContent type: string, length: 24847
+[2026-03-14T18:16:47.555Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-14T18:16:47.556Z] [INFO] Processing 10 users from CSV
+[2026-03-14T18:16:59.833Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.833Z] [INFO] Body: {"email":"tdavis12351@gmail.com"}
+[2026-03-14T18:16:59.834Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.834Z] [INFO] Body: {"email":"mariasolanalell0@gmail.com"}
+[2026-03-14T18:16:59.835Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.835Z] [INFO] Body: {"email":"converge_ice@yahoo.co.in"}
+[2026-03-14T18:16:59.836Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.836Z] [INFO] Body: {"email":"hannus.saikkonen@gmail.com"}
+[2026-03-14T18:16:59.837Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.837Z] [INFO] Body: {"email":"david.karlsson@jambotours.se","subject":"Break through the barrier of inconsistent AI art styles","body":"Hi David Karlsson,\n\nEvery creator hits a wall with maintaining consistency across 
+[2026-03-14T18:16:59.838Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.838Z] [INFO] Body: {"email":"jeffrey.s.krugh@gmail.com"}
+[2026-03-14T18:16:59.840Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.841Z] [INFO] Body: {"email":"yateamllc@gmail.com"}
+[2026-03-14T18:16:59.842Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.842Z] [INFO] Body: {"email":"parnevaap@gmail.com"}
+[2026-03-14T18:16:59.843Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.843Z] [INFO] Body: {"email":"lara.djurasovic@student.kcd.org"}
+[2026-03-14T18:16:59.844Z] [INFO] POST /api/emails/send-single
+[2026-03-14T18:16:59.844Z] [INFO] Body: {"email":"tramoreprint@gmail.com"}
+[2026-03-14T18:17:03.362Z] [INFO] Email sent to david.karlsson@jambotours.se
+[2026-03-14T18:17:07.908Z] [INFO] GET /api/stats
+[2026-03-14T18:17:07.919Z] [INFO] GET /api/stats
+[2026-03-14T18:17:16.624Z] [INFO] POST /api/emails/send-manual
+[2026-03-14T18:17:16.625Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ntdavis12351@gmail.com,Tyler Marques Davis,Platinum,40,\"AI PROMPT — THE ADEGOKE BLOODLINE (CORRECTED CONTINUITY
+[2026-03-14T18:17:16.625Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-14T18:17:16.625Z] [INFO] csvContent type: string, length: 27891
+[2026-03-14T18:17:16.626Z] [INFO] Successfully parsed CSV: 10 users
+[2026-03-14T18:17:16.626Z] [INFO] Processing 10 users from CSV
+[2026-03-14T18:17:22.065Z] [INFO] GET /api/config
+[2026-03-14T18:17:22.066Z] [INFO] GET /api/config
+[2026-03-14T18:17:22.594Z] [INFO] GET /api/emails/sent
+[2026-03-14T18:17:22.598Z] [INFO] GET /api/emails/sent
+[2026-03-17T16:04:05.288Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-17T16:04:05.289Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-17T16:04:25.735Z] [INFO] GET /api/stats
+[2026-03-17T16:04:25.758Z] [INFO] GET /api/stats
+[2026-03-17T16:04:41.212Z] [INFO] POST /api/emails/send-manual
+[2026-03-17T16:04:41.212Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\ncshody@gmail.com,Karen Depierre,Gold,4,\"photorealistic character sheet of a  brindle  pitbull dog with express
+[2026-03-17T16:04:41.213Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-17T16:04:41.213Z] [INFO] csvContent type: string, length: 8777
+[2026-03-17T16:04:41.215Z] [INFO] Successfully parsed CSV: 9 users
+[2026-03-17T16:04:41.215Z] [INFO] Processing 9 users from CSV
+[2026-03-17T16:04:47.996Z] [INFO] POST /api/emails/preview
+[2026-03-17T16:04:47.996Z] [INFO] Body: {"email":"squirrelscroat@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-17T16:06:58.284Z] [INFO] POST /api/emails/send-manual
+[2026-03-17T16:06:58.285Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nmazynek@gmail.com,Martin Macek,Gold,11,Change the skin color of the character in the front to dark and short cu
+[2026-03-17T16:06:58.286Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-17T16:06:58.286Z] [INFO] csvContent type: string, length: 42823
+[2026-03-17T16:06:58.286Z] [INFO] Successfully parsed CSV: 27 users
+[2026-03-17T16:06:58.288Z] [INFO] Processing 27 users from CSV
+[2026-03-17T16:08:53.490Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.492Z] [INFO] Body: {"email":"mazynek@gmail.com","subject":"wondering something","body":"Hi Martin Macek,\n\nI've noticed many portrait aesthetics artists struggle to get AI to capture subtle expressions consistently.\n\
+[2026-03-17T16:08:53.497Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.500Z] [INFO] Body: {"email":"victorgarciasanchez@gmail.com","subject":"a quick note","body":"Hi victor garcia,\n\nI collaborate with many artists in the diverse AI art styles space — and they often mention that achievin
+[2026-03-17T16:08:53.502Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.502Z] [INFO] Body: {"email":"ktramantano@gmail.com","subject":"just a thought","body":"Hi Keith Tramantano,\n\nI collaborate with many artists in the portrait aesthetics space, and they often find capturing subtle expre
+[2026-03-17T16:08:53.504Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.505Z] [INFO] Body: {"email":"candelanude@gmail.com","subject":"one thing creators tell me","body":"Hi SUSANA PADILLA,\n\nI work with many creators in diverse AI art styles and they often mention that achieving consisten
+[2026-03-17T16:08:53.506Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.506Z] [INFO] Body: {"email":"tara@mixstbeauty.com","subject":"a thought","body":"Hi Tara Cohen,\n\nI often collaborate with artists in the portrait aesthetics space, and they frequently mention that capturing subtle exp
+[2026-03-17T16:08:53.508Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.508Z] [INFO] Body: {"email":"carl@risenowllc.com","subject":"had to share this","body":"Hi CC,\n\nI work with many creators in the diverse AI art styles space — and they often find it tough to achieve consistency across
+[2026-03-17T16:08:53.509Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.510Z] [INFO] Body: {"email":"jenniferscott716@gmail.com","subject":"something I noticed","body":"Hi Jennifer Scott,\n\nI've found that many artists in the nature and portrait aesthetics space struggle to achieve consist
+[2026-03-17T16:08:53.511Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.511Z] [INFO] Body: {"email":"tim.mcculloch@qtutech.com","subject":"something worth knowing","body":"Hi Timothy McCulloch,\n\nI collaborate with many artists in the portrait aesthetics space, and a common challenge they 
+[2026-03-17T16:08:53.513Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:53.514Z] [INFO] Body: {"email":"g.mihai.nedelea@spiruharet.ro","subject":"a quick note","body":"Hi Mihai - Sorin Nedelea,\n\nI collaborate with many artists in the diverse AI art styles space, and they often mention that a
+[2026-03-17T16:08:58.547Z] [INFO] Email sent to tim.mcculloch@qtutech.com
+[2026-03-17T16:08:58.550Z] [INFO] Email sent to jenniferscott716@gmail.com
+[2026-03-17T16:08:58.556Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:58.556Z] [INFO] Body: {"email":"haklajluftrim@outlook.com","subject":"one thing creators tell me","body":"Hi LuftrimH,\n\nI've noticed many anime and nature aesthetics artists struggle to balance vibrant colors with realis
+[2026-03-17T16:08:58.558Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:58.558Z] [INFO] Body: {"email":"beeequi@gmail.com","subject":"a thought","body":"Hi Cherry García,\n\nI collaborate with many artists in the diverse AI art styles space, and they often find that achieving consistency acros
+[2026-03-17T16:08:59.191Z] [INFO] Email sent to g.mihai.nedelea@spiruharet.ro
+[2026-03-17T16:08:59.196Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.196Z] [INFO] Body: {"email":"roy.mrad@gmail.com","subject":"something worth knowing","body":"Hi Roy Mrad,\n\nI collaborate with many artists in the diverse AI art styles space, and they often mention that achieving cons
+[2026-03-17T16:08:59.313Z] [INFO] Email sent to mazynek@gmail.com
+[2026-03-17T16:08:59.324Z] [INFO] Email sent to ktramantano@gmail.com
+[2026-03-17T16:08:59.326Z] [INFO] Email sent to tara@mixstbeauty.com
+[2026-03-17T16:08:59.327Z] [INFO] Email sent to carl@risenowllc.com
+[2026-03-17T16:08:59.329Z] [INFO] Email sent to candelanude@gmail.com
+[2026-03-17T16:08:59.331Z] [INFO] Email sent to victorgarciasanchez@gmail.com
+[2026-03-17T16:08:59.334Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.335Z] [INFO] Body: {"email":"kristenmcintosh2@gmail.com","subject":"honest question","body":"Hi Kristen McIntosh, Realtor,\n\nI often collaborate with artists in the nature aesthetics space, and they frequently mention 
+[2026-03-17T16:08:59.336Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.336Z] [INFO] Body: {"email":"claudiaeperez34@gmail.com","subject":"honest question","body":"Hi Claudia,\n\nI've noticed many creators in the diverse AI art styles space struggle to achieve consistency across different s
+[2026-03-17T16:08:59.338Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.338Z] [INFO] Body: {"email":"zibby.petch.cima@gmail.com","subject":"honest question","body":"Hi Zibby P,\n\nI work with many artists in the diverse AI art styles space — and they often find it tough to achieve consisten
+[2026-03-17T16:08:59.340Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.340Z] [INFO] Body: {"email":"carlacito@gmail.com","subject":"honest question","body":"Hi Carl Acito,\n\nI've seen many artists in the cyberpunk and portrait aesthetics space struggle to get the lighting just right, whic
+[2026-03-17T16:08:59.341Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.341Z] [INFO] Body: {"email":"f.emmenegger@websud.ch","subject":"a quick note","body":"Hi EMMENEGGER,\n\nI collaborate with many artists in the diverse AI art styles space — and they often mention that achieving consiste
+[2026-03-17T16:08:59.342Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:08:59.343Z] [INFO] Body: {"email":"mayura.chandekar@gmail.com","subject":"had to share this","body":"Hi Mayura Chandekar,\n\nI've noticed many artists in the diverse AI art styles space struggle to achieve consistency across 
+[2026-03-17T16:09:04.432Z] [INFO] Email sent to kristenmcintosh2@gmail.com
+[2026-03-17T16:09:04.436Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:04.438Z] [INFO] Body: {"email":"one3onebar@gmail.com","subject":"a thought","body":"Hi Mandeep  Kaur,\n\nI collaborate with many artists in the diverse AI art styles space — and the one thing they all say is that achieving
+[2026-03-17T16:09:04.600Z] [INFO] Email sent to f.emmenegger@websud.ch
+[2026-03-17T16:09:04.605Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:04.606Z] [INFO] Body: {"email":"alejandro.thornton@gmail.com","subject":"wondering something","body":"Hi Alejandro Thornton,\n\nI've seen many artists in the anime and nature aesthetics space struggle to balance vibrant co
+[2026-03-17T16:09:04.819Z] [INFO] Email sent to roy.mrad@gmail.com
+[2026-03-17T16:09:04.823Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:04.824Z] [INFO] Body: {"email":"marketing@marangoni.com","subject":"had to share this","body":"Hi Katrin Breuer,\n\nI work with many artists in the diverse AI art styles space, and they often struggle to achieve consistenc
+[2026-03-17T16:09:05.378Z] [INFO] Email sent to zibby.petch.cima@gmail.com
+[2026-03-17T16:09:05.382Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:05.382Z] [INFO] Body: {"email":"fahrin.29@gmail.com","subject":"just a thought","body":"Hi Fahrin Islam,\n\nI work with many artists in the diverse AI art styles space, and they often find that achieving consistency across
+[2026-03-17T16:09:05.641Z] [INFO] Email sent to mayura.chandekar@gmail.com
+[2026-03-17T16:09:05.647Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:05.647Z] [INFO] Body: {"email":"scarphx@gmail.com","subject":"wondering something","body":"Hi Elitegiant 78,\n\nI collaborate with many artists in the diverse AI art styles space, and they often find that achieving consist
+[2026-03-17T16:09:06.225Z] [INFO] Email sent to haklajluftrim@outlook.com
+[2026-03-17T16:09:06.227Z] [INFO] Email sent to claudiaeperez34@gmail.com
+[2026-03-17T16:09:06.230Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:06.231Z] [INFO] Body: {"email":"markquinto20@gmail.com","subject":"honest question","body":"Hi Mark,\n\nI've noticed many artists in the portrait aesthetics space struggle to achieve consistent facial expressions, and it's
+[2026-03-17T16:09:06.232Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:06.232Z] [INFO] Body: {"email":"leslie@grubler.org","subject":"just a thought","body":"Hi Leslie Grubler,\n\nI collaborate with many artists in the portrait aesthetics space, and they often mention that capturing subtle ex
+[2026-03-17T16:09:06.462Z] [INFO] Email sent to carlacito@gmail.com
+[2026-03-17T16:09:06.466Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:06.467Z] [INFO] Body: {"email":"krcwork1@gmail.com","subject":"had to share this","body":"Hi Kristi Crider,\n\nI've noticed many artists in the diverse AI art styles space struggle to maintain consistency across different 
+[2026-03-17T16:09:06.883Z] [INFO] Email sent to beeequi@gmail.com
+[2026-03-17T16:09:06.887Z] [INFO] POST /api/emails/send-single
+[2026-03-17T16:09:06.887Z] [INFO] Body: {"email":"achazen1@gmail.com","subject":"something I noticed","body":"Hi Avery Chazen,\n\nI work with many artists in the diverse AI art styles space, and they often mention that achieving consistency
+[2026-03-17T16:09:08.212Z] [INFO] Email sent to one3onebar@gmail.com
+[2026-03-17T16:09:08.549Z] [INFO] Email sent to alejandro.thornton@gmail.com
+[2026-03-17T16:09:09.247Z] [INFO] Email sent to marketing@marangoni.com
+[2026-03-17T16:09:10.034Z] [INFO] Email sent to fahrin.29@gmail.com
+[2026-03-17T16:09:10.294Z] [INFO] Email sent to markquinto20@gmail.com
+[2026-03-17T16:09:10.591Z] [INFO] Email sent to scarphx@gmail.com
+[2026-03-17T16:09:10.920Z] [INFO] Email sent to leslie@grubler.org
+[2026-03-17T16:09:11.646Z] [INFO] Email sent to achazen1@gmail.com
+[2026-03-17T16:09:11.991Z] [INFO] Email sent to krcwork1@gmail.com
+[2026-03-17T16:09:54.950Z] [INFO] POST /api/emails/send-manual
+[2026-03-17T16:09:54.950Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\nmazynek@gmail.com,Martin Macek,Gold,11,Change the skin color of the character in the front to dark and short cu
+[2026-03-17T16:09:54.951Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-17T16:09:54.951Z] [INFO] csvContent type: string, length: 8414
+[2026-03-17T16:09:54.952Z] [INFO] Successfully parsed CSV: 8 users
+[2026-03-17T16:09:54.952Z] [INFO] Processing 8 users from CSV

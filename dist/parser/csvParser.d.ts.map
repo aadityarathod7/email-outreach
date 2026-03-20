@@ -1,0 +1,1 @@
+{"version":3,"file":"csvParser.d.ts","sourceRoot":"","sources":["../../src/parser/csvParser.ts"],"names":[],"mappings":"AAEA;;GAEG;AACH,MAAM,WAAW,UAAU;IACzB,KAAK,EAAE,MAAM,CAAC;IACd,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;IACb,WAAW,EAAE,MAAM,CAAC;IACpB,OAAO,EAAE,MAAM,EAAE,CAAC;CACnB;AAUD;;GAEG;AACH,wBAAgB,QAAQ,CAAC,UAAU,EAAE,MAAM,GAAG,UAAU,EAAE,CAuDzD"}
