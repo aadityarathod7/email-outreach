@@ -44,7 +44,7 @@ router.get('/sent', (req: Request, res: Response) => {
  */
 router.post('/preview', async (req: Request, res: Response) => {
   try {
-    const { email, name, plan, totalImages, prompts } = req.body;
+    const { email, name, plan, totalImages, prompts, customPrompt } = req.body;
 
     if (!email || !name) {
       return res.status(400).json({ error: 'Missing email or name' });
@@ -58,7 +58,7 @@ router.post('/preview', async (req: Request, res: Response) => {
       prompts: prompts || [],
     };
 
-    const emailContent = await generateEmail(user);
+    const emailContent = await generateEmail(user, customPrompt);
 
     res.json({
       email,
@@ -78,7 +78,7 @@ router.post('/preview', async (req: Request, res: Response) => {
  */
 router.post('/send-manual', async (req: Request, res: Response) => {
   try {
-    const { csvContent, dryRun = false } = req.body;
+    const { csvContent, dryRun = false, customPrompt } = req.body;
 
     logger.log(`Received send-manual request. Body keys: ${Object.keys(req.body).join(', ')}`);
     logger.log(`csvContent type: ${typeof csvContent}, length: ${csvContent?.length || 0}`);
@@ -128,7 +128,7 @@ router.post('/send-manual', async (req: Request, res: Response) => {
         }
 
         // Generate email
-        const emailContent = await generateEmail(user);
+        const emailContent = await generateEmail(user, customPrompt);
 
         // Send email (or skip if dry run)
         let sent = false;

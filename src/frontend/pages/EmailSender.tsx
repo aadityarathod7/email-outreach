@@ -4,6 +4,7 @@ import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw } from 'lu
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
+  const [customPrompt, setCustomPrompt] = useState('');
   const [preview, setPreview] = useState(false);
   const [results, setResults] = useState<any>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
@@ -49,7 +50,7 @@ function EmailSender() {
     e.stopPropagation();
     setPreviewLoading(true);
     setPreview(true);
-    const result = await sendEmails(csvContent, true);
+    const result = await sendEmails(csvContent, true, customPrompt);
     if (result) {
       setResults({ ...result, dryRun: true });
     }
@@ -135,7 +136,7 @@ function EmailSender() {
       setResults({ ...results, details: updatedDetails });
 
       // Call the API to regenerate this email
-      const response = await fetch('http://localhost:3000/api/emails/preview', {
+      const response = await fetch('/api/emails/preview', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -144,6 +145,7 @@ function EmailSender() {
           plan: detail.plan || 'Gold',
           totalImages: detail.totalImages || 0,
           prompts: detail.prompts || [],
+          customPrompt: customPrompt || undefined,
         }),
       });
 
@@ -180,6 +182,35 @@ function EmailSender() {
     <div>
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+        {/* Custom Prompt */}
+        <div className="bg-white border-2 border-gray-200 rounded-xl p-6 sm:p-8 mb-6">
+          <h2 className="text-lg sm:text-xl font-bold text-black mb-1">Custom Email Prompt</h2>
+          <p className="text-gray-500 text-sm mb-4">
+            Describe the email style, tone, and context. Leave blank to use the default Day 3 urgency template.
+          </p>
+          <textarea
+            value={customPrompt}
+            onChange={(e) => setCustomPrompt(e.target.value)}
+            placeholder={`e.g. "Write a friendly Day 1 cold outreach email introducing ArtNovaAI. The user hasn't heard of us before. Mention we generate images in 4-5 seconds and they get 2 free credits to try."`}
+            rows={4}
+            className="w-full border-2 border-gray-200 rounded-lg p-3 text-sm text-black placeholder-gray-400 focus:outline-none focus:border-black resize-none transition-colors"
+          />
+          {customPrompt.trim() && (
+            <div className="flex items-center gap-2 mt-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black text-white text-xs font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                AI generation active
+              </span>
+              <button
+                onClick={() => setCustomPrompt('')}
+                className="text-xs text-gray-500 hover:text-black underline transition-colors"
+              >
+                Clear
+              </button>
+            </div>
+          )}
+        </div>
+
         {/* Upload and Actions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {/* Upload Section */}

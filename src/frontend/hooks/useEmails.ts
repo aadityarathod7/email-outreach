@@ -48,13 +48,14 @@ export function useEmails() {
     []
   );
 
-  const sendEmails = useCallback(async (csvContent: string, dryRun = false) => {
+  const sendEmails = useCallback(async (csvContent: string, dryRun = false, customPrompt?: string) => {
     try {
       setSending(true);
       setError(null);
       const data = await client.post('/emails/send-manual', {
         csvContent,
         dryRun,
+        customPrompt,
       });
       return data as SendResult;
     } catch (err) {
