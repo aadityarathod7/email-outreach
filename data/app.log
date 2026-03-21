@@ -2422,3 +2422,107 @@ Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","
 [2026-03-20T16:14:51.496Z] [INFO] POST /api/emails/send-single
 [2026-03-20T16:14:51.497Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","subject":"Aadi, one more thing before you decide","body":"Hi Aadi,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nShort version: y
 [2026-03-20T16:14:55.893Z] [INFO] Email sent to iammr.x00001@gmail.com
+[2026-03-20T16:16:56.762Z] [INFO] POST /api/emails/send-single
+[2026-03-20T16:16:56.763Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, one more thing before you decide","body":"Hi Aadi,\n\nFollowing up from yesterday — wanted to make sure you had a chance to see this.\n\nYour ArtNo
+[2026-03-20T16:17:03.409Z] [INFO] Email sent to aadityarathod7@gmail.com
+[2026-03-21T10:00:09.254Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-21T10:00:09.258Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-21T10:00:14.446Z] [INFO] GET /api/emails/sent
+[2026-03-21T10:00:14.464Z] [INFO] GET /api/emails/sent
+[2026-03-21T10:00:17.853Z] [INFO] DELETE /api/emails/sent
+[2026-03-21T10:00:34.113Z] [INFO] POST /api/emails/send-manual
+[2026-03-21T10:00:34.114Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-21T10:00:34.114Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-21T10:00:34.115Z] [INFO] csvContent type: string, length: 49697
+[2026-03-21T10:00:34.116Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-21T10:00:34.117Z] [INFO] Processing 26 users from CSV
+[2026-03-21T10:01:32.785Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:01:32.787Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"Ayeshah, one more thing before you decide","body":"Hi Ayeshah,\n\nJust looping back in case yesterday's message got lost.\n\nYou already have an account on A
+[2026-03-21T10:01:32.806Z] [ERROR] Failed to send email to ayeshahfrj@gmail.com: getaddrinfo ENOTFOUND smtp.gmail.com
+[2026-03-21T10:03:13.066Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-21T10:03:13.072Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-21T10:03:27.006Z] [INFO] POST /api/emails/send-manual
+[2026-03-21T10:03:27.006Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-21T10:03:27.007Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-21T10:03:27.008Z] [INFO] csvContent type: string, length: 49697
+[2026-03-21T10:03:27.010Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-21T10:03:27.011Z] [INFO] Processing 26 users from CSV
+[2026-03-21T10:03:37.788Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:03:37.792Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"Ayeshah, wasn't sure if you saw this","body":"Hi Ayeshah,\n\nJust following up on my message from yesterday.\n\nYour ArtNovaAI account is ready with 2 free c
+[2026-03-21T10:03:42.898Z] [INFO] Email sent to ayeshahfrj@gmail.com
+[2026-03-21T10:05:43.439Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:05:43.440Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","subject":"Pilar, just following up","body":"Hi Pilar,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't get bur
+[2026-03-21T10:05:52.005Z] [INFO] Email sent to pilarciniegas2910@gmail.com
+[2026-03-21T10:07:52.028Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:07:52.029Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","subject":"Frans, circling back quickly","body":"Hi Frans,\n\nReaching out once more — didn't want this to slip through the cracks.\n\nYou already have an account 
+[2026-03-21T10:07:55.690Z] [INFO] Email sent to fjm.hazen@hoteldedraak.nl
+[2026-03-21T10:09:56.439Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:09:56.440Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"Tifany, didn't want this to get buried","body":"Hi Tifany,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nShort version: you
+[2026-03-21T10:09:59.812Z] [INFO] Email sent to tifanydm@yahoo.com
+[2026-03-21T10:11:59.960Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:11:59.961Z] [INFO] Body: {"email":"brian@rocksoup.tv","subject":"Brian, one more thing before you decide","body":"Hi Brian,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nI know things get busy — but your current t
+[2026-03-21T10:12:05.249Z] [INFO] Email sent to brian@rocksoup.tv
+[2026-03-21T10:14:05.450Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:14:05.450Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"Tifany, wasn't sure if you saw this","body":"Hi Tifany,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nShort version: your c
+[2026-03-21T10:14:09.095Z] [INFO] Email sent to tifanydm@yahoo.com
+[2026-03-21T10:14:09.096Z] [ERROR] Error sending single email: SqliteError: UNIQUE constraint failed: sent_emails.email
+[2026-03-21T10:16:09.865Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:16:09.866Z] [INFO] Body: {"email":"jay@jayzerbe.com","subject":"Jay, wanted to make sure you saw this","body":"Hi Jay,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't get bur
+[2026-03-21T10:16:13.813Z] [INFO] Email sent to jay@jayzerbe.com
+[2026-03-21T10:18:13.812Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:18:13.814Z] [INFO] Body: {"email":"jennynlee4@gmail.com","subject":"Jenny, circling back quickly","body":"Hi Jenny,\n\nFollowing up from yesterday — wanted to make sure you had a chance to see this.\n\nShort version: your cur
+[2026-03-21T10:18:17.175Z] [INFO] Email sent to jennynlee4@gmail.com
+[2026-03-21T10:20:17.666Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:20:17.667Z] [INFO] Body: {"email":"karen@kdynamics.net","subject":"Karen, didn't want this to get buried","body":"Hi Karen,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't ge
+[2026-03-21T10:20:27.896Z] [INFO] Email sent to karen@kdynamics.net
+[2026-03-21T10:22:28.095Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:22:28.096Z] [INFO] Body: {"email":"quentin.receveur@gmail.com","subject":"quentin, circling back quickly","body":"Hi quentin,\n\nJust looping back in case yesterday's message got lost.\n\nYour ArtNovaAI account is ready with 
+[2026-03-21T10:22:32.716Z] [INFO] Email sent to quentin.receveur@gmail.com
+[2026-03-21T10:24:32.734Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:24:32.735Z] [INFO] Body: {"email":"lindseygutierrez@hotmail.com","subject":"Lindsey, wasn't sure if you saw this","body":"Hi Lindsey,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this
+[2026-03-21T10:24:38.092Z] [INFO] Email sent to lindseygutierrez@hotmail.com
+[2026-03-21T10:26:38.334Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:26:38.334Z] [INFO] Body: {"email":"ellen.duwe@hxi.digital","subject":"Matthias, circling back quickly","body":"Hi Matthias,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't ge
+[2026-03-21T10:26:42.876Z] [INFO] Email sent to ellen.duwe@hxi.digital
+[2026-03-21T10:28:43.773Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:28:43.773Z] [INFO] Body: {"email":"mochuch2@gmail.com","subject":"mo, just checking in","body":"Hi mo,\n\nJust looping back in case yesterday's message got lost.\n\nYour ArtNovaAI account is ready with 2 free credits — and yo
+[2026-03-21T10:28:48.111Z] [INFO] Email sent to mochuch2@gmail.com
+[2026-03-21T10:30:48.666Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:30:48.667Z] [INFO] Body: {"email":"horaniki99@gmail.com","subject":"Horváth, one more thing before you decide","body":"Hi Horváth,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your
+[2026-03-21T10:30:53.087Z] [INFO] Email sent to horaniki99@gmail.com
+[2026-03-21T10:32:53.513Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:32:53.514Z] [INFO] Body: {"email":"bkramich@gmail.com","subject":"Bob, still here if you need it","body":"Hi Bob,\n\nJust looping back in case yesterday's message got lost.\n\nBefore your current tool auto-renews — your ArtNo
+[2026-03-21T10:32:57.650Z] [INFO] Email sent to bkramich@gmail.com
+[2026-03-21T10:34:58.417Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:34:58.418Z] [INFO] Body: {"email":"b.deuzeman@hotmail.com","subject":"blandy, didn't want this to get buried","body":"Hi blandy,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nBefore your current tool 
+[2026-03-21T10:35:03.825Z] [INFO] Email sent to b.deuzeman@hotmail.com
+[2026-03-21T10:37:04.256Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:37:04.257Z] [INFO] Body: {"email":"luminaxcreative@gmail.com","subject":"Luminax, one more thing before you decide","body":"Hi Luminax,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure th
+[2026-03-21T10:37:08.580Z] [INFO] Email sent to luminaxcreative@gmail.com
+[2026-03-21T10:39:08.675Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:39:08.675Z] [INFO] Body: {"email":"bibilorenzano@gmail.com","subject":"Bibi, didn't want this to get buried","body":"Hi Bibi,\n\nJust looping back in case yesterday's message got lost.\n\nYour ArtNovaAI account is ready with 
+[2026-03-21T10:39:13.466Z] [INFO] Email sent to bibilorenzano@gmail.com
+[2026-03-21T10:41:14.203Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:41:14.204Z] [INFO] Body: {"email":"constance.fedor@gmail.com","subject":"Constance, just following up","body":"Hi Constance,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nBefore your current tool auto-renews — you
+[2026-03-21T10:41:19.228Z] [INFO] Email sent to constance.fedor@gmail.com
+[2026-03-21T10:43:19.799Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:43:19.799Z] [INFO] Body: {"email":"abaumruk@valdivia-consulting.com","subject":"Anthony, just following up","body":"Hi Anthony,\n\nSent you something yesterday — wasn't sure if it landed in the right place.\n\nYou already hav
+[2026-03-21T10:43:24.431Z] [INFO] Email sent to abaumruk@valdivia-consulting.com
+[2026-03-21T10:45:25.246Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:45:25.247Z] [INFO] Body: {"email":"marjan.greenblatt@gmail.com","subject":"Marjan, one more thing before you decide","body":"Hi Marjan,\n\nReaching out once more — didn't want this to slip through the cracks.\n\nI know things
+[2026-03-21T10:45:29.620Z] [INFO] Email sent to marjan.greenblatt@gmail.com
+[2026-03-21T10:47:29.662Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:47:29.663Z] [INFO] Body: {"email":"johnphaman@gmail.com","subject":"John, just following up","body":"Hi John,\n\nDidn't hear back, so I wanted to follow up quickly.\n\nBefore your current tool auto-renews — your ArtNovaAI acc
+[2026-03-21T10:47:34.491Z] [INFO] Email sent to johnphaman@gmail.com
+[2026-03-21T10:49:34.883Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:49:34.883Z] [INFO] Body: {"email":"nermina_bubic@outlook.com","subject":"Nermina, circling back quickly","body":"Hi Nermina,\n\nJust looping back in case yesterday's message got lost.\n\nYou already have an account on ArtNova
+[2026-03-21T10:49:39.458Z] [INFO] Email sent to nermina_bubic@outlook.com
+[2026-03-21T10:51:40.371Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:51:40.372Z] [INFO] Body: {"email":"leeslate50@gmail.com","subject":"Lee, just checking in","body":"Hi Lee,\n\nJust following up on my message from yesterday.\n\nShort version: your current tool is expiring soon, you already h
+[2026-03-21T10:51:43.778Z] [INFO] Email sent to leeslate50@gmail.com
+[2026-03-21T10:53:43.790Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:53:43.791Z] [INFO] Body: {"email":"lisa.kelly1977@gmail.com","subject":"Lisa, didn't want this to get buried","body":"Hi Lisa,\n\nI reached out yesterday about your expiring subscription — just wanted to make sure this didn't
+[2026-03-21T10:53:47.700Z] [INFO] Email sent to lisa.kelly1977@gmail.com
+[2026-03-21T10:55:47.714Z] [INFO] POST /api/emails/send-single
+[2026-03-21T10:55:47.714Z] [INFO] Body: {"email":"nickgatland@gmail.com","subject":"Nick, still here if you need it","body":"Hi Nick,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your subscriptio
+[2026-03-21T10:55:53.038Z] [INFO] Email sent to nickgatland@gmail.com
