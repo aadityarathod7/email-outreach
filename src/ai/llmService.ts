@@ -54,6 +54,21 @@ function firstName(fullName: string): string {
   return fullName.trim().split(/\s+/)[0];
 }
 
+/**
+ * Auto-format email body:
+ * - Splits into paragraphs on any run of blank lines
+ * - Trims each paragraph (preserves internal single newlines for sign-off blocks)
+ * - Rejoins with exactly one blank line (\n\n) between paragraphs
+ * - Removes trailing/leading whitespace from the whole body
+ */
+function autoFormat(body: string): string {
+  return body
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter((block) => block.length > 0)
+    .join('\n\n');
+}
+
 // ─── LLM-based generation ─────────────────────────────────────────────────────
 
 async function generateEmailWithLLM(
@@ -64,10 +79,17 @@ async function generateEmailWithLLM(
 
   const systemMessage = `You are an email copywriter for ${config.brandName} (${config.brandUrl}), a fast AI image generation tool. The sender is ${config.senderName} from ${config.brandName}.
 
-Write a short, personal, plain-text email (no HTML, no markdown formatting, no bullet points) based on the instructions given. Keep it concise (under 120 words). Use \\n\\n between paragraphs. Sign off as "${config.senderName}\\n${config.brandName} Team".
+Write a short, personal, plain-text email based on the instructions given. Keep it concise (under 120 words total across all parts). No HTML, no markdown, no bullet points.
 
-Return ONLY valid JSON with this exact shape: {"subject": "...", "body": "..."}
-Do not include any text before or after the JSON.`;
+Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outside the JSON:
+{
+  "subject": "one-line subject",
+  "greeting": "Hi ${first},",
+  "paragraph1": "Opening sentence or two.",
+  "paragraph2": "Second paragraph — product benefit or context.",
+  "cta": "Call to action line including the URL ${config.brandUrl}",
+  "signoff": "Warm regards,\\n${config.senderName}\\n${config.brandName} Team"
+}`;
 
   const userMessage = `${customPrompt}\n\nRecipient name: ${first}\nRecipient email: ${user.email}`;
 
@@ -84,7 +106,7 @@ Do not include any text before or after the JSON.`;
         { role: 'user', content: userMessage },
       ],
       temperature: 0.8,
-      max_tokens: 500,
+      max_tokens: 600,
     }),
   });
 
@@ -96,11 +118,24 @@ Do not include any text before or after the JSON.`;
   const data = await response.json() as { choices: Array<{ message: { content: string } }> };
   const content: string = data.choices[0].message.content.trim();
 
-  // Extract JSON — handle case where model wraps in markdown code fences
   const jsonMatch = content.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error('LLM did not return valid JSON');
 
-  return JSON.parse(jsonMatch[0]) as { subject: string; body: string };
+  const result = JSON.parse(jsonMatch[0]) as {
+    subject: string;
+    greeting: string;
+    paragraph1: string;
+    paragraph2?: string;
+    cta: string;
+    signoff: string;
+  };
+
+  // Assemble with guaranteed \n\n between every section
+  const parts = [result.greeting, result.paragraph1, result.paragraph2, result.cta, result.signoff]
+    .filter((p): p is string => !!p && p.trim().length > 0)
+    .map((p) => p.trim());
+
+  return { subject: result.subject.trim(), body: parts.join('\n\n') };
 }
 
 // ─── Main export ──────────────────────────────────────────────────────────────
@@ -127,15 +162,14 @@ export async function generateEmail(
     const comparison = pick(COMPARISON_LINES);
     const url = config.brandUrl;
 
-    // Build body directly — no LLM, guaranteed blank lines between paragraphs
-    const body = [
+    const body = autoFormat([
       `Hi ${first},`,
       opening,
       middle,
       comparison,
       `This is the last nudge, I promise: ${url}`,
       'Warm regards,\nAayushi\nArtNovaAI Team',
-    ].join('\n\n');
+    ].join('\n\n'));
 
     return { subject, body };
   } catch (error) {

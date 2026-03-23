@@ -14,6 +14,8 @@ interface Config {
 
   // LLM API
   llmApiKey: string;
+  emailHost: string;
+  emailPort: number;
   emailService: string;
   emailUser: string;
   emailPassword: string;
@@ -60,6 +62,8 @@ function loadConfig(): Config {
     smtpUser: process.env.SMTP_USER!,
     smtpAppPassword: process.env.SMTP_APP_PASSWORD!,
     llmApiKey: process.env.LLM_API_KEY!,
+    emailHost: process.env.EMAIL_HOST || 'smtp.gmail.com',
+    emailPort: parseInt(process.env.EMAIL_PORT || '587', 10),
     emailService: process.env.EMAIL_SERVICE!,
     emailUser: process.env.EMAIL_USER!,
     emailPassword: process.env.EMAIL_PASSWORD!,

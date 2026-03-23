@@ -433,16 +433,66 @@ function EmailSender() {
                       <div className="p-4 sm:p-6 bg-white">
                         <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Email Body</p>
                         {isEditing ? (
-                          <textarea
-                            value={displayDetail.body}
-                            onChange={(e) =>
-                              setEditedDetails({
-                                ...editedDetails,
-                                [idx]: { ...displayDetail, body: e.target.value },
-                              })
-                            }
-                            className="input-field text-xs sm:text-sm font-mono min-h-[150px]"
-                          />
+                          <div>
+                            {/* Formatting toolbar */}
+                            <div className="flex flex-wrap gap-1.5 mb-2">
+                              {[
+                                {
+                                  label: '↕ Add spacing',
+                                  title: 'Add blank line between paragraphs',
+                                  fn: (body: string) => body.replace(/\n\n+/g, '\n\n\n'),
+                                },
+                                {
+                                  label: '↔ Compact',
+                                  title: 'Remove extra blank lines',
+                                  fn: (body: string) => body.replace(/\n{3,}/g, '\n\n'),
+                                },
+                                {
+                                  label: '→ Indent',
+                                  title: 'Indent each paragraph',
+                                  fn: (body: string) =>
+                                    body
+                                      .split('\n')
+                                      .map((l) => (l.trim() ? '    ' + l : l))
+                                      .join('\n'),
+                                },
+                                {
+                                  label: '← Unindent',
+                                  title: 'Remove leading spaces',
+                                  fn: (body: string) =>
+                                    body
+                                      .split('\n')
+                                      .map((l) => l.replace(/^ {1,4}/, ''))
+                                      .join('\n'),
+                                },
+                              ].map(({ label, title, fn }) => (
+                                <button
+                                  key={label}
+                                  title={title}
+                                  type="button"
+                                  onClick={() =>
+                                    setEditedDetails({
+                                      ...editedDetails,
+                                      [idx]: { ...displayDetail, body: fn(displayDetail.body) },
+                                    })
+                                  }
+                                  className="px-2 py-1 bg-gray-100 hover:bg-gray-200 text-black rounded text-xs font-mono transition-colors border border-gray-200"
+                                >
+                                  {label}
+                                </button>
+                              ))}
+                            </div>
+                            <textarea
+                              value={displayDetail.body}
+                              onChange={(e) =>
+                                setEditedDetails({
+                                  ...editedDetails,
+                                  [idx]: { ...displayDetail, body: e.target.value },
+                                })
+                              }
+                              className="input-field text-xs sm:text-sm font-mono min-h-[150px]"
+                            />
+                          </div>
                         ) : (
                           <div className="text-xs sm:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-gray-50 p-4 rounded border border-gray-200 font-mono">
                             {displayDetail.body}
