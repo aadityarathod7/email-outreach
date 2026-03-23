@@ -72,18 +72,26 @@ function EmailSender() {
     try {
       // Send emails sequentially with 3-minute delay between each
       const sendResults: any[] = [];
-      const updatedDetails = [...finalDetails];
 
-      for (let i = 0; i < finalDetails.length; i++) {
+      // Only send emails that are ready (not skipped/failed from preview)
+      const sendableIndices: number[] = finalDetails
+        .map((d: any, i: number) => ({ d, i }))
+        .filter(({ d }: { d: any }) => d.status !== 'skipped' && d.status !== 'failed')
+        .map(({ i }: { i: number }) => i);
+
+      for (let si = 0; si < sendableIndices.length; si++) {
+        const i = sendableIndices[si];
         const detail = finalDetails[i];
 
         // Update UI to show which email is currently sending
         setResults((prev: any) => ({
           ...prev,
           dryRun: false,
-          details: updatedDetails.map((d, j) => ({
+          details: prev.details.map((d: any, j: number) => ({
             ...d,
-            status: j < i ? (sendResults[j]?.error ? 'failed' : 'sent') : j === i ? 'sending' : d.status,
+            status: sendableIndices.slice(0, si).includes(j)
+              ? (sendResults[j]?.error ? 'failed' : 'sent')
+              : j === i ? 'sending' : d.status,
           })),
         }));
 
@@ -99,25 +107,26 @@ function EmailSender() {
           .then((res) => res.json())
           .catch((err) => ({ error: err.message }));
 
-        sendResults.push(result);
+        sendResults[i] = result;
 
-        // Wait 2 minutes before next email (skip after last one)
-        if (i < finalDetails.length - 1) {
+        // Wait 2 minutes before next sendable email only
+        if (si < sendableIndices.length - 1) {
           await new Promise((resolve) => setTimeout(resolve, 2 * 60 * 1000));
         }
       }
 
-      // Final update showing all results
+      // Final update — preserve skipped status, update sent/failed
       setResults((prev: any) => ({
         ...prev,
         dryRun: false,
-        details: finalDetails.map((detail: any, idx: number) => ({
-          ...detail,
-          status: sendResults[idx]?.error ? 'failed' : 'sent',
-          reason: sendResults[idx]?.error,
-        })),
-        sent: sendResults.filter((r) => !r.error).length,
-        failed: sendResults.filter((r) => r.error).length,
+        details: finalDetails.map((detail: any, idx: number) => {
+          if (detail.status === 'skipped') return detail;
+          const r = sendResults[idx];
+          if (!r) return detail; // not attempted
+          return { ...detail, status: r.error ? 'failed' : 'sent', reason: r.error };
+        }),
+        sent: sendableIndices.filter((i) => sendResults[i] && !sendResults[i].error).length,
+        failed: sendableIndices.filter((i) => sendResults[i] && sendResults[i].error).length,
       }));
     } catch (err) {
       console.error('Error sending emails:', err);
