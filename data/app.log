@@ -2526,3 +2526,369 @@ Please retry in 13.079059207s. [{"@type":"type.googleapis.com/google.rpc.Help","
 [2026-03-21T10:55:47.714Z] [INFO] POST /api/emails/send-single
 [2026-03-21T10:55:47.714Z] [INFO] Body: {"email":"nickgatland@gmail.com","subject":"Nick, still here if you need it","body":"Hi Nick,\n\nI know inboxes get busy — just wanted to resurface this quickly.\n\nThe short version: your subscriptio
 [2026-03-21T10:55:53.038Z] [INFO] Email sent to nickgatland@gmail.com
+[2026-03-21T13:53:35.054Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-21T13:53:35.056Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-21T13:53:44.500Z] [INFO] GET /api/stats
+[2026-03-21T13:53:44.519Z] [INFO] GET /api/stats
+[2026-03-21T13:54:00.715Z] [INFO] POST /api/emails/send-manual
+[2026-03-21T13:54:00.715Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-21T13:54:00.716Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun
+[2026-03-21T13:54:00.716Z] [INFO] csvContent type: string, length: 40821
+[2026-03-21T13:54:00.718Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-21T13:54:00.719Z] [INFO] Processing 25 users from CSV
+[2026-03-21T14:00:24.473Z] [INFO] POST /api/emails/send-manual
+[2026-03-21T14:00:24.474Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-21T14:00:24.475Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-21T14:00:24.475Z] [INFO] csvContent type: string, length: 40821
+[2026-03-21T14:00:24.476Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-21T14:00:24.476Z] [INFO] Processing 25 users from CSV
+[2026-03-21T14:00:36.238Z] [INFO] POST /api/emails/preview
+[2026-03-21T14:00:36.240Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-21T14:00:37.677Z] [INFO] POST /api/emails/preview
+[2026-03-21T14:00:37.678Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-21T14:00:38.757Z] [INFO] POST /api/emails/preview
+[2026-03-21T14:00:38.757Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-21T14:00:40.138Z] [INFO] POST /api/emails/preview
+[2026-03-21T14:00:40.138Z] [INFO] Body: {"email":"tifanydm@yahoo.com","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-21T14:00:41.313Z] [INFO] POST /api/emails/preview
+[2026-03-21T14:00:41.313Z] [INFO] Body: {"email":"brian@rocksoup.tv","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-21T14:02:05.018Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:02:05.019Z] [INFO] Body: {"email":"marthion@arti.gr","subject":"Martha, one last thing before your subscription ends","body":"Hi Martha,\n\nThis is my third and final message. I only kept following up because I genuinely thin
+[2026-03-21T14:02:08.414Z] [INFO] Email sent to marthion@arti.gr
+[2026-03-21T14:04:08.428Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:04:08.429Z] [INFO] Body: {"email":"cm.richards@gmail.com","subject":"Crystal, your subscription expires today","body":"Hi Crystal,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expiry 
+[2026-03-21T14:04:11.681Z] [INFO] Email sent to cm.richards@gmail.com
+[2026-03-21T14:06:11.699Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:06:11.700Z] [INFO] Body: {"email":"john.lockie@gmail.com","subject":"John, closing the loop on this","body":"Hi John,\n\nThis is my third and final message. I only kept following up because I genuinely think this matters for 
+[2026-03-21T14:06:25.410Z] [INFO] Email sent to john.lockie@gmail.com
+[2026-03-21T14:08:25.426Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:08:25.427Z] [INFO] Body: {"email":"kachur7@hotmail.com","subject":"Logan, this is my last message about this","body":"Hi Logan,\n\nI promised myself I'd only send one more — and today's the day your subscription actually expi
+[2026-03-21T14:08:25.437Z] [ERROR] Failed to send email to kachur7@hotmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58070)
+[2026-03-21T14:10:25.464Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:10:25.464Z] [INFO] Body: {"email":"millerjennifer400@gmail.com","subject":"Jennifer, this is my last message about this","body":"Hi Jennifer,\n\nI don't want to clutter your inbox — but today is the last day, and I'd feel bad
+[2026-03-21T14:10:25.470Z] [ERROR] Failed to send email to millerjennifer400@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58118)
+[2026-03-21T14:12:25.593Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:12:25.593Z] [INFO] Body: {"email":"textil.vernerova@gmail.com","subject":"Hana, final note before your renewal","body":"Hi Hana,\n\nFinal message from me. Your subscription ends today, and I wanted to make sure you had this b
+[2026-03-21T14:12:25.597Z] [ERROR] Failed to send email to textil.vernerova@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58164)
+[2026-03-21T14:14:25.761Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:14:25.761Z] [INFO] Body: {"email":"sarinamaria.tobler@uzh.ch","subject":"Sarina, today is the last day — just try it","body":"Hi Sarina,\n\nI don't want to clutter your inbox — but today is the last day, and I'd feel bad not 
+[2026-03-21T14:14:25.765Z] [ERROR] Failed to send email to sarinamaria.tobler@uzh.ch: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58208)
+[2026-03-21T14:16:26.469Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:16:26.470Z] [INFO] Body: {"email":"elenidan@icloud.com","subject":"evess, wrapping up — today's the day","body":"Hi evess,\n\nI promised myself I'd only send one more — and today's the day your subscription actually expires, 
+[2026-03-21T14:16:26.473Z] [ERROR] Failed to send email to elenidan@icloud.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58257)
+[2026-03-21T14:18:27.239Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:18:27.240Z] [INFO] Body: {"email":"bnpulidobooks@yahoo.com","subject":"BNPulido, wrapping up — today's the day","body":"Hi BNPulido,\n\nI promised myself I'd only send one more — and today's the day your subscription actually
+[2026-03-21T14:18:27.243Z] [ERROR] Failed to send email to bnpulidobooks@yahoo.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58296)
+[2026-03-21T14:20:27.957Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:20:27.958Z] [INFO] Body: {"email":"sparkybarry@yahoo.com","subject":"Christine, today is the last day — just try it","body":"Hi Christine,\n\nI promised myself I'd only send one more — and today's the day your subscription ac
+[2026-03-21T14:20:27.962Z] [ERROR] Failed to send email to sparkybarry@yahoo.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58342)
+[2026-03-21T14:22:28.824Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:22:28.825Z] [INFO] Body: {"email":"bnlinaburg@gmail.com","subject":"Brian, this is my last message about this","body":"Hi Brian,\n\nI know I've reached out before — this is the last time. Today your current tool's subscriptio
+[2026-03-21T14:22:28.830Z] [ERROR] Failed to send email to bnlinaburg@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58385)
+[2026-03-21T14:24:29.521Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:24:29.524Z] [INFO] Body: {"email":"bryantdenise5@gmail.com","subject":"Denise, your subscription expires today","body":"Hi Denise,\n\nI don't want to clutter your inbox — but today is the last day, and I'd feel bad not mentio
+[2026-03-21T14:24:29.529Z] [ERROR] Failed to send email to bryantdenise5@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58423)
+[2026-03-21T14:26:30.312Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:26:30.313Z] [INFO] Body: {"email":"joshua.4.tyler@gmail.com","subject":"Joshua, final note before your renewal","body":"Hi Joshua,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expiry 
+[2026-03-21T14:26:30.316Z] [ERROR] Failed to send email to joshua.4.tyler@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58476)
+[2026-03-21T14:28:30.971Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:28:30.971Z] [INFO] Body: {"email":"tford1066@gmail.com","subject":"Taylor, this is my last message about this","body":"Hi Taylor,\n\nI know I've reached out before — this is the last time. Today your current tool's subscripti
+[2026-03-21T14:28:30.976Z] [ERROR] Failed to send email to tford1066@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58516)
+[2026-03-21T14:30:31.659Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:30:31.660Z] [INFO] Body: {"email":"sn.nicole@gmail.com","subject":"Sofia, this is my last message about this","body":"Hi Sofia,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription
+[2026-03-21T14:30:31.664Z] [ERROR] Failed to send email to sn.nicole@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58560)
+[2026-03-21T14:32:32.429Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:32:32.429Z] [INFO] Body: {"email":"ariel@turbogrease.com","subject":"ariel, closing the loop on this","body":"Hi ariel,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expiry date.\n\nYo
+[2026-03-21T14:32:32.437Z] [ERROR] Failed to send email to ariel@turbogrease.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58604)
+[2026-03-21T14:34:33.334Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:34:33.335Z] [INFO] Body: {"email":"mn365fit@gmail.com","subject":"Minh, last chance — expires today","body":"Hi Minh,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription expires.\
+[2026-03-21T14:34:33.339Z] [ERROR] Failed to send email to mn365fit@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58645)
+[2026-03-21T14:36:34.123Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:36:34.123Z] [INFO] Body: {"email":"jrcprod@gmail.com","subject":"jordan, closing the loop on this","body":"Hi jordan,\n\nI don't want to clutter your inbox — but today is the last day, and I'd feel bad not mentioning it one m
+[2026-03-21T14:36:34.130Z] [ERROR] Failed to send email to jrcprod@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58688)
+[2026-03-21T14:38:34.966Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:38:34.967Z] [INFO] Body: {"email":"aagh140503@gmail.com","subject":"Amy, your subscription expires today","body":"Hi Amy,\n\nThis is my third and final message. I only kept following up because I genuinely think this matters 
+[2026-03-21T14:38:34.971Z] [ERROR] Failed to send email to aagh140503@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58728)
+[2026-03-21T14:40:35.699Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:40:35.699Z] [INFO] Body: {"email":"martykihn@gmail.com","subject":"Martin, last chance — expires today","body":"Hi Martin,\n\nFinal message from me. Your subscription ends today, and I wanted to make sure you had this before 
+[2026-03-21T14:40:35.703Z] [ERROR] Failed to send email to martykihn@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58783)
+[2026-03-21T14:42:36.451Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:42:36.451Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","subject":"ayesha, last chance — expires today","body":"Hi ayesha,\n\nI don't want to clutter your inbox — but today is the last day, and I'd feel bad not mentioning it
+[2026-03-21T14:42:36.455Z] [ERROR] Failed to send email to ayeshahfrj@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58821)
+[2026-03-21T14:44:37.201Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:44:37.202Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com","subject":"pilarciniegas, one last thing before your subscription ends","body":"Hi pilarciniegas,\n\nI've reached out a couple of times this week — today is genu
+[2026-03-21T14:44:37.205Z] [ERROR] Failed to send email to pilarciniegas2910@gmail.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58863)
+[2026-03-21T14:46:38.049Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:46:38.049Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl","subject":"hazen, wrapping up — today's the day","body":"Hi hazen,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expiry da
+[2026-03-21T14:46:38.053Z] [ERROR] Failed to send email to fjm.hazen@hoteldedraak.nl: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58911)
+[2026-03-21T14:48:38.817Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:48:38.818Z] [INFO] Body: {"email":"tifanydm@yahoo.com","subject":"tifany, last chance — expires today","body":"Hi tifany,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription expir
+[2026-03-21T14:48:38.823Z] [ERROR] Failed to send email to tifanydm@yahoo.com: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58949)
+[2026-03-21T14:50:39.514Z] [INFO] POST /api/emails/send-single
+[2026-03-21T14:50:39.515Z] [INFO] Body: {"email":"brian@rocksoup.tv","subject":"brian, last chance — expires today","body":"Hi brian,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription expires.
+[2026-03-21T14:50:39.518Z] [ERROR] Failed to send email to brian@rocksoup.tv: connect ENETUNREACH 192.178.211.108:465 - Local (0.0.0.0:58995)
+[2026-03-21T15:01:48.510Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-21T15:01:48.512Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-21T15:02:44.480Z] [INFO] POST /api/emails/send-manual
+[2026-03-21T15:02:44.481Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-21T15:02:44.482Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-21T15:02:44.482Z] [INFO] csvContent type: string, length: 40821
+[2026-03-21T15:02:44.484Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-21T15:02:44.484Z] [INFO] Processing 25 users from CSV
+[2026-03-21T15:02:52.869Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:02:52.869Z] [INFO] Body: {"email":"marthion@arti.gr"}
+[2026-03-21T15:04:52.907Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:04:52.908Z] [INFO] Body: {"email":"cm.richards@gmail.com"}
+[2026-03-21T15:06:52.949Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:06:52.951Z] [INFO] Body: {"email":"john.lockie@gmail.com"}
+[2026-03-21T15:08:52.986Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:08:52.987Z] [INFO] Body: {"email":"kachur7@hotmail.com","subject":"Logan, closing the loop on this","body":"Hi Logan,\n\nThis is my third and final message. I only kept following up because I genuinely think this matters for 
+[2026-03-21T15:08:56.790Z] [INFO] Email sent to kachur7@hotmail.com
+[2026-03-21T15:10:56.810Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:10:56.811Z] [INFO] Body: {"email":"millerjennifer400@gmail.com","subject":"Jennifer, final note before your renewal","body":"Hi Jennifer,\n\nFinal message from me. Your subscription ends today, and I wanted to make sure you h
+[2026-03-21T15:11:00.165Z] [INFO] Email sent to millerjennifer400@gmail.com
+[2026-03-21T15:13:00.496Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:13:00.497Z] [INFO] Body: {"email":"textil.vernerova@gmail.com","subject":"Hana, final note before your renewal","body":"Hi Hana,\n\nFinal message from me. Your subscription ends today, and I wanted to make sure you had this b
+[2026-03-21T15:13:03.740Z] [INFO] Email sent to textil.vernerova@gmail.com
+[2026-03-21T15:15:03.893Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:15:03.894Z] [INFO] Body: {"email":"sarinamaria.tobler@uzh.ch","subject":"Sarina, wrapping up — today's the day","body":"Hi Sarina,\n\nI promised myself I'd only send one more — and today's the day your subscription actually e
+[2026-03-21T15:15:08.354Z] [INFO] Email sent to sarinamaria.tobler@uzh.ch
+[2026-03-21T15:17:08.452Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:17:08.453Z] [INFO] Body: {"email":"elenidan@icloud.com","subject":"evess, this is my last message about this","body":"Hi evess,\n\nThis is my third and final message. I only kept following up because I genuinely think this ma
+[2026-03-21T15:17:11.672Z] [INFO] Email sent to elenidan@icloud.com
+[2026-03-21T15:19:12.134Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:19:12.135Z] [INFO] Body: {"email":"bnpulidobooks@yahoo.com","subject":"BNPulido, final note before your renewal","body":"Hi BNPulido,\n\nFinal message from me. Your subscription ends today, and I wanted to make sure you had t
+[2026-03-21T15:19:15.331Z] [INFO] Email sent to bnpulidobooks@yahoo.com
+[2026-03-21T15:21:15.849Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:21:15.849Z] [INFO] Body: {"email":"sparkybarry@yahoo.com","subject":"Christine, wrapping up — today's the day","body":"Hi Christine,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expir
+[2026-03-21T15:21:18.933Z] [INFO] Email sent to sparkybarry@yahoo.com
+[2026-03-21T15:23:19.758Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:23:19.759Z] [INFO] Body: {"email":"bnlinaburg@gmail.com","subject":"Brian, your subscription expires today","body":"Hi Brian,\n\nI've reached out a couple of times this week — today is genuinely the last day your current subs
+[2026-03-21T15:23:23.921Z] [INFO] Email sent to bnlinaburg@gmail.com
+[2026-03-21T15:25:24.603Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:25:24.604Z] [INFO] Body: {"email":"bryantdenise5@gmail.com","subject":"Denise, today is the last day — just try it","body":"Hi Denise,\n\nThis is my third and final message. I only kept following up because I genuinely think 
+[2026-03-21T15:25:27.956Z] [INFO] Email sent to bryantdenise5@gmail.com
+[2026-03-21T15:27:28.453Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:27:28.453Z] [INFO] Body: {"email":"joshua.4.tyler@gmail.com","subject":"Joshua, last chance — expires today","body":"Hi Joshua,\n\nThis is my third and final message. I only kept following up because I genuinely think this ma
+[2026-03-21T15:27:31.960Z] [INFO] Email sent to joshua.4.tyler@gmail.com
+[2026-03-21T15:29:32.336Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:29:32.336Z] [INFO] Body: {"email":"tford1066@gmail.com","subject":"Taylor, your subscription expires today","body":"Hi Taylor,\n\nLast one, I promise. I've sent a couple of notes this week, and today is the actual expiry date
+[2026-03-21T15:29:35.755Z] [INFO] Email sent to tford1066@gmail.com
+[2026-03-21T15:31:36.125Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:31:36.125Z] [INFO] Body: {"email":"sn.nicole@gmail.com","subject":"Sofia, wrapping up — today's the day","body":"Hi Sofia,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription expi
+[2026-03-21T15:33:36.162Z] [ERROR] Failed to send email to sn.nicole@gmail.com: Connection timeout
+[2026-03-21T15:35:36.790Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:35:36.791Z] [INFO] Body: {"email":"ariel@turbogrease.com","subject":"ariel, wrapping up — today's the day","body":"Hi ariel,\n\nI know I've reached out before — this is the last time. Today your current tool's subscription ex
+[2026-03-21T15:35:40.720Z] [INFO] Email sent to ariel@turbogrease.com
+[2026-03-21T15:37:40.856Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:37:40.908Z] [INFO] Body: {"email":"mn365fit@gmail.com","subject":"Minh, final note before your renewal","body":"Hi Minh,\n\nThis is my third and final message. I only kept following up because I genuinely think this matters f
+[2026-03-21T15:37:47.267Z] [INFO] Email sent to mn365fit@gmail.com
+[2026-03-21T15:39:47.284Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:39:47.284Z] [INFO] Body: {"email":"jrcprod@gmail.com","subject":"jordan, one last thing before your subscription ends","body":"Hi jordan,\n\nOne last note. I've followed up because today is genuinely the final day of your sub
+[2026-03-21T15:39:50.568Z] [INFO] Email sent to jrcprod@gmail.com
+[2026-03-21T15:41:51.323Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:41:51.323Z] [INFO] Body: {"email":"aagh140503@gmail.com","subject":"Amy, last chance — expires today","body":"Hi Amy,\n\nOne last note. I've followed up because today is genuinely the final day of your subscription.\n\nThe ac
+[2026-03-21T15:41:56.354Z] [INFO] Email sent to aagh140503@gmail.com
+[2026-03-21T15:43:56.842Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:43:56.843Z] [INFO] Body: {"email":"martykihn@gmail.com","subject":"Martin, this is my last message about this","body":"Hi Martin,\n\nOne last note. I've followed up because today is genuinely the final day of your subscriptio
+[2026-03-21T15:44:02.676Z] [INFO] Email sent to martykihn@gmail.com
+[2026-03-21T15:46:03.384Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:46:03.385Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com"}
+[2026-03-21T15:48:03.521Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:48:03.522Z] [INFO] Body: {"email":"pilarciniegas2910@gmail.com"}
+[2026-03-21T15:50:04.052Z] [INFO] POST /api/emails/send-single
+[2026-03-21T15:50:04.052Z] [INFO] Body: {"email":"fjm.hazen@hoteldedraak.nl"}
+[2026-03-23T06:08:35.157Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T06:08:35.159Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T06:08:40.954Z] [INFO] GET /api/stats
+[2026-03-23T06:08:40.974Z] [INFO] GET /api/stats
+[2026-03-23T06:08:52.076Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T06:08:52.077Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-23T06:08:52.077Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T06:08:52.077Z] [INFO] csvContent type: string, length: 40821
+[2026-03-23T06:08:52.079Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-23T06:08:52.079Z] [INFO] Processing 25 users from CSV
+[2026-03-23T06:08:54.080Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:08:54.081Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-23T06:08:57.827Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:08:57.828Z] [INFO] Body: {"email":"brian@rocksoup.tv","name":"User","plan":"Gold","totalImages":0,"prompts":[]}
+[2026-03-23T06:10:24.813Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T06:10:24.814Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nmarthion@arti.gr,Martha Ioannidou,Gold,15,\"do it origam\ncan you make it a gif?opening the torso in the midd
+[2026-03-23T06:10:24.814Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T06:10:24.814Z] [INFO] csvContent type: string, length: 40821
+[2026-03-23T06:10:24.815Z] [INFO] Successfully parsed CSV: 25 users
+[2026-03-23T06:10:24.815Z] [INFO] Processing 25 users from CSV
+[2026-03-23T06:10:25.150Z] [ERROR] Failed to generate email for sn.nicole@gmail.com: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:27.415Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:27.416Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the right
+[2026-03-23T06:10:27.461Z] [ERROR] Failed to generate email for marthion@arti.gr: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:27.462Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:28.494Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:28.494Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the right
+[2026-03-23T06:10:28.581Z] [ERROR] Failed to generate email for marthion@arti.gr: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:28.581Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.034Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:29.035Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the right
+[2026-03-23T06:10:29.117Z] [ERROR] Failed to generate email for marthion@arti.gr: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.117Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.364Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:29.365Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the right
+[2026-03-23T06:10:29.411Z] [ERROR] Failed to generate email for marthion@arti.gr: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.412Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.576Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:29.576Z] [INFO] Body: {"email":"marthion@arti.gr","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the right
+[2026-03-23T06:10:29.647Z] [ERROR] Failed to generate email for marthion@arti.gr: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:29.648Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:31.398Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:31.398Z] [INFO] Body: {"email":"elenidan@icloud.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the ri
+[2026-03-23T06:10:31.478Z] [ERROR] Failed to generate email for elenidan@icloud.com: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:31.478Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:32.006Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:32.007Z] [INFO] Body: {"email":"elenidan@icloud.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the ri
+[2026-03-23T06:10:32.111Z] [ERROR] Failed to generate email for elenidan@icloud.com: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:32.111Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:32.218Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:10:32.219Z] [INFO] Body: {"email":"elenidan@icloud.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the ri
+[2026-03-23T06:10:32.300Z] [ERROR] Failed to generate email for elenidan@icloud.com: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:10:32.301Z] [ERROR] Error generating preview: Error: Groq API error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+[2026-03-23T06:13:10.458Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T06:13:10.460Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T06:13:43.703Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T06:13:43.704Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\nayeshahfrj@gmail.com,Ayeshah Frj,Gold,73,Upscale image,\"Create an image of the same anthropomorphic mouse ch
+[2026-03-23T06:13:43.704Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T06:13:43.704Z] [INFO] csvContent type: string, length: 49697
+[2026-03-23T06:13:43.706Z] [INFO] Successfully parsed CSV: 26 users
+[2026-03-23T06:13:43.707Z] [INFO] Processing 26 users from CSV
+[2026-03-23T06:13:45.380Z] [INFO] POST /api/emails/preview
+[2026-03-23T06:13:45.380Z] [INFO] Body: {"email":"ayeshahfrj@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the r
+[2026-03-23T08:58:16.207Z] [INFO] GET /api/stats
+[2026-03-23T08:58:16.214Z] [INFO] GET /api/stats
+[2026-03-23T08:58:46.214Z] [INFO] GET /api/stats
+[2026-03-23T08:59:32.187Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T08:59:32.188Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\ndalsaniyad@gmail.com,Dhaval Dalsaniya,Platinum,285,\"Recreate the office with futuristic glass architecture, 
+[2026-03-23T08:59:32.189Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T08:59:32.189Z] [INFO] csvContent type: string, length: 4926
+[2026-03-23T08:59:32.190Z] [INFO] Successfully parsed CSV: 8 users
+[2026-03-23T08:59:32.190Z] [INFO] Processing 8 users from CSV
+[2026-03-23T09:02:58.362Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:02:58.364Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:02:58.364Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:02:58.365Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:02:58.365Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:02:58.367Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:03:06.625Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:03:06.626Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","subject":"Aadi, what if your next tool was faster and cheaper","body":"Hi Aadi,\nYour current plan is expiring soon — and before you hit renew, we think you deserve 
+[2026-03-23T09:03:09.590Z] [INFO] Email sent to iammr.x00001@gmail.com
+[2026-03-23T09:07:53.991Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:07:53.994Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:08:20.115Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:08:20.116Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:08:20.116Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:08:20.116Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:08:20.118Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:08:20.119Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:08:27.635Z] [INFO] POST /api/emails/preview
+[2026-03-23T09:08:27.636Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the
+[2026-03-23T09:12:04.187Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:12:04.189Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:12:22.936Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:12:22.937Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:12:22.937Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:12:22.938Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:12:22.939Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:12:22.940Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:13:53.383Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:13:53.385Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:14:14.843Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:14:14.844Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:14:14.845Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:14:14.845Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:14:14.846Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:14:14.847Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:17:11.930Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:17:11.933Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:17:31.323Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:17:31.323Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:17:31.323Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:17:31.324Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:17:31.325Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:17:31.325Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:17:43.852Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:17:43.853Z] [INFO] Body: {"email":"iammr.x00001@gmail.com"}
+[2026-03-23T09:19:44.296Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:19:44.297Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, what if your next tool was faster and cheaper","body":"Hi Aadi,\n\nYour current plan is expiring soon — and before you hit renew, we think you dese
+[2026-03-23T09:20:03.693Z] [ERROR] Failed to send email to aadityarathod7@gmail.com: read ETIMEDOUT
+[2026-03-23T09:23:27.676Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:23:27.678Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:24:05.551Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:24:05.552Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\niammr.x00001@gmail.com,Aadi,Gold,10,Test prompt 1,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5\r\n
+[2026-03-23T09:24:05.552Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:24:05.552Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:24:05.554Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:24:05.554Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:24:12.319Z] [INFO] POST /api/emails/preview
+[2026-03-23T09:24:12.319Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","name":"User","plan":"Gold","totalImages":0,"prompts":[],"customPrompt":"WHO YOU ARE: Aayushi — a warm, credible professional at ArtNovaAI reaching out at exactly the
+[2026-03-23T09:24:22.164Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:24:22.165Z] [INFO] Body: {"email":"iammr.x00001@gmail.com","subject":"User, before your plan expires — see this","body":"Hi User,\n\nYour current tool's subscription is ending soon — and before you renew, there's something wo
+[2026-03-23T09:24:41.400Z] [ERROR] Failed to send email to iammr.x00001@gmail.com: read ETIMEDOUT
+[2026-03-23T09:26:42.130Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:26:42.130Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, what if your next tool was faster and cheaper","body":"Hi Aadi,\n\nYour current plan is expiring soon — and before you hit renew, we think you dese
+[2026-03-23T09:27:01.350Z] [ERROR] Failed to send email to aadityarathod7@gmail.com: read ETIMEDOUT
+[2026-03-23T09:30:31.472Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:30:31.474Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:31:02.229Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:31:02.229Z] [INFO] Body: {"email":"aayushipatidar07@gmail.com","subject":"Aadi, before your plan expires — see this","body":"Hi Aadi,\n\nYour current tool's subscription is ending soon — and before you renew, there's somethin
+[2026-03-23T09:31:23.696Z] [ERROR] Failed to send email to aayushipatidar07@gmail.com: read ETIMEDOUT
+[2026-03-23T09:32:16.947Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:32:16.949Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:33:18.899Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:33:18.900Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\naadityarathod7@gmail.com,Aadi,Gold,10,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5,Test prompt 6\r
+[2026-03-23T09:33:18.900Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:33:18.901Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:33:18.902Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:33:18.902Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:33:43.843Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:33:43.844Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, before your plan expires — see this","body":"Hi Aadi,\n\nYour current tool's subscription is ending soon — and before you renew, there's something 
+[2026-03-23T09:34:03.251Z] [ERROR] Failed to send email to aadityarathod7@gmail.com: read ETIMEDOUT
+[2026-03-23T09:36:03.268Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:36:03.271Z] [INFO] Body: {"email":"patidaraayushi900@gmail.com","subject":"Aadi, what if your next tool was faster and cheaper","body":"Hi Aadi,\n\nYour current plan is expiring soon — and before you hit renew, we think you d
+[2026-03-23T09:36:22.465Z] [ERROR] Failed to send email to patidaraayushi900@gmail.com: read ETIMEDOUT
+[2026-03-23T09:36:42.902Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:36:42.904Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:36:57.577Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:36:57.577Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\naadityarathod7@gmail.com,Aadi,Gold,10,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5,Test prompt 6\r
+[2026-03-23T09:36:57.578Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:36:57.578Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:36:57.580Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:36:57.580Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:37:04.414Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:37:04.415Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, before your plan expires — see this","body":"Hi Aadi,\n\nYour current tool's subscription is ending soon — and before you renew, there's something 
+[2026-03-23T09:37:24.845Z] [ERROR] Failed to send email to aadityarathod7@gmail.com: read ETIMEDOUT
+[2026-03-23T09:39:32.471Z] [INFO] 🚀 Server running on http://localhost:3000
+[2026-03-23T09:39:32.473Z] [INFO] 📧 Email Outreach Dashboard - ArtNovaAI
+[2026-03-23T09:39:47.779Z] [INFO] POST /api/emails/send-manual
+[2026-03-23T09:39:47.780Z] [INFO] Body: {"csvContent":"email,name,plan,totalImages,images.0,images.1,images.2,images.3,images.4\r\naadityarathod7@gmail.com,Aadi,Gold,10,Test prompt 2,Test prompt 3,Test prompt 4,Test prompt 5,Test prompt 6\r
+[2026-03-23T09:39:47.781Z] [INFO] Received send-manual request. Body keys: csvContent, dryRun, customPrompt
+[2026-03-23T09:39:47.781Z] [INFO] csvContent type: string, length: 511
+[2026-03-23T09:39:47.783Z] [INFO] Successfully parsed CSV: 4 users
+[2026-03-23T09:39:47.783Z] [INFO] Processing 4 users from CSV
+[2026-03-23T09:39:53.130Z] [INFO] POST /api/emails/send-single
+[2026-03-23T09:39:53.131Z] [INFO] Body: {"email":"aadityarathod7@gmail.com","subject":"Aadi, before your plan expires — see this","body":"Hi Aadi,\n\nYour current tool's subscription is ending soon — and before you renew, there's something 
+[2026-03-23T09:39:55.790Z] [INFO] Email sent to aadityarathod7@gmail.com

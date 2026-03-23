@@ -10,39 +10,26 @@ function getRandomIP(): string {
 }
 
 /**
- * Create email transporter based on configured service
+ * Send a personalized email — fresh transporter per call to avoid ETIMEDOUT
  */
-function createTransporter(): nodemailer.Transporter {
-  return nodemailer.createTransport({
-    host: config.emailHost,
-    port: config.emailPort,
-    secure: false, // STARTTLS on port 587
+export async function sendEmail(to: string, subject: string, body: string): Promise<boolean> {
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // SSL — no STARTTLS negotiation
     auth: {
       user: config.emailUser,
       pass: config.emailPassword,
     },
+    tls: { rejectUnauthorized: false },
+    connectionTimeout: 30000,
+    greetingTimeout: 15000,
+    socketTimeout: 30000,
   });
-}
 
-let transporter: nodemailer.Transporter | null = null;
-
-/**
- * Get transporter (singleton)
- */
-function getTransporter(): nodemailer.Transporter {
-  if (!transporter) {
-    transporter = createTransporter();
-  }
-  return transporter;
-}
-
-/**
- * Send a personalized email
- */
-export async function sendEmail(to: string, subject: string, body: string): Promise<boolean> {
   try {
-    const mailOptions = {
-      from: config.emailUser,
+    await transporter.sendMail({
+      from: `${config.senderName} <${config.emailUser}>`,
       to,
       subject,
       text: body,
@@ -55,10 +42,7 @@ export async function sendEmail(to: string, subject: string, body: string): Prom
         'User-Agent': 'Mozilla/5.0',
         'MIME-Version': '1.0',
       },
-    };
-
-    const transporter = getTransporter();
-    await transporter.sendMail(mailOptions);
+    });
 
     logger.log(`Email sent to ${to}`);
     return true;
@@ -67,15 +51,8 @@ export async function sendEmail(to: string, subject: string, body: string): Prom
       `Failed to send email to ${to}: ${err instanceof Error ? err.message : String(err)}`
     );
     return false;
+  } finally {
+    transporter.close();
   }
 }
 
-/**
- * Close transporter connection
- */
-export function closeTransporter(): void {
-  if (transporter) {
-    transporter.close();
-    transporter = null;
-  }
-}
