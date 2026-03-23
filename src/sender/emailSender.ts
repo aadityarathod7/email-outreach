@@ -14,7 +14,9 @@ function getRandomIP(): string {
  */
 function createTransporter(): nodemailer.Transporter {
   return nodemailer.createTransport({
-    service: config.emailService || 'gmail',
+    host: config.emailHost,
+    port: config.emailPort,
+    secure: false, // STARTTLS on port 587
     auth: {
       user: config.emailUser,
       pass: config.emailPassword,
