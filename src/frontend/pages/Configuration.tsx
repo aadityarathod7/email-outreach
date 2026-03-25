@@ -10,7 +10,8 @@ function Configuration() {
 
   useEffect(() => {
     if (config) {
-      setFormData(config);
+      // Don't pre-fill API key fields with masked values — keep empty so user enters new keys intentionally
+      setFormData({ ...config, llmApiKeys: '' });
     }
   }, [config]);
 
@@ -20,7 +21,14 @@ function Configuration() {
     setSaving(true);
     setSuccess(false);
 
-    const result = await updateConfig(formData);
+    // Strip read-only / masked fields before sending
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { emailService: _es, llmApiKey: _lk, ...editable } = formData;
+
+    // Don't send API keys if they still contain masked characters (unchanged from GET)
+    if (editable.llmApiKeys?.includes('*')) delete editable.llmApiKeys;
+
+    const result = await updateConfig(editable);
 
     setSaving(false);
     if (result.success) {
@@ -174,7 +182,10 @@ function Configuration() {
                   placeholder={'gsk_key_one\ngsk_key_two\ngsk_key_three'}
                 />
                 <p className="text-xs text-gray-500 mt-1">
-                  Add multiple keys — if one hits its rate limit, the next is used automatically. Get free keys at{' '}
+                  {config?.llmApiKeys
+                    ? `${config.llmApiKeys.split('\n').filter(Boolean).length} key(s) currently configured. Paste new keys below to replace them.`
+                    : 'No keys configured yet.'}{' '}
+                  Get free keys at{' '}
                   <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline">console.groq.com</a>
                 </p>
               </div>
