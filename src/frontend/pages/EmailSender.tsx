@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
-import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw, Trash2 } from 'lucide-react';
+import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw, Trash2, FlaskConical } from 'lucide-react';
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
@@ -9,6 +9,9 @@ function EmailSender() {
   const [results, setResults] = useState<any>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [editedDetails, setEditedDetails] = useState<{[key: number]: any}>({});
+  const [testEmailAddress, setTestEmailAddress] = useState('');
+  const [testSending, setTestSending] = useState(false);
+  const [testResult, setTestResult] = useState<'sent' | 'failed' | null>(null);
   const { sendEmails, sending } = useEmails();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,6 +58,31 @@ function EmailSender() {
       setResults({ ...result, dryRun: true });
     }
     setPreviewLoading(false);
+  };
+
+  const handleTestEmail = async () => {
+    if (!testEmailAddress.trim() || !results?.details?.length) return;
+    const first = results.details.find((d: any) => d.status === 'ready' || d.status === 'sent');
+    if (!first) return;
+    setTestSending(true);
+    setTestResult(null);
+    try {
+      const res = await fetch('/api/emails/send-single', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: testEmailAddress.trim(),
+          subject: `[TEST] ${first.subject}`,
+          body: first.body,
+        }),
+      });
+      const data = await res.json();
+      setTestResult(data.error ? 'failed' : 'sent');
+    } catch {
+      setTestResult('failed');
+    } finally {
+      setTestSending(false);
+    }
   };
 
   const handleSend = async (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -339,6 +367,30 @@ function EmailSender() {
                   ? 'Review the emails below before sending'
                   : 'All emails have been processed'}
               </p>
+              {results.dryRun && (
+                <div className="flex flex-col sm:flex-row gap-2 mt-4">
+                  <input
+                    type="email"
+                    value={testEmailAddress}
+                    onChange={(e) => setTestEmailAddress(e.target.value)}
+                    placeholder="your@email.com"
+                    className="flex-1 px-3 py-2 rounded-lg text-sm text-black bg-white border-0 focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                  <button
+                    onClick={handleTestEmail}
+                    disabled={!testEmailAddress.trim() || testSending}
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-white text-black text-sm font-semibold rounded-lg hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
+                  >
+                    <FlaskConical className="w-4 h-4" />
+                    {testSending ? 'Sending...' : 'Send Test Email'}
+                  </button>
+                  {testResult && (
+                    <span className={`flex items-center text-xs font-semibold px-3 rounded-lg ${testResult === 'sent' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}>
+                      {testResult === 'sent' ? 'Test sent!' : 'Test failed'}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Stats Grid */}
@@ -520,8 +572,20 @@ function EmailSender() {
                             />
                           </div>
                         ) : (
-                          <div className="text-xs sm:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-gray-50 p-4 rounded border border-gray-200 font-mono">
-                            {displayDetail.body}
+                          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                            {/* Email client header */}
+                            <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
+                              <p className="text-xs text-gray-500"><span className="font-semibold">From:</span> Aayushi &lt;aayushi@artnovaai.com&gt;</p>
+                              <p className="text-xs text-gray-500 mt-0.5"><span className="font-semibold">To:</span> {detail.email}</p>
+                            </div>
+                            {/* Email body styled like inbox */}
+                            <div className="px-6 py-5 font-sans text-sm text-gray-800 leading-7">
+                              {displayDetail.body.split('\n\n').map((paragraph: string, pi: number) => (
+                                <p key={pi} className="mb-4 last:mb-0 whitespace-pre-wrap">
+                                  {paragraph}
+                                </p>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>

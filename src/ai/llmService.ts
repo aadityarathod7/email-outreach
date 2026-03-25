@@ -151,7 +151,16 @@ export async function generateEmail(
 ): Promise<{ subject: string; body: string }> {
   try {
     if (customPrompt && customPrompt.trim()) {
-      return await generateEmailWithLLM(user, customPrompt.trim());
+      // Retry up to 2 times on failure, then fall back to rotation pools
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+          return await generateEmailWithLLM(user, customPrompt.trim());
+        } catch (llmErr) {
+          logger.error(`LLM attempt ${attempt} failed for ${user.email}: ${llmErr instanceof Error ? llmErr.message : String(llmErr)}`);
+          if (attempt < 2) await new Promise((r) => setTimeout(r, 1500));
+        }
+      }
+      logger.log(`LLM failed after retries for ${user.email} — falling back to rotation pools`);
     }
 
     const first = firstName(user.name);

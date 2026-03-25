@@ -114,6 +114,7 @@ router.post('/send-manual', async (req: Request, res: Response) => {
     };
 
     // Process each user
+    let llmCallCount = 0;
     for (const user of users) {
       try {
         // Check if already sent
@@ -127,8 +128,14 @@ router.post('/send-manual', async (req: Request, res: Response) => {
           continue;
         }
 
+        // Add 1s delay between LLM calls to avoid rate limits
+        if (customPrompt && llmCallCount > 0) {
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+        }
+
         // Generate email
         const emailContent = await generateEmail(user, customPrompt);
+        llmCallCount++;
 
         // Send email (or skip if dry run)
         let sent = false;
@@ -215,7 +222,7 @@ router.post('/send-single', async (req: Request, res: Response) => {
  * DELETE /api/emails/sent
  * Delete all sent emails from history
  */
-router.delete('/sent', (req: Request, res: Response) => {
+router.delete('/sent', (_req: Request, res: Response) => {
   try {
     const count = deleteAllSentEmails();
     res.json({ success: true, message: `Deleted ${count} emails from history` });
