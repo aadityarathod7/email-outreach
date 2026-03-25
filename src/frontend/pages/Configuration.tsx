@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useConfig } from '../hooks/useConfig';
-import { Save, Tag, Settings, Wrench, AlertCircle } from 'lucide-react';
+import { Save, Tag, Settings, Wrench, AlertCircle, KeyRound } from 'lucide-react';
 
 function Configuration() {
   const { config, loading, error, updateConfig } = useConfig();
@@ -150,6 +150,33 @@ function Configuration() {
                   min="1000"
                   step="1000"
                 />
+              </div>
+            </div>
+          </div>
+
+          {/* API Keys */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 pb-3 border-b-2 border-gray-200 mb-5">
+              <KeyRound className="w-5 h-5 text-black" />
+              <h3 className="text-sm font-bold text-black uppercase tracking-wide">API Keys</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="md:col-span-2">
+                <label className="block text-sm font-semibold text-black mb-1.5">
+                  Groq API Keys
+                  <span className="ml-2 text-xs font-normal text-gray-500 bg-gray-100 px-2 py-0.5 rounded">one per line — rotates automatically on rate limit</span>
+                </label>
+                <textarea
+                  value={formData.llmApiKeys || ''}
+                  onChange={(e) => setFormData({ ...formData, llmApiKeys: e.target.value })}
+                  rows={3}
+                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black font-mono text-sm resize-none"
+                  placeholder={'gsk_key_one\ngsk_key_two\ngsk_key_three'}
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  Add multiple keys — if one hits its rate limit, the next is used automatically. Get free keys at{' '}
+                  <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline">console.groq.com</a>
+                </p>
               </div>
             </div>
           </div>

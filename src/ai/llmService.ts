@@ -2,6 +2,31 @@ import { config } from '../config/env';
 import { logger } from '../utils/logger';
 import { UserRecord } from '../parser/csvParser';
 
+// ─── API key pool ──────────────────────────────────────────────────────────────
+// Reads LLM_API_KEYS (comma-separated) or falls back to LLM_API_KEY
+function loadApiKeys(): string[] {
+  const multi = process.env.LLM_API_KEYS;
+  if (multi) return multi.split(',').map((k) => k.trim()).filter(Boolean);
+  return config.llmApiKey ? [config.llmApiKey] : [];
+}
+
+let _apiKeys = loadApiKeys();
+let _keyIndex = 0;
+
+function nextApiKey(): string {
+  if (_apiKeys.length === 0) throw new Error('No LLM API keys configured');
+  const key = _apiKeys[_keyIndex % _apiKeys.length];
+  _keyIndex = (_keyIndex + 1) % _apiKeys.length;
+  return key;
+}
+
+/** Call after saving new keys via settings so they take effect immediately */
+export function reloadApiKeys(): void {
+  _apiKeys = loadApiKeys();
+  _keyIndex = 0;
+  logger.log(`LLM API keys reloaded: ${_apiKeys.length} key(s) available`);
+}
+
 // ─── Rotation pools ───────────────────────────────────────────────────────────
 
 const SUBJECT_STYLES = [
@@ -93,49 +118,66 @@ Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outs
 
   const userMessage = `${customPrompt}\n\nRecipient name: ${first}\nRecipient email: ${user.email}`;
 
-  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${config.llmApiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'llama-3.3-70b-versatile',
-      messages: [
-        { role: 'system', content: systemMessage },
-        { role: 'user', content: userMessage },
-      ],
-      temperature: 0.8,
-      max_tokens: 600,
-    }),
-  });
+  // Try each key in rotation — skip to next on 429 rate limit
+  let lastError: string = 'No API keys configured';
+  for (let ki = 0; ki < _apiKeys.length; ki++) {
+    const apiKey = nextApiKey();
+    try {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'llama-3.3-70b-versatile',
+          messages: [
+            { role: 'system', content: systemMessage },
+            { role: 'user', content: userMessage },
+          ],
+          temperature: 0.8,
+          max_tokens: 600,
+        }),
+      });
 
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`Groq API error: ${response.status} ${err}`);
+      if (response.status === 429) {
+        logger.log(`API key ${ki + 1} rate limited — trying next key`);
+        lastError = 'Rate limited';
+        continue; // try next key
+      }
+
+      if (!response.ok) {
+        const err = await response.text();
+        throw new Error(`Groq API error: ${response.status} ${err}`);
+      }
+
+      const data = await response.json() as { choices: Array<{ message: { content: string } }> };
+      const content: string = data.choices[0].message.content.trim();
+
+      const jsonMatch = content.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('LLM did not return valid JSON');
+
+      const result = JSON.parse(jsonMatch[0]) as {
+        subject: string;
+        greeting: string;
+        paragraph1: string;
+        paragraph2?: string;
+        cta: string;
+        signoff: string;
+      };
+
+      const parts = [result.greeting, result.paragraph1, result.paragraph2, result.cta, result.signoff]
+        .filter((p): p is string => !!p && p.trim().length > 0)
+        .map((p) => p.trim());
+
+      return { subject: result.subject.trim(), body: parts.join('\n\n') };
+    } catch (err) {
+      lastError = err instanceof Error ? err.message : String(err);
+      if (!lastError.includes('Rate limited')) throw err; // non-rate-limit errors bubble up
+    }
   }
 
-  const data = await response.json() as { choices: Array<{ message: { content: string } }> };
-  const content: string = data.choices[0].message.content.trim();
-
-  const jsonMatch = content.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('LLM did not return valid JSON');
-
-  const result = JSON.parse(jsonMatch[0]) as {
-    subject: string;
-    greeting: string;
-    paragraph1: string;
-    paragraph2?: string;
-    cta: string;
-    signoff: string;
-  };
-
-  // Assemble with guaranteed \n\n between every section
-  const parts = [result.greeting, result.paragraph1, result.paragraph2, result.cta, result.signoff]
-    .filter((p): p is string => !!p && p.trim().length > 0)
-    .map((p) => p.trim());
-
-  return { subject: result.subject.trim(), body: parts.join('\n\n') };
+  throw new Error(`All API keys exhausted: ${lastError}`);
 }
 
 // ─── Main export ──────────────────────────────────────────────────────────────

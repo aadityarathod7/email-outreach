@@ -10,8 +10,11 @@ const router: Router = express.Router();
  * GET /api/config
  * Get current configuration
  */
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (_req: Request, res: Response) => {
   try {
+    const maskKey = (key: string) =>
+      key.length > 8 ? `${key.slice(0, 6)}${'*'.repeat(key.length - 10)}${key.slice(-4)}` : '****';
+
     res.json({
       brandName: config.brandName,
       brandUrl: config.brandUrl,
@@ -21,6 +24,10 @@ router.get('/', (req: Request, res: Response) => {
       delayBetweenEmailsMs: config.delayBetweenEmailsMs,
       csvSenderEmail: config.csvSenderEmail,
       emailService: config.emailService,
+      llmApiKey: config.llmApiKey ? maskKey(config.llmApiKey) : '',
+      llmApiKeys: process.env.LLM_API_KEYS
+        ? process.env.LLM_API_KEYS.split(',').map((k) => maskKey(k.trim())).join('\n')
+        : '',
     });
   } catch (err) {
     logger.error(`Error fetching config: ${err}`);
@@ -43,6 +50,8 @@ router.patch('/', (req: Request, res: Response) => {
       'maxEmailsPerBatch',
       'delayBetweenEmailsMs',
       'csvSenderEmail',
+      'llmApiKey',
+      'llmApiKeys',
     ];
 
     // Validate fields
@@ -64,9 +73,15 @@ router.patch('/', (req: Request, res: Response) => {
       maxEmailsPerBatch: 'MAX_EMAILS_PER_BATCH',
       delayBetweenEmailsMs: 'DELAY_BETWEEN_EMAILS_MS',
       csvSenderEmail: 'CSV_SENDER_EMAIL',
+      llmApiKey: 'LLM_API_KEY',
+      llmApiKeys: 'LLM_API_KEYS',
     };
 
-    for (const [key, value] of Object.entries(updates)) {
+    for (let [key, value] of Object.entries(updates)) {
+      // Normalize newline-separated keys to comma-separated for LLM_API_KEYS
+      if (key === 'llmApiKeys') {
+        value = (value as string).split('\n').map((k: string) => k.trim()).filter(Boolean).join(',');
+      }
       const envKey = envMap[key];
       if (envKey) {
         const regex = new RegExp(`${envKey}=.*$`, 'm');
