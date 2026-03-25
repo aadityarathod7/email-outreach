@@ -34,7 +34,6 @@ function History() {
 
   const handleDelete = async (emailAddress: string) => {
     if (!confirm(`Delete email history for ${emailAddress}?`)) return;
-
     try {
       setDeleting(true);
       await client.delete(`/emails/sent/${encodeURIComponent(emailAddress)}`);
@@ -64,28 +63,29 @@ function History() {
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="card-elevated">
-        <div className="flex items-center justify-between mb-6">
+    <div className="space-y-5 animate-fade-in">
+      <div className="card">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-5">
           <div>
-            <h2 className="text-2xl font-bold text-black">Email History</h2>
-            <p className="text-gray-600 text-sm mt-1">Review all sent emails</p>
+            <h2 className="text-base font-bold text-gray-900">Email History</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Review all sent emails</p>
           </div>
           <div className="flex items-center gap-3">
+            <div className="text-right">
+              <p className="text-lg font-bold text-gray-900">{filteredEmails.length}</p>
+              <p className="text-xs text-gray-400">emails</p>
+            </div>
             {emails.length > 0 && (
               <button
                 onClick={handleClearAll}
                 disabled={clearingAll}
-                className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all font-semibold text-sm shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
+                className="btn-secondary text-red-600 border-red-100 hover:bg-red-50 hover:border-red-200 text-xs px-3 py-2"
               >
-                <Trash2 className="w-4 h-4" />
+                <Trash2 className="w-3.5 h-3.5" />
                 {clearingAll ? 'Clearing...' : 'Clear All'}
               </button>
             )}
-            <div className="bg-gray-100 px-4 py-2 rounded-lg border border-gray-200">
-              <p className="text-black font-semibold text-lg">{filteredEmails.length}</p>
-              <p className="text-gray-600 text-xs">emails found</p>
-            </div>
           </div>
         </div>
 
@@ -94,57 +94,62 @@ function History() {
           placeholder="Search by email, name, or subject..."
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="input-field mb-6"
+          className="input-field mb-5"
         />
 
         {loading ? (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-10 w-10 border-b-2 border-black mb-3"></div>
-            <p className="text-gray-600 font-medium">Loading email history...</p>
+          <div className="text-center py-14">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-2 border-indigo-500 border-t-transparent mb-3"></div>
+            <p className="text-gray-500 text-sm">Loading email history...</p>
           </div>
         ) : filteredEmails.length === 0 ? (
-          <div className="text-center py-12">
-            <Mail className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-            <p className="text-gray-600 font-medium">No emails found</p>
-            <p className="text-gray-500 text-sm mt-1">{filter ? 'Try adjusting your search filters' : 'Start sending emails to see them here'}</p>
+          <div className="text-center py-14">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-4" style={{ background: '#f5f5ff' }}>
+              <Mail className="w-6 h-6" style={{ color: '#6366f1' }} />
+            </div>
+            <p className="text-gray-600 font-medium text-sm">No emails found</p>
+            <p className="text-gray-400 text-xs mt-1">
+              {filter ? 'Try adjusting your search' : 'Start sending emails to see them here'}
+            </p>
           </div>
         ) : (
-          <div className="overflow-x-auto rounded-lg border border-gray-200">
+          <div className="overflow-x-auto -mx-1">
             <table className="w-full text-sm">
-              <thead className="bg-black text-white border-b border-gray-200">
-                <tr>
-                  <th className="text-left py-3 px-4 font-semibold text-white">Email</th>
-                  <th className="text-left py-3 px-4 font-semibold text-white">Name</th>
-                  <th className="text-left py-3 px-4 font-semibold text-white">Subject</th>
-                  <th className="text-left py-3 px-4 font-semibold text-white">Sent At</th>
-                  <th className="text-left py-3 px-4 font-semibold text-white">Status</th>
-                  <th className="text-center py-3 px-4 font-semibold text-white">Action</th>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #f0f0f0' }}>
+                  <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Email</th>
+                  <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
+                  <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Subject</th>
+                  <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Sent At</th>
+                  <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Status</th>
+                  <th className="py-2.5 px-3"></th>
                 </tr>
               </thead>
               <tbody>
                 {filteredEmails.map((email, idx) => (
                   <tr
                     key={idx}
-                    className="table-row-hover border-b border-gray-100 last:border-b-0 cursor-pointer"
+                    className="table-row-hover"
+                    style={{ borderBottom: '1px solid #f7f7f8' }}
                     onClick={() => setSelectedEmail(email)}
                   >
-                    <td className="py-4 px-4 text-black font-medium">{email.email}</td>
-                    <td className="py-4 px-4 text-gray-700">{email.name}</td>
-                    <td className="py-4 px-4 text-gray-600 truncate max-w-xs">{email.subject}</td>
-                    <td className="py-4 px-4 text-gray-500 text-xs">
+                    <td className="py-3 px-3 font-medium text-gray-900">{email.email}</td>
+                    <td className="py-3 px-3 text-gray-600">{email.name}</td>
+                    <td className="py-3 px-3 text-gray-500 truncate max-w-xs">{email.subject}</td>
+                    <td className="py-3 px-3 text-gray-400 text-xs">
                       {new Date(email.sent_at).toLocaleString()}
                     </td>
-                    <td className="py-4 px-4">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
+                    <td className="py-3 px-3">
+                      <span className="badge badge-success">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                         Sent
                       </span>
                     </td>
-                    <td className="py-4 px-4 text-center">
+                    <td className="py-3 px-3 text-right">
                       <button
                         onClick={(e) => { e.stopPropagation(); handleDelete(email.email); }}
                         disabled={deleting}
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-40"
+                        className="btn-icon text-gray-400 hover:text-red-500 disabled:opacity-40"
                         title="Delete from history"
                       >
                         <Trash2 className="w-4 h-4" />
@@ -160,48 +165,54 @@ function History() {
 
       {/* Email Preview Modal */}
       {selectedEmail && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gray-200">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" style={{ border: '1px solid #ebebeb' }}>
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 flex items-start justify-between">
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-black">{selectedEmail.subject}</h2>
-                <div className="flex items-center gap-2 mt-3">
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                  <p className="text-sm text-gray-600">
-                    To: <span className="font-semibold">{selectedEmail.email}</span> • {selectedEmail.name}
+            <div className="sticky top-0 bg-white px-6 py-5 flex items-start justify-between" style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="flex-1 min-w-0 pr-4">
+                <h2 className="text-base font-bold text-gray-900 truncate">{selectedEmail.subject}</h2>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                  <p className="text-xs text-gray-500">
+                    To: <span className="font-medium text-gray-700">{selectedEmail.email}</span> · {selectedEmail.name}
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedEmail(null)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors ml-4"
+                className="btn-icon flex-shrink-0"
               >
-                <X className="w-5 h-5 text-gray-600" />
+                <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-8 space-y-6">
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-3">Email Body</p>
-                <p className="text-black whitespace-pre-wrap font-normal leading-relaxed text-base">
-                  {selectedEmail.body || 'No body content available'}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                  <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-2">Sent At</p>
-                  <p className="text-sm font-semibold text-black">
-                    {new Date(selectedEmail.sent_at).toLocaleString()}
+            <div className="p-6 space-y-4">
+              <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #ebebeb' }}>
+                <div className="px-4 py-3" style={{ background: '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
+                  <p className="text-xs text-gray-500">
+                    <span className="font-medium">From:</span> Aayushi &lt;aayushi@artnovaai.com&gt;
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {new Date(selectedEmail.sent_at).toLocaleDateString()}
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    <span className="font-medium">To:</span> {selectedEmail.email}
                   </p>
                 </div>
-                <div className="bg-green-50 rounded-xl p-4 border border-green-200">
-                  <p className="text-xs text-green-600 font-semibold uppercase tracking-wide mb-2">Status</p>
+                <div className="px-5 py-5 font-sans text-sm text-gray-800 leading-7">
+                  {(selectedEmail.body || 'No body content available').split('\n\n').map((p: string, i: number) => (
+                    <p key={i} className="mb-4 last:mb-0 whitespace-pre-wrap">{p}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-xl p-4" style={{ background: '#fafafa', border: '1px solid #f0f0f0' }}>
+                  <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2">Sent At</p>
+                  <p className="text-sm font-semibold text-gray-900">
+                    {new Date(selectedEmail.sent_at).toLocaleString()}
+                  </p>
+                </div>
+                <div className="rounded-xl p-4" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                  <p className="text-xs text-green-600 font-semibold uppercase tracking-wider mb-2">Status</p>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-500"></span>
                     <p className="text-sm font-semibold text-green-700">Delivered</p>
@@ -211,18 +222,18 @@ function History() {
             </div>
 
             {/* Modal Footer */}
-            <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-8 py-4 flex justify-between gap-3">
+            <div className="sticky bottom-0 bg-white px-6 py-4 flex justify-between gap-3" style={{ borderTop: '1px solid #f0f0f0' }}>
               <button
                 onClick={() => handleDelete(selectedEmail.email)}
                 disabled={deleting}
-                className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all font-semibold text-sm shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
+                className="btn-secondary text-red-600 border-red-100 hover:bg-red-50 hover:border-red-200 text-sm disabled:opacity-40"
               >
                 <Trash2 className="w-4 h-4" />
                 Delete
               </button>
               <button
                 onClick={() => setSelectedEmail(null)}
-                className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-all font-semibold text-sm shadow-md hover:shadow-lg"
+                className="btn-primary"
               >
                 Close
               </button>

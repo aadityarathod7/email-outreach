@@ -10,7 +10,6 @@ function Configuration() {
 
   useEffect(() => {
     if (config) {
-      // Don't pre-fill API key fields with masked values — keep empty so user enters new keys intentionally
       setFormData({ ...config, llmApiKeys: '' });
     }
   }, [config]);
@@ -21,11 +20,9 @@ function Configuration() {
     setSaving(true);
     setSuccess(false);
 
-    // Strip read-only / masked fields before sending
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { emailService: _es, llmApiKey: _lk, ...editable } = formData;
 
-    // Don't send API keys if they still contain masked characters (unchanged from GET)
     if (editable.llmApiKeys?.includes('*')) delete editable.llmApiKeys;
 
     const result = await updateConfig(editable);
@@ -41,8 +38,8 @@ function Configuration() {
     return (
       <div className="flex items-center justify-center h-full">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black mb-3 mx-auto"></div>
-          <p className="text-gray-600 font-medium">Loading settings...</p>
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-2 border-indigo-500 border-t-transparent mb-3"></div>
+          <p className="text-gray-500 text-sm">Loading settings...</p>
         </div>
       </div>
     );
@@ -50,57 +47,61 @@ function Configuration() {
 
   if (error || !formData) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6">
-        <p className="text-red-700 font-semibold">{error || 'Failed to load configuration'}</p>
+      <div className="card" style={{ background: '#fef2f2', border: '1px solid #fecaca' }}>
+        <p className="text-red-700 text-sm font-medium">{error || 'Failed to load configuration'}</p>
       </div>
     );
   }
 
+  const inputCls = 'input-field';
+  const sectionHeaderCls = 'flex items-center gap-2 mb-4 pb-3';
+
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="bg-white border-2 border-gray-200 rounded-lg p-8">
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-black">Settings</h2>
-          <p className="text-gray-600 text-sm mt-1">Manage your campaign configuration</p>
+    <div className="space-y-5 animate-fade-in">
+      <div className="card">
+        <div className="mb-6">
+          <h2 className="text-base font-bold text-gray-900">Settings</h2>
+          <p className="text-xs text-gray-400 mt-0.5">Manage your campaign configuration</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Brand Settings */}
-          <div className="space-y-5">
-            <div className="flex items-center gap-2 pb-3 border-b-2 border-gray-200">
-              <Tag className="w-5 h-5 text-black" />
-              <h3 className="text-sm font-bold text-black uppercase tracking-wide">Brand</h3>
+          {/* Brand */}
+          <div className="space-y-4">
+            <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
+                <Tag className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
+              </div>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">Brand</h3>
             </div>
-            <div className="space-y-4">
+
+            <div className="space-y-3">
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">Brand Name</label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Brand Name</label>
                 <input
                   type="text"
                   value={formData.brandName}
                   onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black placeholder-gray-500"
+                  className={inputCls}
                   placeholder="ArtNovaAI"
                 />
               </div>
-
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">Brand URL</label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Brand URL</label>
                 <input
                   type="url"
                   value={formData.brandUrl}
                   onChange={(e) => setFormData({ ...formData, brandUrl: e.target.value })}
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black placeholder-gray-500"
+                  className={inputCls}
                   placeholder="https://www.artnovaai.com"
                 />
               </div>
-
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">Sender Name</label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Sender Name</label>
                 <input
                   type="text"
                   value={formData.senderName}
                   onChange={(e) => setFormData({ ...formData, senderName: e.target.value })}
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black placeholder-gray-500"
+                  className={inputCls}
                   placeholder="Aayushi"
                 />
               </div>
@@ -108,53 +109,42 @@ function Configuration() {
           </div>
 
           {/* Email Settings */}
-          <div className="space-y-5">
-            <div className="flex items-center gap-2 pb-3 border-b-2 border-gray-200">
-              <Settings className="w-5 h-5 text-black" />
-              <h3 className="text-sm font-bold text-black uppercase tracking-wide">Email Settings</h3>
+          <div className="space-y-4">
+            <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
+                <Settings className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
+              </div>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">Email Settings</h3>
             </div>
-            <div className="space-y-4">
+
+            <div className="space-y-3">
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">
-                  Poll Interval (minutes)
-                </label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Poll Interval (minutes)</label>
                 <input
                   type="number"
                   value={formData.pollIntervalMinutes}
-                  onChange={(e) =>
-                    setFormData({ ...formData, pollIntervalMinutes: parseInt(e.target.value) })
-                  }
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black"
+                  onChange={(e) => setFormData({ ...formData, pollIntervalMinutes: parseInt(e.target.value) })}
+                  className={inputCls}
                   min="5"
                 />
               </div>
-
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">
-                  Max Emails Per Batch
-                </label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Max Emails Per Batch</label>
                 <input
                   type="number"
                   value={formData.maxEmailsPerBatch}
-                  onChange={(e) =>
-                    setFormData({ ...formData, maxEmailsPerBatch: parseInt(e.target.value) })
-                  }
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black"
+                  onChange={(e) => setFormData({ ...formData, maxEmailsPerBatch: parseInt(e.target.value) })}
+                  className={inputCls}
                   min="1"
                 />
               </div>
-
               <div>
-                <label className="block text-sm font-semibold text-black mb-1.5">
-                  Delay Between Emails (ms)
-                </label>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Delay Between Emails (ms)</label>
                 <input
                   type="number"
                   value={formData.delayBetweenEmailsMs}
-                  onChange={(e) =>
-                    setFormData({ ...formData, delayBetweenEmailsMs: parseInt(e.target.value) })
-                  }
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black"
+                  onChange={(e) => setFormData({ ...formData, delayBetweenEmailsMs: parseInt(e.target.value) })}
+                  className={inputCls}
                   min="1000"
                   step="1000"
                 />
@@ -163,88 +153,94 @@ function Configuration() {
           </div>
 
           {/* API Keys */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 pb-3 border-b-2 border-gray-200 mb-5">
-              <KeyRound className="w-5 h-5 text-black" />
-              <h3 className="text-sm font-bold text-black uppercase tracking-wide">API Keys</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="md:col-span-2">
-                <label className="block text-sm font-semibold text-black mb-1.5">
-                  Groq API Keys
-                  <span className="ml-2 text-xs font-normal text-gray-500 bg-gray-100 px-2 py-0.5 rounded">one per line — rotates automatically on rate limit</span>
-                </label>
-                <textarea
-                  value={formData.llmApiKeys || ''}
-                  onChange={(e) => setFormData({ ...formData, llmApiKeys: e.target.value })}
-                  rows={3}
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black font-mono text-sm resize-none"
-                  placeholder={'gsk_key_one\ngsk_key_two\ngsk_key_three'}
-                />
-                <p className="text-xs text-gray-500 mt-1">
-                  {config?.llmApiKeys
-                    ? `${config.llmApiKeys.split('\n').filter(Boolean).length} key(s) currently configured. Paste new keys below to replace them.`
-                    : 'No keys configured yet.'}{' '}
-                  Get free keys at{' '}
-                  <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline">console.groq.com</a>
-                </p>
+          <div className="md:col-span-2 space-y-4">
+            <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
+                <KeyRound className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
               </div>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">API Keys</h3>
+            </div>
+
+            <div className="md:col-span-2">
+              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+                Groq API Keys
+                <span className="ml-2 text-xs font-normal text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
+                  one per line · auto-rotates on rate limit
+                </span>
+              </label>
+              <textarea
+                value={formData.llmApiKeys || ''}
+                onChange={(e) => setFormData({ ...formData, llmApiKeys: e.target.value })}
+                rows={3}
+                className="input-field font-mono text-sm resize-none"
+                placeholder={'gsk_key_one\ngsk_key_two\ngsk_key_three'}
+              />
+              <p className="text-xs text-gray-400 mt-1.5">
+                {config?.llmApiKeys
+                  ? `${config.llmApiKeys.split('\n').filter(Boolean).length} key(s) configured. Paste new keys to replace.`
+                  : 'No keys configured yet.'}{' '}
+                Get free keys at{' '}
+                <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline text-indigo-500 hover:text-indigo-700">
+                  console.groq.com
+                </a>
+              </p>
             </div>
           </div>
 
-          {/* Advanced Settings */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 pb-3 border-b-2 border-gray-200 mb-5">
-              <Wrench className="w-5 h-5 text-black" />
-              <h3 className="text-sm font-bold text-black uppercase tracking-wide">Advanced</h3>
+          {/* Advanced */}
+          <div className="md:col-span-2 space-y-4">
+            <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
+                <Wrench className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
+              </div>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">Advanced</h3>
             </div>
+
             <div>
-              <label className="block text-sm font-semibold text-black mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
                 CSV Sender Email Filter
-                <span className="ml-2 text-xs font-normal text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Optional</span>
+                <span className="ml-2 text-xs font-normal text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Optional</span>
               </label>
               <input
                 type="email"
                 value={formData.csvSenderEmail}
                 onChange={(e) => setFormData({ ...formData, csvSenderEmail: e.target.value })}
-                className="w-full max-w-md px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none text-black placeholder-gray-500"
+                className={`${inputCls} max-w-md`}
                 placeholder="Leave empty to accept CSVs from all senders"
               />
-              <p className="text-xs text-gray-600 mt-2">
+              <p className="text-xs text-gray-400 mt-1.5">
                 Only process CSVs from this email address. Leave empty to accept all.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Messages */}
+        {/* Status Messages */}
         {success && (
-          <div className="mt-8 bg-black text-white border-2 border-black rounded-lg p-4 animate-slide-in-up">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white"></span>
-              <p className="text-sm font-semibold">Settings saved successfully</p>
-            </div>
+          <div className="mt-6 animate-slide-in-up rounded-xl px-4 py-3 flex items-center gap-3"
+            style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+            <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+            <p className="text-sm font-semibold text-green-700">Settings saved successfully</p>
           </div>
         )}
 
         {error && (
-          <div className="mt-8 bg-red-50 border-2 border-red-200 rounded-lg p-4">
-            <div className="flex items-center gap-2">
-              <AlertCircle className="w-4 h-4 text-red-600" />
-              <p className="text-red-700 text-sm font-semibold">{error}</p>
-            </div>
+          <div className="mt-6 rounded-xl px-4 py-3 flex items-center gap-3"
+            style={{ background: '#fef2f2', border: '1px solid #fecaca' }}>
+            <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
+            <p className="text-sm font-medium text-red-700">{error}</p>
           </div>
         )}
 
         {/* Save Button */}
-        <div className="mt-8 pt-6 border-t-2 border-gray-200">
+        <div className="mt-6 pt-5" style={{ borderTop: '1px solid #f0f0f0' }}>
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            className="btn-primary"
           >
             <Save className="w-4 h-4" />
-            {saving ? 'Saving Changes...' : 'Save Settings'}
+            {saving ? 'Saving...' : 'Save Settings'}
           </button>
         </div>
       </div>
