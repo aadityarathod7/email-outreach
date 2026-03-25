@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
-import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw } from 'lucide-react';
+import { Upload, Send, Eye, CheckCircle, Mail, AlertCircle, RotateCcw, Trash2 } from 'lucide-react';
 
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
@@ -396,6 +396,23 @@ function EmailSender() {
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
+                          {results.dryRun && (
+                            <button
+                              onClick={() => {
+                                const updatedDetails = results.details.filter((_: any, i: number) => i !== idx);
+                                setResults({
+                                  ...results,
+                                  details: updatedDetails,
+                                  total: updatedDetails.length,
+                                  sent: updatedDetails.filter((d: any) => d.status === 'ready' || d.status === 'sent').length,
+                                });
+                              }}
+                              className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                              title="Remove from send list"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
                           {results.dryRun && (detail.status === 'ready' || detail.status === 'sent') && (
                             <button
                               onClick={() => {
