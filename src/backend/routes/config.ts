@@ -1,5 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 import { config } from '../../config/env';
+import { reloadApiKeys } from '../../ai/llmService';
 import { logger } from '../../utils/logger';
 import fs from 'fs';
 import path from 'path';
@@ -84,15 +85,35 @@ router.patch('/', (req: Request, res: Response) => {
       }
       const envKey = envMap[key];
       if (envKey) {
-        const regex = new RegExp(`${envKey}=.*$`, 'm');
-        envContent = envContent.replace(regex, `${envKey}=${value}`);
+        const regex = new RegExp(`^${envKey}=.*$`, 'm');
+        if (regex.test(envContent)) {
+          envContent = envContent.replace(regex, `${envKey}=${value}`);
+        } else {
+          envContent = envContent.trimEnd() + `\n${envKey}=${value}\n`;
+        }
       }
     }
 
     fs.writeFileSync(envPath, envContent);
-    logger.log('Configuration updated');
 
-    // Reload config (in a real app, you'd reload the config module)
+    // Update process.env so changes take effect immediately without restart
+    for (let [key, value] of Object.entries(updates)) {
+      if (key === 'llmApiKeys') {
+        value = (value as string).split('\n').map((k: string) => k.trim()).filter(Boolean).join(',');
+      }
+      const envKey = envMap[key];
+      if (envKey) {
+        process.env[envKey] = String(value);
+        // Also update the config object fields that map directly
+        const configKey = key as keyof typeof config;
+        if (configKey in config) (config as unknown as Record<string, unknown>)[configKey] = value;
+      }
+    }
+
+    // Reload LLM API key pool so rotation picks up new keys immediately
+    reloadApiKeys();
+
+    logger.log('Configuration updated');
     res.json({
       success: true,
       message: 'Configuration updated successfully',

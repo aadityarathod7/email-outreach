@@ -10,6 +10,8 @@ export interface Config {
   delayBetweenEmailsMs: number;
   csvSenderEmail: string;
   emailService: string;
+  llmApiKey: string;
+  llmApiKeys: string;
 }
 
 export function useConfig() {
