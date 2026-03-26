@@ -16,10 +16,17 @@ router.get('/', (_req: Request, res: Response) => {
     const maskKey = (key: string) =>
       key.length > 8 ? `${key.slice(0, 6)}${'*'.repeat(key.length - 10)}${key.slice(-4)}` : '****';
 
+    const maskPassword = (pw: string) =>
+      pw ? `${'*'.repeat(pw.length)}` : '';
+
     res.json({
       brandName: config.brandName,
       brandUrl: config.brandUrl,
       senderName: config.senderName,
+      emailUser: config.emailUser,
+      emailPassword: maskPassword(config.emailPassword),
+      emailHost: config.emailHost,
+      emailPort: config.emailPort,
       pollIntervalMinutes: config.pollIntervalMinutes,
       maxEmailsPerBatch: config.maxEmailsPerBatch,
       delayBetweenEmailsMs: config.delayBetweenEmailsMs,
@@ -47,6 +54,10 @@ router.patch('/', (req: Request, res: Response) => {
       'brandName',
       'brandUrl',
       'senderName',
+      'emailUser',
+      'emailPassword',
+      'emailHost',
+      'emailPort',
       'pollIntervalMinutes',
       'maxEmailsPerBatch',
       'delayBetweenEmailsMs',
@@ -70,6 +81,10 @@ router.patch('/', (req: Request, res: Response) => {
       brandName: 'BRAND_NAME',
       brandUrl: 'BRAND_URL',
       senderName: 'SENDER_NAME',
+      emailUser: 'EMAIL_USER',
+      emailPassword: 'EMAIL_PASSWORD',
+      emailHost: 'EMAIL_HOST',
+      emailPort: 'EMAIL_PORT',
       pollIntervalMinutes: 'POLL_INTERVAL_MINUTES',
       maxEmailsPerBatch: 'MAX_EMAILS_PER_BATCH',
       delayBetweenEmailsMs: 'DELAY_BETWEEN_EMAILS_MS',
@@ -94,8 +109,6 @@ router.patch('/', (req: Request, res: Response) => {
       }
     }
 
-    fs.writeFileSync(envPath, envContent);
-
     // Update process.env so changes take effect immediately without restart
     for (let [key, value] of Object.entries(updates)) {
       if (key === 'llmApiKeys') {
@@ -108,7 +121,45 @@ router.patch('/', (req: Request, res: Response) => {
         const configKey = key as keyof typeof config;
         if (configKey in config) (config as unknown as Record<string, unknown>)[configKey] = value;
       }
+
+      // Keep GMAIL_USER, SMTP_USER, GMAIL_APP_PASSWORD, SMTP_APP_PASSWORD in sync
+      if (key === 'emailUser') {
+        process.env.GMAIL_USER = String(value);
+        process.env.SMTP_USER = String(value);
+        (config as unknown as Record<string, unknown>).gmailUser = value;
+        (config as unknown as Record<string, unknown>).smtpUser = value;
+
+        // Also update .env for GMAIL_USER and SMTP_USER
+        const syncKeys = ['GMAIL_USER', 'SMTP_USER'];
+        for (const sk of syncKeys) {
+          const rx = new RegExp(`^${sk}=.*$`, 'm');
+          if (rx.test(envContent)) {
+            envContent = envContent.replace(rx, `${sk}=${value}`);
+          } else {
+            envContent = envContent.trimEnd() + `\n${sk}=${value}\n`;
+          }
+        }
+      }
+      if (key === 'emailPassword') {
+        process.env.GMAIL_APP_PASSWORD = String(value);
+        process.env.SMTP_APP_PASSWORD = String(value);
+        (config as unknown as Record<string, unknown>).gmailAppPassword = value;
+        (config as unknown as Record<string, unknown>).smtpAppPassword = value;
+
+        const syncKeys = ['GMAIL_APP_PASSWORD', 'SMTP_APP_PASSWORD'];
+        for (const sk of syncKeys) {
+          const rx = new RegExp(`^${sk}=.*$`, 'm');
+          if (rx.test(envContent)) {
+            envContent = envContent.replace(rx, `${sk}=${value}`);
+          } else {
+            envContent = envContent.trimEnd() + `\n${sk}=${value}\n`;
+          }
+        }
+      }
     }
+
+    // Re-write .env with synced values
+    fs.writeFileSync(envPath, envContent);
 
     // Reload LLM API key pool so rotation picks up new keys immediately
     reloadApiKeys();

@@ -5,9 +5,14 @@ import { UserRecord } from '../parser/csvParser';
 // ─── API key pool ──────────────────────────────────────────────────────────────
 // Reads LLM_API_KEYS (comma-separated) or falls back to LLM_API_KEY
 function loadApiKeys(): string[] {
+  const keys: string[] = [];
   const multi = process.env.LLM_API_KEYS;
-  if (multi) return multi.split(',').map((k) => k.trim()).filter(Boolean);
-  return config.llmApiKey ? [config.llmApiKey] : [];
+  if (multi) keys.push(...multi.split(',').map((k) => k.trim()).filter(Boolean));
+  // Always include the single LLM_API_KEY as fallback if not already in the list
+  if (config.llmApiKey && !keys.includes(config.llmApiKey)) {
+    keys.push(config.llmApiKey);
+  }
+  return keys;
 }
 
 let _apiKeys = loadApiKeys();
@@ -94,6 +99,30 @@ function autoFormat(body: string): string {
     .join('\n\n');
 }
 
+// ─── Provider detection ──────────────────────────────────────────────────────
+
+interface LLMProvider {
+  url: string;
+  model: string;
+  name: string;
+}
+
+function getProvider(apiKey: string): LLMProvider {
+  if (apiKey.startsWith('sk-')) {
+    return {
+      url: 'https://api.openai.com/v1/chat/completions',
+      model: 'gpt-4o-mini',
+      name: 'OpenAI',
+    };
+  }
+  // Default: Groq (keys start with gsk_)
+  return {
+    url: 'https://api.groq.com/openai/v1/chat/completions',
+    model: 'llama-3.3-70b-versatile',
+    name: 'Groq',
+  };
+}
+
 // ─── LLM-based generation ─────────────────────────────────────────────────────
 
 async function generateEmailWithLLM(
@@ -122,15 +151,16 @@ Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outs
   let lastError: string = 'No API keys configured';
   for (let ki = 0; ki < _apiKeys.length; ki++) {
     const apiKey = nextApiKey();
+    const provider = getProvider(apiKey);
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch(provider.url, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
+          model: provider.model,
           messages: [
             { role: 'system', content: systemMessage },
             { role: 'user', content: userMessage },
@@ -141,14 +171,14 @@ Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outs
       });
 
       if (response.status === 429) {
-        logger.log(`API key ${ki + 1} rate limited — trying next key`);
+        logger.log(`${provider.name} key ${ki + 1} rate limited — trying next key`);
         lastError = 'Rate limited';
         continue; // try next key
       }
 
       if (!response.ok) {
         const err = await response.text();
-        throw new Error(`Groq API error: ${response.status} ${err}`);
+        throw new Error(`${provider.name} API error: ${response.status} ${err}`);
       }
 
       const data = await response.json() as { choices: Array<{ message: { content: string } }> };
@@ -170,6 +200,7 @@ Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outs
         .filter((p): p is string => !!p && p.trim().length > 0)
         .map((p) => p.trim());
 
+      logger.log(`Email generated via ${provider.name} (${provider.model}) for ${user.email}`);
       return { subject: result.subject.trim(), body: parts.join('\n\n') };
     } catch (err) {
       lastError = err instanceof Error ? err.message : String(err);

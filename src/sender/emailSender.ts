@@ -13,10 +13,11 @@ function getRandomIP(): string {
  * Send a personalized email — fresh transporter per call to avoid ETIMEDOUT
  */
 export async function sendEmail(to: string, subject: string, body: string): Promise<boolean> {
+  const port = config.emailPort || 465;
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // SSL — no STARTTLS negotiation
+    host: config.emailHost || 'smtp.gmail.com',
+    port,
+    secure: port === 465,
     auth: {
       user: config.emailUser,
       pass: config.emailPassword,

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useConfig } from '../hooks/useConfig';
-import { Save, Tag, Settings, Wrench, AlertCircle, KeyRound } from 'lucide-react';
+import { Save, Tag, Settings, Wrench, AlertCircle, KeyRound, Mail } from 'lucide-react';
 
 function Configuration() {
   const { config, loading, error, updateConfig } = useConfig();
@@ -10,7 +10,7 @@ function Configuration() {
 
   useEffect(() => {
     if (config) {
-      setFormData({ ...config, llmApiKeys: '' });
+      setFormData({ ...config, llmApiKeys: '', emailPassword: '' });
     }
   }, [config]);
 
@@ -24,6 +24,8 @@ function Configuration() {
     const { emailService: _es, llmApiKey: _lk, ...editable } = formData;
 
     if (editable.llmApiKeys?.includes('*')) delete editable.llmApiKeys;
+    // Don't send empty or masked password back
+    if (!editable.emailPassword || editable.emailPassword.includes('*')) delete editable.emailPassword;
 
     const result = await updateConfig(editable);
 
@@ -108,6 +110,61 @@ function Configuration() {
             </div>
           </div>
 
+          {/* Sender Details */}
+          <div className="space-y-4">
+            <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
+                <Mail className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
+              </div>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">Sender Details</h3>
+            </div>
+
+            <div className="space-y-3">
+              <div>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">Sender Email</label>
+                <input
+                  type="email"
+                  value={formData.emailUser || ''}
+                  onChange={(e) => setFormData({ ...formData, emailUser: e.target.value })}
+                  className={inputCls}
+                  placeholder="aayushi@artnovaai.com"
+                />
+                <p className="text-xs text-gray-400 mt-1">Also updates GMAIL_USER & SMTP_USER</p>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">App Password</label>
+                <input
+                  type="password"
+                  value={formData.emailPassword || ''}
+                  onChange={(e) => setFormData({ ...formData, emailPassword: e.target.value })}
+                  className={inputCls}
+                  placeholder="Leave empty to keep current password"
+                />
+                <p className="text-xs text-gray-400 mt-1">Gmail app password (16-char)</p>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">SMTP Host</label>
+                <input
+                  type="text"
+                  value={formData.emailHost || ''}
+                  onChange={(e) => setFormData({ ...formData, emailHost: e.target.value })}
+                  className={inputCls}
+                  placeholder="smtp.gmail.com"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-600 mb-1.5">SMTP Port</label>
+                <input
+                  type="number"
+                  value={formData.emailPort || 465}
+                  onChange={(e) => setFormData({ ...formData, emailPort: parseInt(e.target.value) })}
+                  className={inputCls}
+                  min="1"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Email Settings */}
           <div className="space-y-4">
             <div className={sectionHeaderCls} style={{ borderBottom: '1px solid #f0f0f0' }}>
@@ -158,14 +215,14 @@ function Configuration() {
               <div className="p-1.5 rounded-lg" style={{ background: '#f5f5ff' }}>
                 <KeyRound className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
               </div>
-              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">API Keys</h3>
+              <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider">AI API Keys</h3>
             </div>
 
             <div className="md:col-span-2">
               <label className="block text-xs font-semibold text-gray-600 mb-1.5">
-                Groq API Keys
+                AI API Keys
                 <span className="ml-2 text-xs font-normal text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
-                  one per line · auto-rotates on rate limit
+                  one per line · auto-rotates · Groq + OpenAI
                 </span>
               </label>
               <textarea
@@ -173,16 +230,15 @@ function Configuration() {
                 onChange={(e) => setFormData({ ...formData, llmApiKeys: e.target.value })}
                 rows={3}
                 className="input-field font-mono text-sm resize-none"
-                placeholder={'gsk_key_one\ngsk_key_two\ngsk_key_three'}
+                placeholder={'gsk_groq_key_one\nsk-openai_key_one\ngsk_groq_key_two'}
               />
               <p className="text-xs text-gray-400 mt-1.5">
                 {config?.llmApiKeys
                   ? `${config.llmApiKeys.split('\n').filter(Boolean).length} key(s) configured. Paste new keys to replace.`
                   : 'No keys configured yet.'}{' '}
-                Get free keys at{' '}
-                <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline text-indigo-500 hover:text-indigo-700">
-                  console.groq.com
-                </a>
+                Groq (gsk_): <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="underline text-indigo-500 hover:text-indigo-700">console.groq.com</a>
+                {' · '}
+                OpenAI (sk-): <a href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer" className="underline text-indigo-500 hover:text-indigo-700">platform.openai.com</a>
               </p>
             </div>
           </div>
