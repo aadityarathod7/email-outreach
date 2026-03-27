@@ -12,6 +12,12 @@ function loadApiKeys(): string[] {
   if (config.llmApiKey && !keys.includes(config.llmApiKey)) {
     keys.push(config.llmApiKey);
   }
+  // Sort: Groq keys (gsk_) first, then OpenAI keys (sk-) last
+  keys.sort((a, b) => {
+    const aIsGroq = a.startsWith('gsk_') ? 0 : 1;
+    const bIsGroq = b.startsWith('gsk_') ? 0 : 1;
+    return aIsGroq - bIsGroq;
+  });
   return keys;
 }
 
@@ -147,7 +153,53 @@ Return ONLY valid JSON with EXACTLY this shape — no extra fields, no text outs
 
   const userMessage = `${customPrompt}\n\nRecipient name: ${first}\nRecipient email: ${user.email}`;
 
-  // Try each key in rotation — skip to next on 429 rate limit
+  // ── 1st priority: PayPal CosmosAI ──
+  const paypalUrl = process.env.PAYPAL_LLM_URL;
+  const paypalKey = process.env.PAYPAL_LLM_KEY;
+  if (paypalUrl && paypalKey) {
+    try {
+      const chatUrl = paypalUrl.endsWith('/') ? `${paypalUrl}chat/completions` : `${paypalUrl}/chat/completions`;
+      const response = await fetch(chatUrl, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${paypalKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: systemMessage },
+            { role: 'user', content: userMessage },
+          ],
+          temperature: 0.8,
+          max_tokens: 600,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json() as { choices: Array<{ message: { content: string } }> };
+        const content: string = data.choices[0].message.content.trim();
+        const jsonMatch = content.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          const result = JSON.parse(jsonMatch[0]) as {
+            subject: string; greeting: string; paragraph1: string;
+            paragraph2?: string; cta: string; signoff: string;
+          };
+          const parts = [result.greeting, result.paragraph1, result.paragraph2, result.cta, result.signoff]
+            .filter((p): p is string => !!p && p.trim().length > 0)
+            .map((p) => p.trim());
+          logger.log(`Email generated via PayPal CosmosAI for ${user.email}`);
+          return { subject: result.subject.trim(), body: parts.join('\n\n') };
+        }
+      }
+      const errText = response.ok ? 'Invalid JSON response' : `${response.status} ${await response.text()}`;
+      logger.log(`PayPal CosmosAI failed (${errText}) — falling through to Groq/OpenAI`);
+    } catch (ppErr) {
+      logger.log(`PayPal CosmosAI error: ${ppErr instanceof Error ? ppErr.message : String(ppErr)} — falling through to Groq/OpenAI`);
+    }
+  }
+
+  // ── 2nd/3rd priority: Groq keys first, then OpenAI keys ──
   let lastError: string = 'No API keys configured';
   for (let ki = 0; ki < _apiKeys.length; ki++) {
     const apiKey = nextApiKey();
