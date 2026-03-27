@@ -2,9 +2,31 @@ import React, { useState } from 'react';
 import { useEmails } from '../hooks/useEmails';
 import { Upload, Send, Eye, CheckCircle, AlertCircle, RotateCcw, Trash2, FlaskConical, Sparkles } from 'lucide-react';
 
+const PROMPT_TEMPLATES = [
+  {
+    label: 'Day 1',
+    tag: 'Cold Intro',
+    color: '#6366f1',
+    prompt: `Write a friendly Day 1 cold outreach email introducing ArtNovaAI. This is the first time the recipient is hearing from us. Keep it warm, curious, and low-pressure. Mention that they get 2 free credits to try AI image generation at artnovaai.com. Don't be salesy — just introduce the tool and let them know it exists. End with a soft CTA like "See how it works with your free credits."`,
+  },
+  {
+    label: 'Day 2',
+    tag: 'Follow-up',
+    color: '#f59e0b',
+    prompt: `Write a Day 2 follow-up email for ArtNovaAI. Reference that we reached out yesterday but keep it natural — don't say "I emailed you yesterday." Instead, position it as a quick follow-up with more context. Highlight a specific benefit: 4-5 second generation time, professional quality, and no subscription needed. Include a slightly stronger CTA: "Try your 2 free credits before they expire: artnovaai.com"`,
+  },
+  {
+    label: 'Day 3',
+    tag: 'Last Chance',
+    color: '#ef4444',
+    prompt: `Write a Day 3 final/urgency email for ArtNovaAI. This is the last email in the sequence. Create gentle urgency — their free credits are expiring today. Keep it short and personal. Mention this is the final message and you won't follow up again. Strong CTA: "Last chance to use your 2 free credits: artnovaai.com". Sign off warmly.`,
+  },
+];
+
 function EmailSender() {
   const [csvContent, setCsvContent] = useState('');
   const [customPrompt, setCustomPrompt] = useState('');
+  const [activeTemplate, setActiveTemplate] = useState<number | null>(null);
   const [preview, setPreview] = useState(false);
   const [results, setResults] = useState<any>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
@@ -212,18 +234,53 @@ function EmailSender() {
           )}
         </div>
         <p className="text-xs text-gray-400 mb-3">
-          Describe the email style and tone. Leave blank to use the default template.
+          Pick a template or write your own. Leave blank to use the default rotation.
         </p>
+
+        {/* Day 1 / Day 2 / Day 3 template buttons */}
+        <div className="flex gap-2 mb-3">
+          {PROMPT_TEMPLATES.map((t, i) => {
+            const isActive = activeTemplate === i;
+            return (
+              <button
+                key={i}
+                onClick={() => {
+                  if (isActive) {
+                    setActiveTemplate(null);
+                    setCustomPrompt('');
+                  } else {
+                    setActiveTemplate(i);
+                    setCustomPrompt(t.prompt);
+                  }
+                }}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-all"
+                style={{
+                  background: isActive ? t.color : '#f7f7f8',
+                  color: isActive ? '#fff' : '#555',
+                  border: `1.5px solid ${isActive ? t.color : '#e5e5e5'}`,
+                }}
+              >
+                <span
+                  className="w-2 h-2 rounded-full flex-shrink-0"
+                  style={{ background: isActive ? '#fff' : t.color }}
+                />
+                {t.label}
+                <span style={{ opacity: 0.75 }}>· {t.tag}</span>
+              </button>
+            );
+          })}
+        </div>
+
         <textarea
           value={customPrompt}
-          onChange={(e) => setCustomPrompt(e.target.value)}
+          onChange={(e) => { setCustomPrompt(e.target.value); setActiveTemplate(null); }}
           placeholder={`e.g. "Write a friendly Day 1 cold outreach introducing ArtNovaAI..."`}
           rows={3}
           className="input-field text-sm resize-none"
         />
         {customPrompt.trim() && (
           <button
-            onClick={() => setCustomPrompt('')}
+            onClick={() => { setCustomPrompt(''); setActiveTemplate(null); }}
             className="mt-2 text-xs text-gray-400 hover:text-gray-700 transition-colors"
           >
             Clear prompt
